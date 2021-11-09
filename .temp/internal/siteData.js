@@ -163,82 +163,8 @@ export const siteData = {
           "title": "更多指令",
           "slug": "更多指令"
         }
-      ]
-    },
-    {
-      "title": "Node.js API",
-      "frontmatter": {},
-      "regularPath": "/api/node.html",
-      "relativePath": "api/node.md",
-      "key": "v-c66ccb58",
-      "path": "/api/node.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "方法",
-          "slug": "方法"
-        },
-        {
-          "level": 3,
-          "title": "createApp(\\[options]): Promise<App>",
-          "slug": "createapp-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "dev(\\[options]): Promise<App>",
-          "slug": "dev-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "build(\\[options]): Promise<App>",
-          "slug": "build-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "eject(targetDir): Promise<void>",
-          "slug": "eject-targetdir-promise-void"
-        },
-        {
-          "level": 2,
-          "title": "Options",
-          "slug": "options"
-        },
-        {
-          "level": 3,
-          "title": "sourceDir",
-          "slug": "sourcedir"
-        },
-        {
-          "level": 3,
-          "title": "theme",
-          "slug": "theme"
-        },
-        {
-          "level": 3,
-          "title": "plugins",
-          "slug": "plugins"
-        },
-        {
-          "level": 3,
-          "title": "temp",
-          "slug": "temp"
-        },
-        {
-          "level": 3,
-          "title": "dest",
-          "slug": "dest"
-        },
-        {
-          "level": 3,
-          "title": "siteConfig",
-          "slug": "siteconfig"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "配置",
@@ -461,32 +387,84 @@ export const siteData = {
           "title": "evergreen",
           "slug": "evergreen"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
-      "title": "静态资源的的的的的",
+      "title": "Node.js API",
       "frontmatter": {},
-      "regularPath": "/guide/assets.html",
-      "relativePath": "guide/assets.md",
-      "key": "v-24737316",
-      "path": "/guide/assets.html",
+      "regularPath": "/api/node.html",
+      "relativePath": "api/node.md",
+      "key": "v-c66ccb58",
+      "path": "/api/node.html",
       "headers": [
         {
           "level": 2,
-          "title": "相对路径",
-          "slug": "相对路径"
+          "title": "使用",
+          "slug": "使用"
         },
         {
           "level": 2,
-          "title": "公共文件",
-          "slug": "公共文件"
+          "title": "方法",
+          "slug": "方法"
+        },
+        {
+          "level": 3,
+          "title": "createApp(\\[options]): Promise<App>",
+          "slug": "createapp-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "dev(\\[options]): Promise<App>",
+          "slug": "dev-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "build(\\[options]): Promise<App>",
+          "slug": "build-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "eject(targetDir): Promise<void>",
+          "slug": "eject-targetdir-promise-void"
         },
         {
           "level": 2,
-          "title": "基础路径",
-          "slug": "基础路径"
+          "title": "Options",
+          "slug": "options"
+        },
+        {
+          "level": 3,
+          "title": "sourceDir",
+          "slug": "sourcedir"
+        },
+        {
+          "level": 3,
+          "title": "theme",
+          "slug": "theme"
+        },
+        {
+          "level": 3,
+          "title": "plugins",
+          "slug": "plugins"
+        },
+        {
+          "level": 3,
+          "title": "temp",
+          "slug": "temp"
+        },
+        {
+          "level": 3,
+          "title": "dest",
+          "slug": "dest"
+        },
+        {
+          "level": 3,
+          "title": "siteConfig",
+          "slug": "siteconfig"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "FAQ",
@@ -518,32 +496,8 @@ export const siteData = {
           "title": "什么时候需要使用 clientDynamicModules?",
           "slug": "什么时候需要使用-clientdynamicmodules"
         }
-      ]
-    },
-    {
-      "title": "基本配置",
-      "frontmatter": {},
-      "regularPath": "/guide/basic-config.html",
-      "relativePath": "guide/basic-config.md",
-      "key": "v-bd2252cc",
-      "path": "/guide/basic-config.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "配置文件",
-          "slug": "配置文件"
-        },
-        {
-          "level": 2,
-          "title": "主题配置",
-          "slug": "主题配置"
-        },
-        {
-          "level": 2,
-          "title": "应用级别的配置",
-          "slug": "应用级别的配置"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "介绍",
@@ -588,7 +542,60 @@ export const siteData = {
           "title": "GitBook",
           "slug": "gitbook"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "静态资源的的的的的",
+      "frontmatter": {},
+      "regularPath": "/guide/assets.html",
+      "relativePath": "guide/assets.md",
+      "key": "v-24737316",
+      "path": "/guide/assets.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "相对路径",
+          "slug": "相对路径"
+        },
+        {
+          "level": 2,
+          "title": "公共文件",
+          "slug": "公共文件"
+        },
+        {
+          "level": 2,
+          "title": "基础路径",
+          "slug": "基础路径"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "基本配置",
+      "frontmatter": {},
+      "regularPath": "/guide/basic-config.html",
+      "relativePath": "guide/basic-config.md",
+      "key": "v-bd2252cc",
+      "path": "/guide/basic-config.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "配置文件",
+          "slug": "配置文件"
+        },
+        {
+          "level": 2,
+          "title": "主题配置",
+          "slug": "主题配置"
+        },
+        {
+          "level": 2,
+          "title": "应用级别的配置",
+          "slug": "应用级别的配置"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "部署",
@@ -648,7 +655,24 @@ export const siteData = {
           "title": "21 云盒子",
           "slug": "_21-云盒子"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "目录结构",
+      "frontmatter": {},
+      "regularPath": "/guide/directory-structure.html",
+      "relativePath": "guide/directory-structure.md",
+      "key": "v-b99e7fd4",
+      "path": "/guide/directory-structure.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "默认的页面路由",
+          "slug": "默认的页面路由"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "Front Matter",
@@ -738,30 +762,8 @@ export const siteData = {
           "title": "tags",
           "slug": "tags"
         }
-      ]
-    },
-    {
-      "title": "目录结构",
-      "frontmatter": {},
-      "regularPath": "/guide/directory-structure.html",
-      "relativePath": "guide/directory-structure.md",
-      "key": "v-b99e7fd4",
-      "path": "/guide/directory-structure.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "默认的页面路由",
-          "slug": "默认的页面路由"
-        }
-      ]
-    },
-    {
-      "title": "快速上手",
-      "frontmatter": {},
-      "regularPath": "/guide/getting-started.html",
-      "relativePath": "guide/getting-started.md",
-      "key": "v-0c171076",
-      "path": "/guide/getting-started.html"
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "全局计算属性",
@@ -811,27 +813,8 @@ export const siteData = {
           "title": "$themeConfig",
           "slug": "themeconfig"
         }
-      ]
-    },
-    {
-      "title": "多语言支持",
-      "frontmatter": {},
-      "regularPath": "/guide/i18n.html",
-      "relativePath": "guide/i18n.md",
-      "key": "v-2667aa40",
-      "path": "/guide/i18n.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "站点多语言配置",
-          "slug": "站点多语言配置"
-        },
-        {
-          "level": 2,
-          "title": "默认主题多语言配置",
-          "slug": "默认主题多语言配置"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "Markdown 插槽",
@@ -861,7 +844,38 @@ export const siteData = {
           "title": "例子",
           "slug": "例子"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "快速上手",
+      "frontmatter": {},
+      "regularPath": "/guide/getting-started.html",
+      "relativePath": "guide/getting-started.md",
+      "key": "v-0c171076",
+      "path": "/guide/getting-started.html",
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "多语言支持",
+      "frontmatter": {},
+      "regularPath": "/guide/i18n.html",
+      "relativePath": "guide/i18n.md",
+      "key": "v-2667aa40",
+      "path": "/guide/i18n.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "站点多语言配置",
+          "slug": "站点多语言配置"
+        },
+        {
+          "level": 2,
+          "title": "默认主题多语言配置",
+          "slug": "默认主题多语言配置"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "Markdown 拓展",
@@ -936,7 +950,8 @@ export const siteData = {
           "title": "代码块中的行高亮",
           "slug": "代码块中的行高亮"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "永久链接",
@@ -966,7 +981,37 @@ export const siteData = {
           "title": "模板变量",
           "slug": "模板变量"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "/hero.png",
+        "actionText": "快速上手 →",
+        "actionLink": "/guide/",
+        "features": [
+          {
+            "title": "简洁至上",
+            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
+          },
+          {
+            "title": "Vue 驱动",
+            "details": "享受 Vue + webpack 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。"
+          },
+          {
+            "title": "高性能",
+            "details": "VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。"
+          }
+        ],
+        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
+      },
+      "regularPath": "/",
+      "relativePath": "index.md",
+      "key": "v-939e4ac8",
+      "path": "/",
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "在 Markdown 中 使用 Vue",
@@ -1051,35 +1096,8 @@ export const siteData = {
           "title": "Badge",
           "slug": "badge"
         }
-      ]
-    },
-    {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroImage": "/hero.png",
-        "actionText": "快速上手 →",
-        "actionLink": "/guide/",
-        "features": [
-          {
-            "title": "简洁至上",
-            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
-          },
-          {
-            "title": "Vue 驱动",
-            "details": "享受 Vue + webpack 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。"
-          },
-          {
-            "title": "高性能",
-            "details": "VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。"
-          }
-        ],
-        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
-      },
-      "regularPath": "/",
-      "relativePath": "index.md",
-      "key": "v-939e4ac8",
-      "path": "/"
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "VuePress 1.x 的设计理念",
@@ -1146,7 +1164,8 @@ export const siteData = {
           "title": "其他",
           "slug": "其他"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "术语",
@@ -1218,7 +1237,81 @@ export const siteData = {
           "title": "parentThemeEntry",
           "slug": "parentthemeentry"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "本地开发",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/miscellaneous/local-development.html",
+      "relativePath": "miscellaneous/local-development.md",
+      "key": "v-2b4c7216",
+      "path": "/miscellaneous/local-development.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "摘要",
+          "slug": "摘要"
+        },
+        {
+          "level": 2,
+          "title": "初始化 package",
+          "slug": "初始化-package"
+        },
+        {
+          "level": 2,
+          "title": "链接",
+          "slug": "链接"
+        },
+        {
+          "level": 2,
+          "title": "取消链接",
+          "slug": "取消链接"
+        },
+        {
+          "level": 2,
+          "title": "BUGS / 问答",
+          "slug": "bugs-问答"
+        },
+        {
+          "level": 2,
+          "title": "更多相关",
+          "slug": "更多相关"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "主题",
+      "frontmatter": {},
+      "regularPath": "/notes/",
+      "relativePath": "notes/README.md",
+      "key": "v-3cc3d441",
+      "path": "/notes/",
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "使用主题",
+      "frontmatter": {},
+      "regularPath": "/notes/using-a-theme.html",
+      "relativePath": "notes/using-a-theme.md",
+      "key": "v-d5f66a54",
+      "path": "/notes/using-a-theme.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用来自依赖的主题",
+          "slug": "使用来自依赖的主题"
+        },
+        {
+          "level": 2,
+          "title": "主题的缩写",
+          "slug": "主题的缩写"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "从 VuePress 0.x 迁移",
@@ -1265,77 +1358,8 @@ export const siteData = {
           "title": ".vuepress/style.styl",
           "slug": "vuepress-style-styl"
         }
-      ]
-    },
-    {
-      "title": "本地开发",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/miscellaneous/local-development.html",
-      "relativePath": "miscellaneous/local-development.md",
-      "key": "v-2b4c7216",
-      "path": "/miscellaneous/local-development.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "摘要",
-          "slug": "摘要"
-        },
-        {
-          "level": 2,
-          "title": "初始化 package",
-          "slug": "初始化-package"
-        },
-        {
-          "level": 2,
-          "title": "链接",
-          "slug": "链接"
-        },
-        {
-          "level": 2,
-          "title": "取消链接",
-          "slug": "取消链接"
-        },
-        {
-          "level": 2,
-          "title": "BUGS / 问答",
-          "slug": "bugs-问答"
-        },
-        {
-          "level": 2,
-          "title": "更多相关",
-          "slug": "更多相关"
-        }
-      ]
-    },
-    {
-      "title": "主题",
-      "frontmatter": {},
-      "regularPath": "/notes/",
-      "relativePath": "notes/README.md",
-      "key": "v-3cc3d441",
-      "path": "/notes/"
-    },
-    {
-      "title": "使用主题",
-      "frontmatter": {},
-      "regularPath": "/notes/using-a-theme.html",
-      "relativePath": "notes/using-a-theme.md",
-      "key": "v-d5f66a54",
-      "path": "/notes/using-a-theme.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用来自依赖的主题",
-          "slug": "使用来自依赖的主题"
-        },
-        {
-          "level": 2,
-          "title": "主题的缩写",
-          "slug": "主题的缩写"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "开发主题",
@@ -1381,7 +1405,8 @@ export const siteData = {
           "slug": "应用配置"
         }
       ],
-      "excerpt": "<h1 id=\"开发主题\"><a class=\"header-anchor\" href=\"#开发主题\">#</a> 开发主题</h1>\n<p>想要书写一个主题，首先在你文档根目录创建一个 <code>.vuepress/theme</code> 目录，接着创建一个 <code>Layout.vue</code> 文件：</p>\n<pre class=\"vue-container\"><code><p>.\n└─ .vuepress\n └─ <code>theme</code>\n     └─ Layout.vue</p>\n</code></pre><p>到这里，就像开发一个普通的 Vue 应用一样。如何组织你的主题，这完全取决于你。</p>\n<h2 id=\"获取渲染内容\"><a class=\"header-anchor\" href=\"#获取渲染内容\">#</a> 获取渲染内容</h2>\n<p>当前的 <code>.md</code> 文件渲染的内容，可以作为一个独特的全局组件 <code>&lt;Content/&gt;</code> 来使用，你可能想要它显示在页面中的某个地方。一个最简单的主题，可以是一个唯一的 <code>Layout.vue</code> 组件，并包含以下内容：</p>\n<!--beforebegin--><div class=\"language-html extra-class\"><!--afterbegin--><pre v-pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>template</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>theme-container<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Content</span><span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>template</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<!--beforeend--></div><!--afterend--><p><strong>更多请阅读:</strong></p>\n<ul>\n<li><RouterLink to=\"/guide/markdown-slot.html\">Markdown 插槽</RouterLink></li>\n</ul>\n<h2 id=\"内容摘抄\"><a class=\"header-anchor\" href=\"#内容摘抄\">#</a> 内容摘抄</h2>\n<p>如果一个 markdown 文件中有一个 `</p>\n"
+      "excerpt": "<h1 id=\"开发主题\"><a class=\"header-anchor\" href=\"#开发主题\">#</a> 开发主题</h1>\n<p>想要书写一个主题，首先在你文档根目录创建一个 <code>.vuepress/theme</code> 目录，接着创建一个 <code>Layout.vue</code> 文件：</p>\n<pre class=\"vue-container\"><code><p>.\n└─ .vuepress\n └─ <code>theme</code>\n     └─ Layout.vue</p>\n</code></pre><p>到这里，就像开发一个普通的 Vue 应用一样。如何组织你的主题，这完全取决于你。</p>\n<h2 id=\"获取渲染内容\"><a class=\"header-anchor\" href=\"#获取渲染内容\">#</a> 获取渲染内容</h2>\n<p>当前的 <code>.md</code> 文件渲染的内容，可以作为一个独特的全局组件 <code>&lt;Content/&gt;</code> 来使用，你可能想要它显示在页面中的某个地方。一个最简单的主题，可以是一个唯一的 <code>Layout.vue</code> 组件，并包含以下内容：</p>\n<!--beforebegin--><div class=\"language-html extra-class\"><!--afterbegin--><pre v-pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>template</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>theme-container<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Content</span><span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>template</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<!--beforeend--></div><!--afterend--><p><strong>更多请阅读:</strong></p>\n<ul>\n<li><RouterLink to=\"/guide/markdown-slot.html\">Markdown 插槽</RouterLink></li>\n</ul>\n<h2 id=\"内容摘抄\"><a class=\"header-anchor\" href=\"#内容摘抄\">#</a> 内容摘抄</h2>\n<p>如果一个 markdown 文件中有一个 `</p>\n",
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "pwa",
@@ -1459,7 +1484,8 @@ export const siteData = {
           "title": "七、系列推荐",
           "slug": "七、系列推荐"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "插件",
@@ -1494,159 +1520,8 @@ export const siteData = {
           "title": "架构",
           "slug": "架构"
         }
-      ]
-    },
-    {
-      "title": "active-header-links",
-      "frontmatter": {
-        "title": "active-header-links",
-        "metaTitle": "页面滚动时自动激活侧边栏链接的插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-active-header-links.html",
-      "relativePath": "plugin/official/plugin-active-header-links.md",
-      "key": "v-a5a022da",
-      "path": "/plugin/official/plugin-active-header-links.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 3,
-          "title": "配置选项",
-          "slug": "配置选项"
-        },
-        {
-          "level": 2,
-          "title": "选项",
-          "slug": "选项"
-        },
-        {
-          "level": 3,
-          "title": "sidebarLinkSelector",
-          "slug": "sidebarlinkselector"
-        },
-        {
-          "level": 3,
-          "title": "headerAnchorSelector",
-          "slug": "headeranchorselector"
-        }
-      ]
-    },
-    {
-      "title": "生命周期",
-      "frontmatter": {},
-      "regularPath": "/plugin/life-cycle.html",
-      "relativePath": "plugin/life-cycle.md",
-      "key": "v-0574b130",
-      "path": "/plugin/life-cycle.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "ready",
-          "slug": "ready"
-        },
-        {
-          "level": 2,
-          "title": "updated",
-          "slug": "updated"
-        },
-        {
-          "level": 2,
-          "title": "generated",
-          "slug": "generated"
-        }
-      ]
-    },
-    {
-      "title": "blog",
-      "frontmatter": {
-        "title": "blog",
-        "metaTitle": "博客插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-blog.html",
-      "relativePath": "plugin/official/plugin-blog.md",
-      "key": "v-735f9383",
-      "path": "/plugin/official/plugin-blog.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "功能",
-          "slug": "功能"
-        },
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        }
-      ]
-    },
-    {
-      "title": "back-to-top",
-      "frontmatter": {
-        "title": "back-to-top",
-        "metaTitle": "Back-To-Top 插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-back-to-top.html",
-      "relativePath": "plugin/official/plugin-back-to-top.md",
-      "key": "v-3f5d91fe",
-      "path": "/plugin/official/plugin-back-to-top.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        }
-      ]
-    },
-    {
-      "title": "google-analytics",
-      "frontmatter": {
-        "title": "google-analytics",
-        "metaTitle": "Google Analytics 插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-google-analytics.html",
-      "relativePath": "plugin/official/plugin-google-analytics.md",
-      "key": "v-42e31883",
-      "path": "/plugin/official/plugin-google-analytics.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "选项",
-          "slug": "选项"
-        },
-        {
-          "level": 3,
-          "title": "ga",
-          "slug": "ga"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "Context API",
@@ -1691,18 +1566,142 @@ export const siteData = {
           "title": "ctx.writeTemp",
           "slug": "ctx-writetemp"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
-      "title": "nprogress",
+      "title": "生命周期",
+      "frontmatter": {},
+      "regularPath": "/plugin/life-cycle.html",
+      "relativePath": "plugin/life-cycle.md",
+      "key": "v-0574b130",
+      "path": "/plugin/life-cycle.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "ready",
+          "slug": "ready"
+        },
+        {
+          "level": 2,
+          "title": "updated",
+          "slug": "updated"
+        },
+        {
+          "level": 2,
+          "title": "generated",
+          "slug": "generated"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "active-header-links",
       "frontmatter": {
-        "title": "nprogress",
-        "metaTitle": "Nprogress 插件 | VuePress"
+        "title": "active-header-links",
+        "metaTitle": "页面滚动时自动激活侧边栏链接的插件 | VuePress"
       },
-      "regularPath": "/plugin/official/plugin-nprogress.html",
-      "relativePath": "plugin/official/plugin-nprogress.md",
-      "key": "v-09b06f5d",
-      "path": "/plugin/official/plugin-nprogress.html",
+      "regularPath": "/plugin/official/plugin-active-header-links.html",
+      "relativePath": "plugin/official/plugin-active-header-links.md",
+      "key": "v-a5a022da",
+      "path": "/plugin/official/plugin-active-header-links.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 3,
+          "title": "配置选项",
+          "slug": "配置选项"
+        },
+        {
+          "level": 2,
+          "title": "选项",
+          "slug": "选项"
+        },
+        {
+          "level": 3,
+          "title": "sidebarLinkSelector",
+          "slug": "sidebarlinkselector"
+        },
+        {
+          "level": 3,
+          "title": "headerAnchorSelector",
+          "slug": "headeranchorselector"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "blog",
+      "frontmatter": {
+        "title": "blog",
+        "metaTitle": "博客插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-blog.html",
+      "relativePath": "plugin/official/plugin-blog.md",
+      "key": "v-735f9383",
+      "path": "/plugin/official/plugin-blog.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "功能",
+          "slug": "功能"
+        },
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "back-to-top",
+      "frontmatter": {
+        "title": "back-to-top",
+        "metaTitle": "Back-To-Top 插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-back-to-top.html",
+      "relativePath": "plugin/official/plugin-back-to-top.md",
+      "key": "v-3f5d91fe",
+      "path": "/plugin/official/plugin-back-to-top.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "google-analytics",
+      "frontmatter": {
+        "title": "google-analytics",
+        "metaTitle": "Google Analytics 插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-google-analytics.html",
+      "relativePath": "plugin/official/plugin-google-analytics.md",
+      "key": "v-42e31883",
+      "path": "/plugin/official/plugin-google-analytics.html",
       "headers": [
         {
           "level": 2,
@@ -1716,10 +1715,16 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "自定义颜色",
-          "slug": "自定义颜色"
+          "title": "选项",
+          "slug": "选项"
+        },
+        {
+          "level": 3,
+          "title": "ga",
+          "slug": "ga"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "last-updated",
@@ -1752,7 +1757,8 @@ export const siteData = {
           "title": "dateOptions",
           "slug": "dateoptions"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "medium-zoom",
@@ -1790,7 +1796,37 @@ export const siteData = {
           "title": "options",
           "slug": "options"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "nprogress",
+      "frontmatter": {
+        "title": "nprogress",
+        "metaTitle": "Nprogress 插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-nprogress.html",
+      "relativePath": "plugin/official/plugin-nprogress.md",
+      "key": "v-09b06f5d",
+      "path": "/plugin/official/plugin-nprogress.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 2,
+          "title": "自定义颜色",
+          "slug": "自定义颜色"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "pwa",
@@ -1858,7 +1894,52 @@ export const siteData = {
           "title": "自定义 SW-Update Popup 的 UI",
           "slug": "自定义-sw-update-popup-的-ui"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "register-components",
+      "frontmatter": {
+        "title": "register-components",
+        "metaTitle": "注册组件的插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-register-components.html",
+      "relativePath": "plugin/official/plugin-register-components.md",
+      "key": "v-49b0f55a",
+      "path": "/plugin/official/plugin-register-components.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 2,
+          "title": "选项",
+          "slug": "选项"
+        },
+        {
+          "level": 3,
+          "title": "componentsDir",
+          "slug": "componentsdir"
+        },
+        {
+          "level": 3,
+          "title": "components",
+          "slug": "components"
+        },
+        {
+          "level": 3,
+          "title": "getComponentName",
+          "slug": "getcomponentname"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "search",
@@ -1901,7 +1982,44 @@ export const siteData = {
           "title": "调整默认颜色",
           "slug": "调整默认颜色"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "使用插件",
+      "frontmatter": {},
+      "regularPath": "/plugin/using-a-plugin.html",
+      "relativePath": "plugin/using-a-plugin.md",
+      "key": "v-741a7960",
+      "path": "/plugin/using-a-plugin.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用来自依赖的插件",
+          "slug": "使用来自依赖的插件"
+        },
+        {
+          "level": 2,
+          "title": "插件的缩写",
+          "slug": "插件的缩写"
+        },
+        {
+          "level": 2,
+          "title": "插件的选项",
+          "slug": "插件的选项"
+        },
+        {
+          "level": 3,
+          "title": "Babel 式",
+          "slug": "babel-式"
+        },
+        {
+          "level": 3,
+          "title": "对象式",
+          "slug": "对象式"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "Option API",
@@ -1993,85 +2111,8 @@ export const siteData = {
           "title": "extendCli",
           "slug": "extendcli"
         }
-      ]
-    },
-    {
-      "title": "register-components",
-      "frontmatter": {
-        "title": "register-components",
-        "metaTitle": "注册组件的插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-register-components.html",
-      "relativePath": "plugin/official/plugin-register-components.md",
-      "key": "v-49b0f55a",
-      "path": "/plugin/official/plugin-register-components.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "选项",
-          "slug": "选项"
-        },
-        {
-          "level": 3,
-          "title": "componentsDir",
-          "slug": "componentsdir"
-        },
-        {
-          "level": 3,
-          "title": "components",
-          "slug": "components"
-        },
-        {
-          "level": 3,
-          "title": "getComponentName",
-          "slug": "getcomponentname"
-        }
-      ]
-    },
-    {
-      "title": "使用插件",
-      "frontmatter": {},
-      "regularPath": "/plugin/using-a-plugin.html",
-      "relativePath": "plugin/using-a-plugin.md",
-      "key": "v-741a7960",
-      "path": "/plugin/using-a-plugin.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用来自依赖的插件",
-          "slug": "使用来自依赖的插件"
-        },
-        {
-          "level": 2,
-          "title": "插件的缩写",
-          "slug": "插件的缩写"
-        },
-        {
-          "level": 2,
-          "title": "插件的选项",
-          "slug": "插件的选项"
-        },
-        {
-          "level": 3,
-          "title": "Babel 式",
-          "slug": "babel-式"
-        },
-        {
-          "level": 3,
-          "title": "对象式",
-          "slug": "对象式"
-        }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "开发插件",
@@ -2079,15 +2120,8 @@ export const siteData = {
       "regularPath": "/plugin/writing-a-plugin.html",
       "relativePath": "plugin/writing-a-plugin.md",
       "key": "v-475d7a50",
-      "path": "/plugin/writing-a-plugin.html"
-    },
-    {
-      "title": "主题",
-      "frontmatter": {},
-      "regularPath": "/theme/",
-      "relativePath": "theme/README.md",
-      "key": "v-30685831",
-      "path": "/theme/"
+      "path": "/plugin/writing-a-plugin.html",
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "博客主题",
@@ -2112,7 +2146,17 @@ export const siteData = {
           "title": "使用",
           "slug": "使用"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "主题",
+      "frontmatter": {},
+      "regularPath": "/theme/",
+      "relativePath": "theme/README.md",
+      "key": "v-30685831",
+      "path": "/theme/",
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "默认主题配置",
@@ -2232,7 +2276,46 @@ export const siteData = {
           "title": "特定页面的自定义布局",
           "slug": "特定页面的自定义布局"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "主题的配置",
+      "frontmatter": {
+        "metaTitle": "Configuration | Theme"
+      },
+      "regularPath": "/theme/option-api.html",
+      "relativePath": "theme/option-api.md",
+      "key": "v-30116df2",
+      "path": "/theme/option-api.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "plugins",
+          "slug": "plugins"
+        },
+        {
+          "level": 2,
+          "title": "devTemplate",
+          "slug": "devtemplate"
+        },
+        {
+          "level": 2,
+          "title": "ssrTemplate",
+          "slug": "ssrtemplate"
+        },
+        {
+          "level": 2,
+          "title": "extend",
+          "slug": "extend"
+        },
+        {
+          "level": 2,
+          "title": "globalLayout",
+          "slug": "globallayout"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "主题的继承",
@@ -2277,7 +2360,29 @@ export const siteData = {
           "title": "访问父主题",
           "slug": "访问父主题"
         }
-      ]
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
+    },
+    {
+      "title": "使用主题",
+      "frontmatter": {},
+      "regularPath": "/theme/using-a-theme.html",
+      "relativePath": "theme/using-a-theme.md",
+      "key": "v-7ac6d3d6",
+      "path": "/theme/using-a-theme.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用来自依赖的主题",
+          "slug": "使用来自依赖的主题"
+        },
+        {
+          "level": 2,
+          "title": "主题的缩写",
+          "slug": "主题的缩写"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42"
     },
     {
       "title": "开发主题",
@@ -2323,64 +2428,8 @@ export const siteData = {
           "slug": "应用配置"
         }
       ],
-      "excerpt": "<h1 id=\"开发主题\"><a class=\"header-anchor\" href=\"#开发主题\">#</a> 开发主题</h1>\n<p>想要书写一个主题，首先在你文档根目录创建一个 <code>.vuepress/theme</code> 目录，接着创建一个 <code>Layout.vue</code> 文件：</p>\n<pre class=\"vue-container\"><code><p>.\n└─ .vuepress\n └─ <code>theme</code>\n     └─ Layout.vue</p>\n</code></pre><p>到这里，就像开发一个普通的 Vue 应用一样。如何组织你的主题，这完全取决于你。</p>\n<h2 id=\"获取渲染内容\"><a class=\"header-anchor\" href=\"#获取渲染内容\">#</a> 获取渲染内容</h2>\n<p>当前的 <code>.md</code> 文件渲染的内容，可以作为一个独特的全局组件 <code>&lt;Content/&gt;</code> 来使用，你可能想要它显示在页面中的某个地方。一个最简单的主题，可以是一个唯一的 <code>Layout.vue</code> 组件，并包含以下内容：</p>\n<!--beforebegin--><div class=\"language-html extra-class\"><!--afterbegin--><pre v-pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>template</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>theme-container<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Content</span><span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>template</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<!--beforeend--></div><!--afterend--><p><strong>更多请阅读:</strong></p>\n<ul>\n<li><RouterLink to=\"/guide/markdown-slot.html\">Markdown 插槽</RouterLink></li>\n</ul>\n<h2 id=\"内容摘抄\"><a class=\"header-anchor\" href=\"#内容摘抄\">#</a> 内容摘抄</h2>\n<p>如果一个 markdown 文件中有一个 `</p>\n"
-    },
-    {
-      "title": "主题的配置",
-      "frontmatter": {
-        "metaTitle": "Configuration | Theme"
-      },
-      "regularPath": "/theme/option-api.html",
-      "relativePath": "theme/option-api.md",
-      "key": "v-30116df2",
-      "path": "/theme/option-api.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "plugins",
-          "slug": "plugins"
-        },
-        {
-          "level": 2,
-          "title": "devTemplate",
-          "slug": "devtemplate"
-        },
-        {
-          "level": 2,
-          "title": "ssrTemplate",
-          "slug": "ssrtemplate"
-        },
-        {
-          "level": 2,
-          "title": "extend",
-          "slug": "extend"
-        },
-        {
-          "level": 2,
-          "title": "globalLayout",
-          "slug": "globallayout"
-        }
-      ]
-    },
-    {
-      "title": "使用主题",
-      "frontmatter": {},
-      "regularPath": "/theme/using-a-theme.html",
-      "relativePath": "theme/using-a-theme.md",
-      "key": "v-7ac6d3d6",
-      "path": "/theme/using-a-theme.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用来自依赖的主题",
-          "slug": "使用来自依赖的主题"
-        },
-        {
-          "level": 2,
-          "title": "主题的缩写",
-          "slug": "主题的缩写"
-        }
-      ]
+      "excerpt": "<h1 id=\"开发主题\"><a class=\"header-anchor\" href=\"#开发主题\">#</a> 开发主题</h1>\n<p>想要书写一个主题，首先在你文档根目录创建一个 <code>.vuepress/theme</code> 目录，接着创建一个 <code>Layout.vue</code> 文件：</p>\n<pre class=\"vue-container\"><code><p>.\n└─ .vuepress\n └─ <code>theme</code>\n     └─ Layout.vue</p>\n</code></pre><p>到这里，就像开发一个普通的 Vue 应用一样。如何组织你的主题，这完全取决于你。</p>\n<h2 id=\"获取渲染内容\"><a class=\"header-anchor\" href=\"#获取渲染内容\">#</a> 获取渲染内容</h2>\n<p>当前的 <code>.md</code> 文件渲染的内容，可以作为一个独特的全局组件 <code>&lt;Content/&gt;</code> 来使用，你可能想要它显示在页面中的某个地方。一个最简单的主题，可以是一个唯一的 <code>Layout.vue</code> 组件，并包含以下内容：</p>\n<!--beforebegin--><div class=\"language-html extra-class\"><!--afterbegin--><pre v-pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>template</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span> <span class=\"token attr-name\">class</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>theme-container<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Content</span><span class=\"token punctuation\">/></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>template</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<!--beforeend--></div><!--afterend--><p><strong>更多请阅读:</strong></p>\n<ul>\n<li><RouterLink to=\"/guide/markdown-slot.html\">Markdown 插槽</RouterLink></li>\n</ul>\n<h2 id=\"内容摘抄\"><a class=\"header-anchor\" href=\"#内容摘抄\">#</a> 内容摘抄</h2>\n<p>如果一个 markdown 文件中有一个 `</p>\n",
+      "lastUpdated": "2021/11/8下午5:45:42"
     }
   ],
   "themeConfig": {
