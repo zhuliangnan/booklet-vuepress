@@ -5,7 +5,7 @@
 ::: vue
 .
 └─ .vuepress
-   └─ `theme`
+   └─ `theme`
        └─ Layout.vue
 :::
 

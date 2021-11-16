@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vuepress.git"
+    "url": "git+https://github.com/zhuliangnan"
   },
   "license": "MIT",
   "author": "Evan You",
@@ -34,6 +34,7 @@
     "@vuepress/plugin-medium-zoom": "1.8.0",
     "@vuepress/plugin-pwa": "1.8.0",
     "@vuepress/theme-vue": "1.8.0",
+    "@xiaopanda/vuepress-plugin-code-copy": "^1.0.3",
     "remark-cli": "^9.0.0",
     "remark-lint": "^6.0.5",
     "remark-preset-lint-consistent": "^2.0.3",
@@ -49,6 +50,17 @@
     "textlint-rule-write-good": "^1.6.2",
     "vue-toasted": "^1.1.25",
     "vuepress": "1.8.0",
-    "vuepress-plugin-flowchart": "^1.4.2"
+    "vuepress-plugin-catalog-graph": "^0.2.8",
+    "vuepress-plugin-disqus": "^0.2.0",
+    "vuepress-plugin-flowchart": "^1.4.2",
+    "vuepress-plugin-right-anchor": "^0.5.4",
+    "vuepress-plugin-table-of-contents": "^1.1.7"
+  },
+  "dependencies": {
+    "vuepress-plugin-gitalk-maker": "^0.1.0",
+    "vuepress-plugin-global-toc": "^1.1.0",
+    "vuepress-plugin-music-bar": "^3.7.6",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "vuepress-plugin-tags": "^1.0.2"
   }
 }

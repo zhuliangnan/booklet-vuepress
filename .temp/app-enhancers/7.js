@@ -1,1 +1,1 @@
-export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-flowchart\\lib\\client.js"
+export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-tags\\enhanceAppFile.js"
