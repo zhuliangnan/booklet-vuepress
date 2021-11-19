@@ -4,8 +4,9 @@ sidebar: auto
 ## 基于Spring Aop实现用户操作日志监控
 
 ## 前言
->> 大家在平时做项目的时候，习惯于记录系统日志，出错去查看系统日志而对于用户具体做了什么操作无法知道，这篇我将用Aop实现一下简单的用户操作日志监控，抛砖引玉。大家稍微修改一下就可以用在项目中了。项目我已经上传到github
-
+::: tip
+ 大家在平时做项目的时候，习惯于记录系统日志，出错去查看系统日志而对于用户具体做了什么操作无法知道，这篇我将用Aop实现一下简单的用户操作日志监控，抛砖引玉。大家稍微修改一下就可以用在项目中了。项目我已经上传到github
+::: 
 https://github.com/zhuliangnan/userOperationLog/tree/master
 
 - 备注：建表语句在 resources/sql/test.sql
@@ -16,7 +17,9 @@ https://github.com/zhuliangnan/userOperationLog/tree/master
 
 
 OperLogAspect.Java
->>Aop切片类 里面注释写的很完整
+::: tip
+Aop切片类 里面注释写的很完整
+::: 
 ````java
 package com.zln.zcar.cms.utils.aop;
 

@@ -2,8 +2,9 @@
 sidebar: auto
 ---
 ## fastjson基本使用
-
+::: tip
 导包
+::: 
 ````xml
         <dependency>
             <groupId>com.alibaba</groupId>

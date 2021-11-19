@@ -20,7 +20,9 @@ CREATE UNIQUE INDEX  mail  on user_info(name)  ;
 
 
 ## 索引的创建和删除
->> 注意：对于创建索引时如果是blob 和 text 类型，必须指定length。
+::: warning
+ 注意：对于创建索引时如果是blob 和 text 类型，必须指定length。
+:::
 
 - 创建表的时候同时创建索引
 ````sql
@@ -85,7 +87,7 @@ Hash似乎解决了磁盘IO的问题，但是Hash有大量冲突的时候还是�
 
 ## MySQL索引优化
 
-1. 前导模糊查询不能使用索引
+### 1. 前导模糊查询不能使用索引
 ````sql
 例如下面 SQL 语句不能使用索引。
 
@@ -97,7 +99,7 @@ select * fromdoc where title like 'XX%'
 
 页面搜索严禁左模糊或者全模糊，如果需要可以用搜索引擎来解决。
 ````
-2. union、in、or 都能够命中索引，建议使用 in。
+### 2. union、in、or 都能够命中索引，建议使用 in。
 ````sql
 union：能够命中索引。
 
@@ -133,7 +135,7 @@ select * fromdoc where status = 1 or status = 2
 页面搜索严禁左模糊或者全模糊，如果需要可以用搜索引擎来解决。
 ````
 
-3. 负向条件查询不能使用索引，可以优化为 in 查询。
+### 3. 负向条件查询不能使用索引，可以优化为 in 查询。
 ````sql
 负向条件有：!=、<>、not in、not exists、not like 等。
 
@@ -148,7 +150,7 @@ select * fromdoc where status != 1 and status != 2
 select * fromdoc where status in (0,3,4)
 ````
 
-4. 联合索引最左前缀原则（又叫最左侧查询）
+### 4. 联合索引最左前缀原则（又叫最左侧查询）
 ````sql
 如果在(a,b,c)三个字段上建立联合索引，那么它能够加快 a | (a,b) | (a,b,c) 三组查询速度。
 
@@ -181,7 +183,7 @@ selectuid, login_time from user where passwd=? andlogin_name=?
 但还是建议 where 后的顺序和联合索引一致，养成好习惯。
 ````
 
-5. 范围列可以用到索引（联合索引必须是最左前缀）
+### 5. 范围列可以用到索引（联合索引必须是最左前缀）
 ````sql
 范围条件有：<、<=、>、>=、between等。
 
@@ -193,7 +195,7 @@ selectuid, login_time from user where passwd=? andlogin_name=?
 
 select * fromemployees.titles where emp_no < 10010' and title='Senior Engineer'and from_date between '1986-01-01' and '1986-12-31'
 ````
-6. 把计算放到业务层而不是数据库层。
+### 6. 把计算放到业务层而不是数据库层。
 ````sql
 在字段上进行计算不能命中索引。
 
@@ -225,7 +227,7 @@ select * fromorder where date < = '2018-01-2412:00:00'
 
 优化后的 SQL 释放了数据库的 CPU 多次调用，传入的 SQL 相同，才可以利用查询缓存。
 ````
-7. 强制类型转换会全表扫描
+### 7. 强制类型转换会全表扫描
 ````sql
 如果 phone 字段是 varchar 类型，则下面的 SQL 不能命中索引。
 
@@ -235,7 +237,7 @@ select * fromorder where date < = '2018-01-2412:00:00'
 
 select * fromuser where phone='13800001234'
 ````
-8. 更新十分频繁、数据区分度不高的字段上不宜建立索引。
+### 8. 更新十分频繁、数据区分度不高的字段上不宜建立索引。
 ````sql
 - 更新会变更 B+ 树，更新频繁的字段建立索引会大大降低数据库性能。
 
@@ -245,7 +247,7 @@ select * fromuser where phone='13800001234'
  count(distinct(列名))/count(*) 来计算。
 ````
 
-9. 利用覆盖索引来进行查询操作，避免回表
+### 9. 利用覆盖索引来进行查询操作，避免回表
 ````sql
 被查询的列，数据能从索引中取得，而不用通过行定位符 row-locator 再到 row 上获取，即“被查询列要被所建的索引覆盖”，这能够加速查询速度。
 
@@ -257,7 +259,7 @@ select uid, login_time from user where login_name=? andpasswd=?
 
 可以建立(login_name, passwd, login_time)的联合索引，由于 login_time 已经建立在索引中了，被查询的 uid 和 login_time 就不用去 row 上获取数据了，从而加速查询。
 ````
-10. 如果有 order by、group by 的场景，请注意利用索引的有序性
+### 10. 如果有 order by、group by 的场景，请注意利用索引的有序性
 ````sql
 order by 最后的字段是组合索引的一部分，并且放在索引组合顺序的最后，避免出现 file_sort 的情况，影响查询性能。
 
@@ -266,7 +268,7 @@ order by 最后的字段是组合索引的一部分，并且放在索引组合�
 如果索引中有范围查找，那么索引有序性无法利用，如 WHERE     a>10 ORDER BY b;，索引(a,b)无法排序。
 ````
 
-11. 使用短索引（又叫前缀索引）来优化索引。
+### 11. 使用短索引（又叫前缀索引）来优化索引。
 ````sql
 前缀索引，就是用列的前缀代替整个列作为索引 key，当前缀长度合适时，可以做到既使得前缀索引的区分度接近全列索引，同时因为索引 key 变短而减少了索引文件的大小和维护开销，可以使用 count(distinct left(列名, 索引长度))/count(*) 来计算前缀索引的区分度。
 
@@ -282,12 +284,12 @@ SELEC *FROM employees.employees WHERE first_name='Eric'AND last_name='Anido';
 
 我们可以建立索引：(firstname, lastname(4))。
 ````
-12. 建立索引的列，不允许为 null
+### 12. 建立索引的列，不允许为 null
 ````sql
 单列索引不存 null 值，复合索引不存全为 null 的值，如果列允许为 null，可能会得到“不符合预期”的结果集，所以，请使用 not null 约束以及默认值。
 ````
 
-13. 利用延迟关联或者子查询优化超多分页场景。
+### 13. 利用延迟关联或者子查询优化超多分页场景。
 ````sql
 MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行，那当 offset 特别大的时候，效率就非常的低下，要么控制返回的总页数，要么对超过特定阈值的页数进行 SQL 改写。
 
@@ -298,16 +300,16 @@ MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃�
 select a.* from 表1 a,(select id from 表1 where 条件 limit 100000,20 ) b where a.id=b.id
 ````
 
-14. 业务上具有唯一特性的字段，即使是多个字段的组合，也必须建成唯一索引。
+### 14. 业务上具有唯一特性的字段，即使是多个字段的组合，也必须建成唯一索引。
 ````sql
 不要以为唯一索引影响了 insert 速度，这个速度损耗可以忽略，但提高查找速度是明显的。另外，即使在应用层做了非常完善的校验控制，只要没有唯一索引，根据墨菲定律，必然有脏数据产生。
 ````
 
-15. 超过三个表最好不要 join。
+### 15. 超过三个表最好不要 join。
 ````sql
 需要 join 的字段，数据类型必须一致，多表关联查询时，保证被关联的字段需要有索引。
 ````
-16. 如果明确知道只有一条结果返回，limit 1 能够提高效率。
+### 16. 如果明确知道只有一条结果返回，limit 1 能够提高效率。
 ````sql
 比如如下 SQL 语句：
 
@@ -320,7 +322,7 @@ select * from user where login_name=? limit 1
 自己明确知道只有一条结果，但数据库并不知道，明确告诉它，让它主动停止游标移动。
 ````
 
-17. SQL 性能优化 explain 中的 type：至少要达到 range 级别，要求是 ref 级别，如果可以是 consts 最好
+### 17. SQL 性能优化 explain 中的 type：至少要达到 range 级别，要求是 ref 级别，如果可以是 consts 最好
 ````sql
 consts：单表中最多只有一个匹配行（主键或者唯一索引），在优化阶段即可读取到数据。
 
@@ -330,12 +332,12 @@ range：对索引进行范围检索。
 
 当 type=index 时，索引物理文件全扫，速度非常慢。
 ````
-18. 单表索引建议控制在5个以内。
-19. 单索引字段数不允许超过5个
+### 18. 单表索引建议控制在5个以内。
+### 19. 单索引字段数不允许超过5个
 ````sql
 字段超过5个时，实际已经起不到有效过滤数据的作用了。
 ````
-20. 创建索引时避免以下错误观念
+### 20. 创建索引时避免以下错误观念
 ````sql
 索引越多越好，认为一个查询就需要建一个索引。
 
@@ -347,7 +349,7 @@ range：对索引进行范围检索。
 ````
 
 ## 问题详解
-1. 请问如下三条 SQL 该如何建立索引？
+### 1. 请问如下三条 SQL 该如何建立索引？
 ````sql
 
 
@@ -369,7 +371,7 @@ MySQL 的查询优化器会自动调整 where 子句的条件顺序以使用适�
 
 ````
 
-2.假如有联合索引(empno、title、fromdate)，下面的 SQL 是否可以用到索引，如果可以的话，会使用几个列？
+### 2.假如有联合索引(empno、title、fromdate)，下面的 SQL 是否可以用到索引，如果可以的话，会使用几个列？
 
 
 ````sql
@@ -381,7 +383,7 @@ select * from employees.titles where emp_no between '10001' and'10010' and title
 ````
 
 
-3.既然索引可以加快查询速度，那么是不是只要是查询语句需要，就建上索引？
+### 3.既然索引可以加快查询速度，那么是不是只要是查询语句需要，就建上索引？
 
 
 ````css
@@ -389,7 +391,7 @@ select * from employees.titles where emp_no between '10001' and'10010' and title
 ````
 
 
-4.主键和聚集索引的关系？
+### 4.主键和聚集索引的关系？
 
 
 ````css
@@ -397,7 +399,7 @@ select * from employees.titles where emp_no between '10001' and'10010' and title
 ````
 
 
-5.一个6亿的表 a，一个3亿的表 b，通过外键 tid 关联，如何最快的查询出满足条件的第50000到第50200中的这200条数据记录？
+### 5.一个6亿的表 a，一个3亿的表 b，通过外键 tid 关联，如何最快的查询出满足条件的第50000到第50200中的这200条数据记录？
 
 
 ````sql

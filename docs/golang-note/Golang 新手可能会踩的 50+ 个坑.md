@@ -13,10 +13,11 @@ sidebar: auto
 
 （改动：添加了运行结果） 
 
-初级篇：1-34
-1. 左大括号 { 一般不能单独放一行
+## 初级篇：1-34
+### 1. 左大括号 { 一般不能单独放一行
+::: tip
 在其他大多数语言中，{ 的位置你自行决定。Go 比较特别，遵守分号注入规则（automatic semicolon injection）：编译器会在每行代码尾部特定分隔符后加 ; 来分隔多条语句，比如会在 ) 后加分号：
-
+::: 
 ````go
 // 错误示例
 func main()					
@@ -47,10 +48,12 @@ func main() {
 ````     
 参考：Golang中自动加分号的特殊分隔符
 
-2. 未使用的变量
+### 2. 未使用的变量
+::: tip
 如果在函数体代码中有未使用的变量，则无法通过编译，不过全局变量声明但不使用是可以的。
 
 即使变量声明后为变量赋值，依旧无法通过编译，需在某处使用它：
+:::
 ````go
 // 错误示例
 var gvar int 	// 全局变量，声明不使用也可以
@@ -79,10 +82,12 @@ func main() {
 	four = four
 }
 ````
-3. 未使用的 import
+### 3. 未使用的 import
+::: tip
 如果你 import 一个包，但包中的变量、函数、接口和结构体一个都没有用到的话，将编译失败。
 
 可以使用 _ 下划线符号作为别名来忽略导入的包，从而避免编译错误，这只会执行 package 的 init()
+::: 
 ````go
 // 错误示例
 import (
@@ -108,7 +113,7 @@ func main() {
 	_ = time.Now
 }
 ````
-4. 简短声明的变量只能在函数内部使用
+### 4. 简短声明的变量只能在函数内部使用
 ````go
 // 错误示例
 myvar := 1	// syntax error: non-declaration statement outside function body
@@ -120,10 +125,12 @@ func main() {
 var  myvar = 1
 func main() {
 }
-5. 使用简短声明来重复声明变量
-不能用简短声明方式来单独为一个变量重复声明， := 左侧至少有一个新变量，才允许多变量的重复声明：
-````
 
+````
+### 5. 使用简短声明来重复声明变量
+::: tip
+不能用简短声明方式来单独为一个变量重复声明， := 左侧至少有一个新变量，才允许多变量的重复声明：
+::: 
 # 标题
 
 ````go
@@ -141,8 +148,10 @@ func main() {
 	one, two = two, one	// 交换两个变量值的简写
 }
 ````
-6. 不能使用简短声明来设置字段的值
+### 6. 不能使用简短声明来设置字段的值
+::: tip
 struct 的变量字段不能使用 := 来赋值以使用预定义的变量来避免解决：
+::: 
 ````go
 // 错误示例
 type info struct {
@@ -176,10 +185,12 @@ func main() {
 	fmt.Printf("info: %+v\n", data)
 }
 ````
-7. 不小心覆盖了变量
+### 7. 不小心覆盖了变量
+::: tip
 对从动态语言转过来的开发者来说，简短声明很好用，这可能会让人误会 := 是一个赋值操作符。
 
 如果你在新的代码块中像下边这样误用了 :=，编译不会报错，但是变量不会按你的预期工作：
+::: 
 ````go
 func main() {
 	x := 1
@@ -203,8 +214,10 @@ main.go:9: declaration of "x" shadows declaration at main.go:5
 
 > $GOPATH/bin/go-nyet main.go
 main.go:10:3:Shadowing variable `x`
-8. 显式类型的变量无法使用 nil 来初始化
+### 8. 显式类型的变量无法使用 nil 来初始化
+::: tip
 nil 是 interface、function、pointer、map、slice 和 channel 类型变量的默认初始值。但声明时不指定类型，编译器也无法推断出变量的具体类型。
+::: 
 ````go
 // 错误示例
 func main() {
@@ -219,8 +232,10 @@ func main() {
 	_ = x
 }
 ````    
-9. 直接使用值为 nil 的 slice、map
+### 9. 直接使用值为 nil 的 slice、map
+::: tip
 允许对值为 nil 的 slice 添加元素，但对值为 nil 的 map 添加元素则会造成运行时 panic
+::: 
 ````go
 // map 错误示例
 func main() {
@@ -236,8 +251,10 @@ func main() {
 	s = append(s, 1)
 }
 ````
-10. map 容量
+### 10. map 容量
+::: tip
 在创建 map 类型的变量时可以指定容量，但不能像 slice 一样使用 cap() 来检测分配空间的大小：
+::: 
 ````go
 // 错误示例
 func main() {
@@ -245,8 +262,10 @@ func main() {
 	println(cap(m)) 	// error: invalid argument m1 (type map[string]int) for cap  
 } 
 ````   
-11. string 类型的变量值不能为 nil
+### 11. string 类型的变量值不能为 nil
+::: tip
 对那些喜欢用 nil 初始化字符串的人来说，这就是坑：
+::: 
 ````go
 // 错误示例
 func main() {
@@ -265,10 +284,12 @@ func main() {
 	}
 }
 ````
-12. Array 类型的值作为函数参数
+### 12. Array 类型的值作为函数参数
+::: tip
 在 C/C++ 中，数组（名）是指针。将数组作为参数传进函数时，相当于传递了数组内存地址的引用，在函数内部会改变该数组的值。
 
 在 Go 中，数组是值。作为参数传进函数时，传递的是数组的原始值拷贝，此时在函数内部是无法更新该数组的：
+::: 
 ````go
 // 数组使用值拷贝传参
 func main() {
@@ -310,8 +331,10 @@ func main() {
 	fmt.Println(x)	// [7 2 3]
 }
 ````
-13. range 遍历 slice 和 array 时混淆了返回值
+### 13. range 遍历 slice 和 array 时混淆了返回值
+::: tip
 与其他编程语言中的 for-in 、foreach 遍历语句不同，Go 中的 range 在遍历时会生成 2 个值，第一个是元素索引，第二个是元素的值：
+::: 
 ````go
 // 错误示例
 func main() {
@@ -331,7 +354,9 @@ func main() {
 	}
 }
 ````
-14. slice 和 array 其实是一维数据
+
+### 14. slice 和 array 其实是一维数据
+::: tip
 看起来 Go 支持多维的 array 和 slice，可以创建数组的数组、切片的切片，但其实并不是。
 
 对依赖动态计算多维数组值的应用来说，就性能和复杂度而言，用 Go 实现的效果并不理想。
@@ -347,6 +372,7 @@ func main() {
 对每个内部 slice 进行内存分配
 
 注意内部的 slice 相互独立，使得任一内部 slice 增缩都不会影响到其他的 slice
+::: 
 ````go
 // 使用各自独立的 6 个 slice 来创建 [2][3] 的动态多维数组
 func main() {
@@ -395,8 +421,10 @@ go-how-is-two-dimensional-arrays-memory-representation
 
 what-is-a-concise-way-to-create-a-2d-slice-in-go
 
-15. 访问 map 中不存在的 key
+### 15. 访问 map 中不存在的 key
+::: tip
 和其他编程语言类似，如果访问了 map 中不存在的 key 则希望能返回 nil，比如在 PHP 中：
+::: 
 ````
 > php -r '$v = ["x"=>1, "y"=>2]; @var_dump($v["z"]);'
 NULL
@@ -422,10 +450,12 @@ func main() {
 	}
 }
 ````
-16. string 类型的值是常量，不可更改
+### 16. string 类型的值是常量，不可更改
+::: tip
 尝试使用索引遍历字符串，来更新字符串中的个别字符，是不允许的。
 
 string 类型的值是只读的二进制 byte slice，如果真要修改字符串中的字符，将 string 转为 []byte 修改后，再转为 string 即可：
+::: 
 ````go
 // 修改字符串的错误示例
 func main() {
@@ -456,7 +486,8 @@ func main() {
 	fmt.Println(x)	// 我ext
 }
 ````
-17. string 与 byte slice 之间的转换
+### 17. string 与 byte slice 之间的转换
+::: tip
 当进行 string 和 byte slice 相互转换时，参与转换的是拷贝的原始值。这种转换的过程，与其他编程语的强制类型转换操作不同，也和新 slice 与旧 slice 共享底层数组不同。
 
 Go 在 string 与 byte slice 相互转换上优化了两点，避免了额外的内存分配：
@@ -469,6 +500,7 @@ Go 在 string 与 byte slice 相互转换上优化了两点，避免了额外的
 对字符串用索引访问返回的不是字符，而是一个 byte 值。
 
 这种处理方式和其他语言一样，比如 PHP 中：
+::: 
 ````go
 > php -r '$name="中文"; var_dump($name);'	# "中文" 占用 6 个字节
 string(6) "中文"
@@ -486,10 +518,12 @@ func main() {
 ````
 如果需要使用 for range 迭代访问字符串中的字符（unicode code point / rune），标准库中有 "unicode/utf8" 包来做 UTF8 的相关解码编码。另外 utf8string 也有像 func (s *String) At(i int) rune 等很方便的库函数。
 
-19. 字符串并不都是 UTF8 文本
+### 19. 字符串并不都是 UTF8 文本
+::: tip
 string 的值不必是 UTF8 文本，可以包含任意的值。只有字符串是文字字面值时才是 UTF8 文本，字串可以通过转义来包含其他数据。
 
 判断字符串是否是 UTF8 文本，可使用 "unicode/utf8" 包中的 ValidString() 函数：
+::: 
 ````go
 func main() {
 	str1 := "ABC"
@@ -502,7 +536,7 @@ func main() {
 	fmt.Println(utf8.ValidString(str3))	// true	// 把转义字符转义成字面值
 }
 ````
-20. 字符串的长度
+### 20. 字符串的长度
 在 Python 中：
 ````python
 data = u'♥'  
@@ -537,7 +571,7 @@ func main() {
 ````
 参考：normalization
 
-21. 在多行 array、slice、map 语句中缺少 , 
+### 21. 在多行 array、slice、map 语句中缺少 , 
 ````go
 func main() {
 	x := []int {
@@ -551,25 +585,31 @@ func main() {
 ````
 声明语句中 } 折叠到单行后，尾部的 , 不是必需的。
 
-22. log.Fatal 和 log.Panic 不只是 log
+### 22. log.Fatal 和 log.Panic 不只是 log
+::: tip
 log 标准库提供了不同的日志记录等级，与其他语言的日志库不同，Go 的 log 包在调用 Fatal*()、Panic*() 时能做更多日志外的事，如中断程序的执行等：
+::: 
 ````go
 func main() {
 	log.Fatal("Fatal level log: log entry")		// 输出信息后，程序终止执行
 	log.Println("Nomal level log: log entry")
 }
 ````
-23. 对内建数据结构的操作并不是同步的
+### 23. 对内建数据结构的操作并不是同步的
+::: tip
 尽管 Go 本身有大量的特性来支持并发，但并不保证并发的数据安全，用户需自己保证变量等数据以原子操作更新。
 
 goroutine 和 channel 是进行原子操作的好方法，或使用 "sync" 包中的锁。
+::: 
 
-24. range 迭代 string 得到的值
+### 24. range 迭代 string 得到的值
+::: tip
 range 得到的索引是字符值（Unicode point / rune）第一个字节的位置，与其他编程语言不同，这个索引并不直接是字符在字符串中的位置。
 
 注意一个字符可能占多个 rune，比如法文单词 café 中的 é。操作特殊字符可使用norm 包。
 
 for range 迭代会尝试将 string 翻译为 UTF8 文本，对任何无效的码点都直接使用 0XFFFD rune（�）UNicode 替代字符来表示。如果 string 中有任何非 UTF8 的数据，应将 string 保存为 byte slice 再进行操作。
+::: 
 ````go
 func main() {
 	data := "A\xfe\x02\xff\x04"
@@ -582,10 +622,12 @@ func main() {
 	}
 }
 ````
-25. range 迭代 map
+### 25. range 迭代 map
+::: tip
 如果你希望以特定的顺序（如按 key 排序）来迭代 map，要注意每次迭代都可能产生不一样的结果。
 
 Go 的运行时是有意打乱迭代顺序的，所以你得到的迭代结果可能不一致。但也并不总会打乱，得到连续相同的 5 个迭代结果也是可能的，如：
+::: 
 ````go
 func main() {
 	m := map[string]int{"one": 1, "two": 2, "three": 3, "four": 4}
@@ -598,8 +640,10 @@ func main() {
 
 
 
-26. switch 中的 fallthrough 语句
+### 26. switch 中的 fallthrough 语句
+::: tip
 switch 语句中的 case 代码块会默认带上 break，但可以使用 fallthrough 来强制执行下一个 case 代码块。
+::: 
 ````go
 func main() {
 	isSpace := func(char byte) bool {
@@ -631,8 +675,10 @@ func main() {
 	fmt.Println(isSpace(' '))	// true
 }
 ````
-27. 自增和自减运算
+### 27. 自增和自减运算
+::: tip
 很多编程语言都自带前置后置的 ++、-- 运算。但 Go 特立独行，去掉了前置操作，同时 ++、— 只作为运算符而非表达式。
+::: 
 ````go
 // 错误示例
 func main() {
@@ -652,8 +698,10 @@ func main() {
 	fmt.Println(data[i])	// 2
 }
 ````
-28. 按位取反
+### 28. 按位取反
+::: tip
 很多编程语言使用 ~ 作为一元按位取反（NOT）操作符，Go 重用 ^ XOR 操作符来按位取反：
+::: 
 ````go
 // 错误的取反操作
 func main() {
@@ -698,8 +746,10 @@ func main() {
 10000010 &^00000010 = 10000000 [A 'AND NOT' B]
 10000010&(^00000010)= 10000000 [A AND (NOT B)]
 ````
-29. 运算符的优先级
+### 29. 运算符的优先级
+::: tip
 除了位清除（bit clear）操作符，Go 也有很多和其他语言一样的位操作符，但优先级另当别论。
+::: 
 ````go
 func main() {
 	fmt.Printf("0x2 & 0x2 + 0x4 -> %#x\n", 0x2&0x2+0x4)	// & 优先 +
@@ -727,8 +777,10 @@ Precedence    Operator
     2             &&
     1             ||
 ````
-30. 不导出的 struct 字段无法被 encode
+### 30. 不导出的 struct 字段无法被 encode
+::: tip
 以小写字母开头的字段成员是无法被外部直接访问的，所以 struct 在进行 json、xml、gob 等格式的 encode 操作时，这些私有字段会被忽略，导出时得到零值：
+::: 
 ````go
 func main() {
 	in := MyData{1, "two"}
@@ -742,8 +794,10 @@ func main() {
 	fmt.Printf("%#v\n", out) 	// main.MyData{One:1, two:""}
 }
 ````
-31. 程序退出时还有 goroutine 在执行
+### 31. 程序退出时还有 goroutine 在执行
+::: tip
 程序默认不等所有 goroutine 都执行完才退出，这点需要特别注意：
+::: 
 ````go
 // 主程序会直接退出
 func main() {
@@ -849,8 +903,10 @@ func doIt(workerID int, ch <-chan interface{}, done <-chan struct{}, wg *sync.Wa
 [0] is done
 all done!
 ````
-32. 向无缓冲的 channel 发送数据，只要 receiver 准备好了就会立刻返回
+### 32. 向无缓冲的 channel 发送数据，只要 receiver 准备好了就会立刻返回
+::: tip
 只有在数据被 receiver 处理时，sender 才会阻塞。因运行环境而异，在 sender 发送完数据后，receiver 的 goroutine 可能没有足够的时间处理下一个数据。如：
+::: 
  ````go
 func main() {
 	ch := make(chan string)
@@ -874,12 +930,14 @@ Processed: cmd.2
 
 
 
-33. 向已关闭的 channel 发送数据会造成 panic
+### 33. 向已关闭的 channel 发送数据会造成 panic
+::: tip
 从已关闭的 channel 接收数据是安全的：
 
 接收状态值 ok 是 false 时表明 channel 中已没有数据可以接收了。类似的，从有缓冲的 channel 中接收数据，缓存的数据获取完再没有数据可取时，状态值也是 false
 
 向已关闭的 channel 中发送数据会造成 panic：
+::: 
  ````go
 func main() {
 	ch := make(chan int)
@@ -935,8 +993,10 @@ Result:  6
 1 Exiting
 ````
 
-34. 使用了值为 nil 的 channel
+### 34. 使用了值为 nil 的 channel
+::: tip
 在一个值为 nil 的 channel 上发送和接收数据将永久阻塞：
+::: 
  ````go
 func main() {
 	var ch chan int // 未初始化，值为 nil
@@ -997,10 +1057,12 @@ Result:  2
 ++++++++++
 --------
 ````
-34. 若函数 receiver 传参是传值方式，则无法修改参数的原有值
+### 35. 若函数 receiver 传参是传值方式，则无法修改参数的原有值
+::: tip
 方法 receiver 的参数与一般函数的参数类似：如果声明为值，那方法体得到的是一份参数的值拷贝，此时对参数的任何修改都不会对原有值产生影响。
 
 除非 receiver 参数是 map 或 slice 类型的变量，并且是以指针方式更新 map 中的字段、slice 中的元素的，才会更新原有值:
+::: 
  ````go
 type data struct {
 	num   int
@@ -1038,9 +1100,11 @@ num=7  key=key1  items=map[]
 num=7  key=valueFunc.key  items=map[valueFunc:true]
 ````
 
-中级篇：35-50
-35. 关闭 HTTP 的响应体
+## 中级篇：35-50
+### 35. 关闭 HTTP 的响应体
+::: tip
 使用 HTTP 标准库发起请求、获取响应时，即使你不从响应中读取任何数据或响应为空，都需要手动关闭响应体。新手很容易忘记手动关闭，或者写在了错误的位置：
+::: 
  ````go
 // 请求失败造成 panic
 func main() {
@@ -1121,11 +1185,13 @@ _, err = io.Copy(ioutil.Discard, resp.Body)	// 手动丢弃读取完毕的数据
 ````java
 json.NewDecoder(resp.Body).Decode(&data) 
 ```` 
-36. 关闭 HTTP 连接
+### 36. 关闭 HTTP 连接
+::: tip
 一些支持 HTTP1.1 或 HTTP1.0 配置了 connection: keep-alive 选项的服务器会保持一段时间的长连接。但标准库 "net/http" 的连接默认只在服务器主动要求关闭时才断开，所以你的程序可能会消耗完 socket 描述符。解决办法有 2 个，请求结束后：
 
 直接设置请求变量的 Close 字段值为 true，每次请求结束后就会主动关闭连接。
 设置 Header 请求头部选项 Connection: close，然后服务器返回的响应头部也会有这个选项，此时 HTTP 标准库会主动断开连接。
+::: 
 ````go
 // 主动关闭连接
 func main() {
@@ -1173,8 +1239,10 @@ func main() {
 
 若你的程序要连接大量的服务器，且每台服务器只请求一两次，那收到请求后直接关闭连接。或增加最大文件打开数 fs.file-max 的值。
 
-37. 将 JSON 中的数字解码为 interface 类型
+### 37. 将 JSON 中的数字解码为 interface 类型
+::: tip
 在 encode/decode JSON 数据时，Go 默认会将数值当做 float64 处理，比如下边的代码会造成 panic：
+::: 
 ````go
 func main() {
 	var data = []byte(`{"status": 200}`)
@@ -1297,10 +1365,12 @@ func main() {
 		fmt.Printf("[%v] result => %+v\n", idx, result)
 	}
 }
-​````
+````
 
-38. struct、array、slice 和 map 的值比较
+### 38. struct、array、slice 和 map 的值比较
+::: tip
 可以使用相等运算符 == 来比较结构体变量，前提是两个结构体的成员都是可比较的类型：
+::: 
 ````go
 type data struct {
 	num     int
@@ -1403,8 +1473,10 @@ func main() {
     fmt.Println("b1 == b2: ", bytes.Equal(b1, b2))	// true
 }
 ````
-39. 从 panic 中恢复
+### 39. 从 panic 中恢复
+::: tip
 在一个 defer 延迟执行的函数中调用 recover() ，它便能捕捉 / 中断 panic
+::: 
 ````go
 // 错误的 recover 调用示例
 func main() {
@@ -1440,8 +1512,10 @@ func doRecover() {
 ````go
 recobered: panic: not good
 ````
-40. 在 range 迭代 slice、array、map 时通过更新引用来更新元素
+### 40. 在 range 迭代 slice、array、map 时通过更新引用来更新元素
+::: tip
 在 range 迭代中，得到的值其实是元素的一份值拷贝，更新拷贝并不会更改原来的元素，即是拷贝的地址并不是原有元素的地址：
+::: 
 ````go
 func main() {
 	data := []int{1, 2, 3}
@@ -1471,8 +1545,10 @@ func main() {
 	fmt.Println(data[0], data[1], data[2])	// &{10} &{20} &{30}
 }
 ````
-41. slice 中隐藏的数据
+### 41. slice 中隐藏的数据
+::: tip
 从 slice 中重新切出新 slice 时，新 slice 会引用原 slice 的底层数组。如果跳了这个坑，程序可能会分配大量的临时 slice 来指向原底层数组的部分数据，将导致难以预料的内存使用。
+::: 
 ````go
 func get() []byte {
 	raw := make([]byte, 10000)
@@ -1501,10 +1577,12 @@ func main() {
 	fmt.Println(len(data), cap(data), &data[0])	// 3 3 0xc4200160b8
 }
 ````
-42. Slice 中数据的误用
+### 42. Slice 中数据的误用
+::: tip
 举个简单例子，重写文件路径（存储在 slice 中）
 
 分割路径来指向每个不同级的目录，修改第一个目录名再重组子目录名，创建新路径：
+::: 
 ````go
 // 错误使用 slice 的拼接示例
 func main() {
@@ -1551,10 +1629,12 @@ func main() {
 ````
 第 6 行中第三个参数是用来控制 dir1 的新容量，再往 dir1 中 append 超额元素时，将分配新的 buffer 来保存。而不是覆盖原来的 path 底层数组
 
-43. 旧 slice
+### 43. 旧 slice
+::: tip
 当你从一个已存在的 slice 创建新 slice 时，二者的数据指向相同的底层数组。如果你的程序使用这个特性，那需要注意 "旧"（stale） slice 问题。
 
 某些情况下，向一个 slice 中追加元素而它指向的底层数组容量不足时，将会重新分配一个新数组来存储数据。而其他 slice 还指向原来的旧底层数组。
+::: 
 ````go
 // 超过容量将重新分配数组来拷贝值、重新存储
 func main() {
@@ -1580,8 +1660,10 @@ func main() {
 	fmt.Println(s2)		// [32 33 14]
 }
 ````
-44. 类型声明与方法
+### 44. 类型声明与方法
+::: tip
 从一个现有的非 interface 类型创建新类型时，并不会继承原有的方法：
+::: 
 ````go
 // 定义 Mutex 的自定义类型
 type myMutex sync.Mutex
@@ -1617,8 +1699,10 @@ func main() {
 	locker.Unlock()
 }
 ````
-45. 跳出 for-switch 和 for-select 代码块
+### 45. 跳出 for-switch 和 for-select 代码块
+::: tip
 没有指定标签的 break 只会跳出 switch/select 语句，若不能使用 return 语句跳出的话，可为 break 跳出标签指定的代码块：
+::: 
 ````go
 // break 配合 label 跳出指定代码块
 func main() {
@@ -1636,8 +1720,10 @@ loop:
 ````
 goto 虽然也能跳转到指定位置，但依旧会再次进入 for-switch，死循环。
 
-46. for 语句中的迭代变量与闭包函数
+### 46. for 语句中的迭代变量与闭包函数
+::: tip
 for 语句中的迭代变量在每次迭代中都会重用，即 for 中创建的闭包函数接收到的参数始终是同一个变量，在 goroutine 开始执行时都会得到同一个迭代值：
+::: 
 ````go
 func main() {
 	data := []string{"one", "two", "three"}
@@ -1731,8 +1817,10 @@ func main() {
 	// 输出 one two three
 }
 ````
-47. defer 函数的参数值
+### 47. defer 函数的参数值
+::: tip
 对 defer 延迟执行的函数，它的参数会在声明时候就会求出具体值，而不是在执行时才求值：
+::: 
 ````go
 // 在 defer 函数中参数会提前求值
 func main() {
@@ -1744,10 +1832,12 @@ func main() {
 ````go
 result: 2
 ````
-48. defer 函数的执行时机
+### 48. defer 函数的执行时机
+::: tip
 对 defer 延迟执行的函数，会在调用它的函数结束时执行，而不是在调用它的语句块结束时执行，注意区分开。
 
 比如在一个长时间执行的函数里，内部 for 循环中使用 defer 来清理每次迭代产生的资源调用，就会出现问题：
+::: 
 ````go
 // 命令行参数指定目录名
 // 遍历读取目录下的文件
@@ -1822,8 +1912,10 @@ func main() {
 ````
 当然你也可以去掉 defer，在文件资源使用完毕后，直接调用 f.Close() 来关闭。
 
-49. 失败的类型断言
+### 49. 失败的类型断言
+::: tip
 在类型断言语句中，断言失败则会返回目标类型的“零值”，断言变量与原来变量混用可能出现异常情况：
+::: 
 ````go
 // 错误示例
 func main() {
@@ -1851,8 +1943,10 @@ func main() {
 	}
 }
 ````
-50. 阻塞的 gorutinue 与资源泄露
+### 50. 阻塞的 gorutinue 与资源泄露
+::: tip
 在 2012 年 Google I/O 大会上，Rob Pike 的 Go Concurrency Patterns 演讲讨论 Go 的几种基本并发模式，如 完整代码 中从数据集中获取第一条数据的函数：
+::: 
 ````go
 func First(query string, replicas []Search) Result {
 	c := make(chan Result)
@@ -1921,10 +2015,12 @@ func First(query string, replicas ...Search) Result {
 Rob Pike 为了简化演示，没有提及演讲代码中存在的这些问题。不过对于新手来说，可能会不加思考直接使用。
 
 高级篇：51-57
-51. 使用指针作为方法的 receiver
+### 51. 使用指针作为方法的 receiver
+::: tip
 只要值是可寻址的，就可以在值上直接调用指针方法。即是对一个方法，它的 receiver 是指针就足矣。
 
 但不是所有值都是可寻址的，比如 map 类型的元素、通过 interface 引用的变量：
+::: 
 ````go
 type data struct {
 	name string
@@ -1958,8 +2054,10 @@ data does not implement printer (print method has pointer receiver)
 
 cannot call pointer method on m["x"] cannot take the address of m["x"]
 ````
-52. 更新 map 字段的值
+### 52. 更新 map 字段的值
+::: tip
 如果 map 一个字段的值是 struct 类型，则无法直接更新该 struct 的单个字段：
+::: 
 ````go
 // 无法直接更新 struct 的字段值
 type data struct {
@@ -2030,10 +2128,12 @@ func main() {
 ````go
 panic: runtime error: invalid memory address or nil pointer dereference
 ````
-53. nil interface 和 nil interface 值
+### 53. nil interface 和 nil interface 值
+::: tip
 虽然 interface 看起来像指针类型，但它不是。interface 类型的变量只有在类型和值均为 nil 时才为 nil
 
 如果你的 interface 变量的值是跟随其他变量变化的（雾），与 nil 比较相等时小心：
+::: 
 ````go
 func main() {
 	var data *byte
@@ -2087,7 +2187,8 @@ func main() {
 	}
 }
 ````
-54. 堆栈变量
+### 54. 堆栈变量
+::: tip
 你并不总是清楚你的变量是分配到了堆还是栈。
 
 在 C++ 中使用 new 创建的变量总是分配到堆内存上的，但在 Go 中即使使用 new()、make() 来创建变量，变量为内存分配位置依旧归 Go 编译器管。
@@ -2104,6 +2205,7 @@ Go 1.5 版本将可执行上下文的数量设置为 runtime.NumCPU() 返回的�
 误区：GOMAXPROCS 表示执行 goroutine 的 CPU 核心数，参考文档
 
 GOMAXPROCS 的值是可以超过 CPU 的实际数量的，在 1.5 中最大为 256
+::: 
 ````go
 func main() {
 	fmt.Println(runtime.GOMAXPROCS(-1))	// 4
@@ -2114,8 +2216,10 @@ func main() {
 	fmt.Println(runtime.GOMAXPROCS(-1))	// Go 1.9.2 // 300
 }
 ````
-56. 读写操作的重新排序
+### 56. 读写操作的重新排序
+::: tip
 Go 可能会重排一些操作的执行顺序，可以保证在一个 goroutine 中操作是顺序执行的，但不保证多 goroutine 的执行顺序：
+::: 
 ````go
 var _ = runtime.GOMAXPROCS(3)
  

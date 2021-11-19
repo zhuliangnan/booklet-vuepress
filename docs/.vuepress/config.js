@@ -56,9 +56,11 @@ module.exports = ctx => ({
                     '/guide/': getGuideSidebar('指南', '深入'),
                     '/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
                     '/theme/': getThemeSidebar('主题', '介绍'),
-                    '/redis/': getRedisSidebar('Redis从底层到原理', '介绍', 'Redis从实战到入土'),
+                    '/redis/': getRedisSidebar('Redis从底层到原理', '目录', 'Redis从实战到入土'),
                     '/golang/': getGolangSidebar('Golang入门教程', '介绍'),
-                    '/mianshi/': getMianShiSidebar('面试知识点总结')
+                    '/mianshi/': getMianShiSidebar('面试知识点总结'),
+                    '/docker/': getDockerSidebar('Docker操作手册', '介绍'),
+                    '/mysql/': getMysqlSidebar('Mysql基础必知', '目录', 'Mysql实战必会')
                 }
             }
         }
@@ -237,6 +239,27 @@ function getThemeSidebar(groupA, introductionA) {
     ]
 }
 
+function getMysqlSidebar(groupA, introductionA, groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ['', introductionA],
+                '基础架构：一条SQL查询语句是如何执行的？'
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                '“万金油”的String，为什么不好用了？'
+            ]
+        }
+    ]
+}
+
 function getRedisSidebar(groupA, introductionA, groupB) {
     return [
         {
@@ -305,4 +328,24 @@ function getMianShiSidebar(groupA) {
         }
     ]
 }
+
+
+function getDockerSidebar(groupA, introductionA) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ['', introductionA],
+                'Docker基础命令',
+                'Docker部署jar包运行',
+                'Docker配置Redis自启动'
+            ]
+        }
+    ]
+}
+
+
+
 

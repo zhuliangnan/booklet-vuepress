@@ -57,6 +57,7 @@
     "vuepress-plugin-table-of-contents": "^1.1.7"
   },
   "dependencies": {
+    "@vuepress/core": "^1.8.2",
     "vuepress-plugin-gitalk-maker": "^0.1.0",
     "vuepress-plugin-global-toc": "^1.1.0",
     "vuepress-plugin-music-bar": "^3.7.6",

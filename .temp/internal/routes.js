@@ -4,7 +4,7 @@
 
 import { injectComponentOption, ensureAsyncComponentsLoaded } from '@app/util'
 import rootMixins from '@internal/root-mixins'
-import GlobalLayout from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
+import GlobalLayout from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
 
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
@@ -15,6 +15,30 @@ export const routes = [
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-29d16f94").then(next)
     },
+  },
+  {
+    name: "v-c66ccb58",
+    path: "/api/node.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-c66ccb58").then(next)
+    },
+  },
+  {
+    name: "v-971ae0c6",
+    path: "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-971ae0c6").then(next)
+    },
+  },
+  {
+    path: "/docker/Docker基础命令.html",
+    redirect: "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html"
+  },
+  {
+    path: "/docker/Docker基础命令.html",
+    redirect: "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html"
   },
   {
     name: "v-09f7d2ca",
@@ -29,12 +53,36 @@ export const routes = [
     redirect: "/config/"
   },
   {
-    name: "v-c66ccb58",
-    path: "/api/node.html",
+    name: "v-2fb2e884",
+    path: "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-c66ccb58").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-2fb2e884").then(next)
     },
+  },
+  {
+    path: "/docker-note/Docker时间与linux不一致.html",
+    redirect: "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html"
+  },
+  {
+    path: "/docker-note/Docker时间与linux不一致.html",
+    redirect: "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html"
+  },
+  {
+    name: "v-6610a23c",
+    path: "/docker/Docker%E9%83%A8%E7%BD%B2jar%E5%8C%85%E8%BF%90%E8%A1%8C.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6610a23c").then(next)
+    },
+  },
+  {
+    path: "/docker/Docker部署jar包运行.html",
+    redirect: "/docker/Docker%E9%83%A8%E7%BD%B2jar%E5%8C%85%E8%BF%90%E8%A1%8C.html"
+  },
+  {
+    path: "/docker/Docker部署jar包运行.html",
+    redirect: "/docker/Docker%E9%83%A8%E7%BD%B2jar%E5%8C%85%E8%BF%90%E8%A1%8C.html"
   },
   {
     name: "v-eae7aa80",
@@ -53,6 +101,34 @@ export const routes = [
     redirect: "/camera_color/%E5%90%8E%E6%9C%9F%E8%B0%83%E8%89%B2.html"
   },
   {
+    name: "v-bb9db62c",
+    path: "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-bb9db62c").then(next)
+    },
+  },
+  {
+    path: "/docker/Docker配置Redis自启动.html",
+    redirect: "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html"
+  },
+  {
+    path: "/docker/Docker配置Redis自启动.html",
+    redirect: "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html"
+  },
+  {
+    name: "v-4b48924a",
+    path: "/docker/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-4b48924a").then(next)
+    },
+  },
+  {
+    path: "/docker/index.html",
+    redirect: "/docker/"
+  },
+  {
     name: "v-0e1ddb52",
     path: "/faq/",
     component: GlobalLayout,
@@ -65,20 +141,52 @@ export const routes = [
     redirect: "/faq/"
   },
   {
-    name: "v-4d67ca2c",
-    path: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html",
+    name: "v-f62ef07a",
+    path: "/flowable/Flowable%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-4d67ca2c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-f62ef07a").then(next)
     },
   },
   {
-    path: "/golang-note/GoLand 控制台输出中文乱码的解决方案.html",
-    redirect: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"
+    path: "/flowable/Flowable工作流快速入门.html",
+    redirect: "/flowable/Flowable%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.html"
   },
   {
-    path: "/golang-note/GoLand 控制台输出中文乱码的解决方案.html",
-    redirect: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"
+    path: "/flowable/Flowable工作流快速入门.html",
+    redirect: "/flowable/Flowable%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.html"
+  },
+  {
+    name: "v-052151d2",
+    path: "/front/webpack-dev-server%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E6%88%96%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E5%8F%AF%E8%BF%90%E8%A1%8C%E7%9A%84%E7%A8%8B%E5%BA%8F.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-052151d2").then(next)
+    },
+  },
+  {
+    path: "/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html",
+    redirect: "/front/webpack-dev-server%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E6%88%96%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E5%8F%AF%E8%BF%90%E8%A1%8C%E7%9A%84%E7%A8%8B%E5%BA%8F.html"
+  },
+  {
+    path: "/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html",
+    redirect: "/front/webpack-dev-server%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E6%88%96%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E5%8F%AF%E8%BF%90%E8%A1%8C%E7%9A%84%E7%A8%8B%E5%BA%8F.html"
+  },
+  {
+    name: "v-1cb07d73",
+    path: "/git/git-clone-10054%E6%88%96%E8%80%85443%E9%97%AE%E9%A2%98.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1cb07d73").then(next)
+    },
+  },
+  {
+    path: "/git/git-clone-10054或者443问题.html",
+    redirect: "/git/git-clone-10054%E6%88%96%E8%80%85443%E9%97%AE%E9%A2%98.html"
+  },
+  {
+    path: "/git/git-clone-10054或者443问题.html",
+    redirect: "/git/git-clone-10054%E6%88%96%E8%80%85443%E9%97%AE%E9%A2%98.html"
   },
   {
     name: "v-fefb7a04",
@@ -95,6 +203,22 @@ export const routes = [
   {
     path: "/golang-note/GoLand 解决无法导入自定义包的问题.html",
     redirect: "/golang-note/GoLand%20%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.html"
+  },
+  {
+    name: "v-4d67ca2c",
+    path: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-4d67ca2c").then(next)
+    },
+  },
+  {
+    path: "/golang-note/GoLand 控制台输出中文乱码的解决方案.html",
+    redirect: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"
+  },
+  {
+    path: "/golang-note/GoLand 控制台输出中文乱码的解决方案.html",
+    redirect: "/golang-note/GoLand%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"
   },
   {
     name: "v-19a6b802",
@@ -145,6 +269,22 @@ export const routes = [
     redirect: "/golang-note/Golang%20%E6%96%B0%E6%89%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%B8%A9%E7%9A%84%2050+%20%E4%B8%AA%E5%9D%91.html"
   },
   {
+    name: "v-5ed98bc6",
+    path: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-5ed98bc6").then(next)
+    },
+  },
+  {
+    path: "/golang/Go的接口及Go中标准接口库,类型断言的使用.html",
+    redirect: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html"
+  },
+  {
+    path: "/golang/Go的接口及Go中标准接口库,类型断言的使用.html",
+    redirect: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html"
+  },
+  {
     name: "v-4715584e",
     path: "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html",
     component: GlobalLayout,
@@ -161,20 +301,16 @@ export const routes = [
     redirect: "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html"
   },
   {
-    name: "v-5ed98bc6",
-    path: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
+    name: "v-0eb467ca",
+    path: "/golang/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5ed98bc6").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-0eb467ca").then(next)
     },
   },
   {
-    path: "/golang/Go的接口及Go中标准接口库,类型断言的使用.html",
-    redirect: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html"
-  },
-  {
-    path: "/golang/Go的接口及Go中标准接口库,类型断言的使用.html",
-    redirect: "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html"
+    path: "/golang/index.html",
+    redirect: "/golang/"
   },
   {
     name: "v-1642200c",
@@ -193,32 +329,20 @@ export const routes = [
     redirect: "/golang/Map%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html"
   },
   {
-    name: "v-0eb467ca",
-    path: "/golang/",
+    name: "v-0ceb0a55",
+    path: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-0eb467ca").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-0ceb0a55").then(next)
     },
   },
   {
-    path: "/golang/index.html",
-    redirect: "/golang/"
+    path: "/golang/range的使用.html",
+    redirect: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html"
   },
   {
-    name: "v-117ba272",
-    path: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-117ba272").then(next)
-    },
-  },
-  {
-    path: "/golang/函数深入分析.html",
-    redirect: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html"
-  },
-  {
-    path: "/golang/函数深入分析.html",
-    redirect: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html"
+    path: "/golang/range的使用.html",
+    redirect: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html"
   },
   {
     name: "v-6eae755e",
@@ -237,36 +361,20 @@ export const routes = [
     redirect: "/golang/%E5%B8%B8%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html"
   },
   {
-    name: "v-0ceb0a55",
-    path: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html",
+    name: "v-117ba272",
+    path: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-0ceb0a55").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-117ba272").then(next)
     },
   },
   {
-    path: "/golang/range的使用.html",
-    redirect: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html"
+    path: "/golang/函数深入分析.html",
+    redirect: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html"
   },
   {
-    path: "/golang/range的使用.html",
-    redirect: "/golang/range%E7%9A%84%E4%BD%BF%E7%94%A8.html"
-  },
-  {
-    name: "v-19a2b555",
-    path: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-19a2b555").then(next)
-    },
-  },
-  {
-    path: "/golang/浅析Goroutines和Channels.html",
-    redirect: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html"
-  },
-  {
-    path: "/golang/浅析Goroutines和Channels.html",
-    redirect: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html"
+    path: "/golang/函数深入分析.html",
+    redirect: "/golang/%E5%87%BD%E6%95%B0%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90.html"
   },
   {
     name: "v-b284dee2",
@@ -301,22 +409,6 @@ export const routes = [
     redirect: "/golang/%E6%9D%A1%E4%BB%B6%20%E9%80%89%E6%8B%A9%20%E5%BE%AA%E7%8E%AF.html"
   },
   {
-    name: "v-7eb0148b",
-    path: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7eb0148b").then(next)
-    },
-  },
-  {
-    path: "/golang/结构体深入解析.html",
-    redirect: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html"
-  },
-  {
-    path: "/golang/结构体深入解析.html",
-    redirect: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html"
-  },
-  {
     name: "v-4d76208b",
     path: "/guide/",
     component: GlobalLayout,
@@ -337,19 +429,27 @@ export const routes = [
     },
   },
   {
+    name: "v-7eb0148b",
+    path: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7eb0148b").then(next)
+    },
+  },
+  {
+    path: "/golang/结构体深入解析.html",
+    redirect: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html"
+  },
+  {
+    path: "/golang/结构体深入解析.html",
+    redirect: "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html"
+  },
+  {
     name: "v-bd2252cc",
     path: "/guide/basic-config.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-bd2252cc").then(next)
-    },
-  },
-  {
-    name: "v-b99e7fd4",
-    path: "/guide/directory-structure.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-b99e7fd4").then(next)
     },
   },
   {
@@ -361,19 +461,43 @@ export const routes = [
     },
   },
   {
+    name: "v-b99e7fd4",
+    path: "/guide/directory-structure.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-b99e7fd4").then(next)
+    },
+  },
+  {
+    name: "v-7c5d6581",
+    path: "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7c5d6581").then(next)
+    },
+  },
+  {
+    path: "/gradle-note/Idea实现gradle打jar包.html",
+    redirect: "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html"
+  },
+  {
+    path: "/gradle-note/Idea实现gradle打jar包.html",
+    redirect: "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html"
+  },
+  {
+    name: "v-00aef094",
+    path: "/guide/frontmatter.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-00aef094").then(next)
+    },
+  },
+  {
     name: "v-0c171076",
     path: "/guide/getting-started.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-0c171076").then(next)
-    },
-  },
-  {
-    name: "v-2667aa40",
-    path: "/guide/i18n.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2667aa40").then(next)
     },
   },
   {
@@ -393,14 +517,6 @@ export const routes = [
     },
   },
   {
-    name: "v-00aef094",
-    path: "/guide/frontmatter.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-00aef094").then(next)
-    },
-  },
-  {
     name: "v-004e8b84",
     path: "/guide/markdown.html",
     component: GlobalLayout,
@@ -409,11 +525,43 @@ export const routes = [
     },
   },
   {
+    name: "v-2667aa40",
+    path: "/guide/i18n.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-2667aa40").then(next)
+    },
+  },
+  {
+    name: "v-19a2b555",
+    path: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-19a2b555").then(next)
+    },
+  },
+  {
+    path: "/golang/浅析Goroutines和Channels.html",
+    redirect: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html"
+  },
+  {
+    path: "/golang/浅析Goroutines和Channels.html",
+    redirect: "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html"
+  },
+  {
     name: "v-294e770c",
     path: "/guide/permalinks.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-294e770c").then(next)
+    },
+  },
+  {
+    name: "v-e34b7f54",
+    path: "/guide/using-vue.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-e34b7f54").then(next)
     },
   },
   {
@@ -427,30 +575,6 @@ export const routes = [
   {
     path: "/index.html",
     redirect: "/"
-  },
-  {
-    name: "v-e34b7f54",
-    path: "/guide/using-vue.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-e34b7f54").then(next)
-    },
-  },
-  {
-    name: "v-53710d65",
-    path: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-53710d65").then(next)
-    },
-  },
-  {
-    path: "/java-note/Springboot引用外部jar包并打包成jar程序运行.html",
-    redirect: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html"
-  },
-  {
-    path: "/java-note/Springboot引用外部jar包并打包成jar程序运行.html",
-    redirect: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html"
   },
   {
     name: "v-656b10bf",
@@ -469,6 +593,22 @@ export const routes = [
     redirect: "/java-note/Error-java%E6%97%A0%E6%95%88%E7%9A%84%E6%BA%90%E5%8F%91%E8%A1%8C%E7%89%8811%E9%94%99%E8%AF%AF.html"
   },
   {
+    name: "v-53710d65",
+    path: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-53710d65").then(next)
+    },
+  },
+  {
+    path: "/java-note/Springboot引用外部jar包并打包成jar程序运行.html",
+    redirect: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html"
+  },
+  {
+    path: "/java-note/Springboot引用外部jar包并打包成jar程序运行.html",
+    redirect: "/java-note/Springboot%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8jar%E5%8C%85%E5%B9%B6%E6%89%93%E5%8C%85%E6%88%90jar%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.html"
+  },
+  {
     name: "v-68fb2ef7",
     path: "/java-note/fastjson%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
     component: GlobalLayout,
@@ -483,6 +623,22 @@ export const routes = [
   {
     path: "/java-note/fastjson基本使用.html",
     redirect: "/java-note/fastjson%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html"
+  },
+  {
+    name: "v-7a302b93",
+    path: "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7a302b93").then(next)
+    },
+  },
+  {
+    path: "/java-note/spring项目中手动获取bean.html",
+    redirect: "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html"
+  },
+  {
+    path: "/java-note/spring项目中手动获取bean.html",
+    redirect: "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html"
   },
   {
     name: "v-02228479",
@@ -517,36 +673,20 @@ export const routes = [
     redirect: "/linux/Linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5.html"
   },
   {
-    name: "v-4175c322",
-    path: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+    name: "v-83130864",
+    path: "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-4175c322").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-83130864").then(next)
     },
   },
   {
-    path: "/linux/deploy/redis环境安装.html",
-    redirect: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+    path: "/linux/deploy/KafKa安装教程.html",
+    redirect: "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html"
   },
   {
-    path: "/linux/deploy/redis环境安装.html",
-    redirect: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
-  },
-  {
-    name: "v-ceb963b4",
-    path: "/mianshi/MySql%E7%AF%87.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-ceb963b4").then(next)
-    },
-  },
-  {
-    path: "/mianshi/MySql篇.html",
-    redirect: "/mianshi/MySql%E7%AF%87.html"
-  },
-  {
-    path: "/mianshi/MySql篇.html",
-    redirect: "/mianshi/MySql%E7%AF%87.html"
+    path: "/linux/deploy/KafKa安装教程.html",
+    redirect: "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html"
   },
   {
     name: "v-7a661752",
@@ -563,6 +703,54 @@ export const routes = [
   {
     path: "/linux/deploy/java环境安装.html",
     redirect: "/linux/deploy/java%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+  },
+  {
+    name: "v-4175c322",
+    path: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-4175c322").then(next)
+    },
+  },
+  {
+    path: "/linux/deploy/redis环境安装.html",
+    redirect: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+  },
+  {
+    path: "/linux/deploy/redis环境安装.html",
+    redirect: "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+  },
+  {
+    name: "v-a1e53f00",
+    path: "/linux/deploy/zookeeper%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-a1e53f00").then(next)
+    },
+  },
+  {
+    path: "/linux/deploy/zookeeper环境安装.html",
+    redirect: "/linux/deploy/zookeeper%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+  },
+  {
+    path: "/linux/deploy/zookeeper环境安装.html",
+    redirect: "/linux/deploy/zookeeper%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html"
+  },
+  {
+    name: "v-ceb963b4",
+    path: "/mianshi/MySql%E7%AF%87.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-ceb963b4").then(next)
+    },
+  },
+  {
+    path: "/mianshi/MySql篇.html",
+    redirect: "/mianshi/MySql%E7%AF%87.html"
+  },
+  {
+    path: "/mianshi/MySql篇.html",
+    redirect: "/mianshi/MySql%E7%AF%87.html"
   },
   {
     name: "v-300887f6",
@@ -597,28 +785,48 @@ export const routes = [
     },
   },
   {
-    name: "v-2303c03a",
-    path: "/mysql-note/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E6%87%82MySQL%20%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E5%8F%8A%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98.html",
+    name: "v-6477dff1",
+    path: "/mysql-note/MySQL%E7%B4%A2%E5%BC%95%E5%8F%8A%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2303c03a").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-6477dff1").then(next)
     },
   },
   {
-    path: "/mysql-note/一篇文章搞懂MySQL 索引底层及优化实战.html",
-    redirect: "/mysql-note/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E6%87%82MySQL%20%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E5%8F%8A%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98.html"
+    path: "/mysql-note/MySQL索引及实际应用.html",
+    redirect: "/mysql-note/MySQL%E7%B4%A2%E5%BC%95%E5%8F%8A%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8.html"
   },
   {
-    path: "/mysql-note/一篇文章搞懂MySQL 索引底层及优化实战.html",
-    redirect: "/mysql-note/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E6%87%82MySQL%20%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E5%8F%8A%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98.html"
+    path: "/mysql-note/MySQL索引及实际应用.html",
+    redirect: "/mysql-note/MySQL%E7%B4%A2%E5%BC%95%E5%8F%8A%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8.html"
   },
   {
-    name: "v-d5f66a54",
-    path: "/notes/using-a-theme.html",
+    name: "v-e125ea82",
+    path: "/mysql/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-d5f66a54").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-e125ea82").then(next)
     },
+  },
+  {
+    path: "/mysql/index.html",
+    redirect: "/mysql/"
+  },
+  {
+    name: "v-cda21bb6",
+    path: "/mysql/%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E6%9D%A1SQL%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84%EF%BC%9F.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-cda21bb6").then(next)
+    },
+  },
+  {
+    path: "/mysql/基础架构：一条SQL查询语句是如何执行的？.html",
+    redirect: "/mysql/%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E6%9D%A1SQL%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84%EF%BC%9F.html"
+  },
+  {
+    path: "/mysql/基础架构：一条SQL查询语句是如何执行的？.html",
+    redirect: "/mysql/%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E6%9D%A1SQL%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84%EF%BC%9F.html"
   },
   {
     name: "v-3cc3d441",
@@ -633,12 +841,36 @@ export const routes = [
     redirect: "/notes/"
   },
   {
+    name: "v-d5f66a54",
+    path: "/notes/using-a-theme.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d5f66a54").then(next)
+    },
+  },
+  {
     name: "v-2347e256",
     path: "/notes/writing-a-theme.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-2347e256").then(next)
     },
+  },
+  {
+    name: "v-3f8ab8f5",
+    path: "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-3f8ab8f5").then(next)
+    },
+  },
+  {
+    path: "/oracle-note/ORA-01756报错的解决方案中文编码错误.html",
+    redirect: "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html"
+  },
+  {
+    path: "/oracle-note/ORA-01756报错的解决方案中文编码错误.html",
+    redirect: "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html"
   },
   {
     name: "v-3aeebd98",
@@ -709,19 +941,19 @@ export const routes = [
     },
   },
   {
-    name: "v-15f167c3",
-    path: "/plugin/official/plugin-last-updated.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-15f167c3").then(next)
-    },
-  },
-  {
     name: "v-42e31883",
     path: "/plugin/official/plugin-google-analytics.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-42e31883").then(next)
+    },
+  },
+  {
+    name: "v-15f167c3",
+    path: "/plugin/official/plugin-last-updated.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-15f167c3").then(next)
     },
   },
   {
@@ -749,22 +981,6 @@ export const routes = [
     },
   },
   {
-    name: "v-88e6897a",
-    path: "/plugin/official/plugin-search.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-88e6897a").then(next)
-    },
-  },
-  {
-    name: "v-1946c1e0",
-    path: "/plugin/option-api.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1946c1e0").then(next)
-    },
-  },
-  {
     name: "v-49b0f55a",
     path: "/plugin/official/plugin-register-components.html",
     component: GlobalLayout,
@@ -773,11 +989,27 @@ export const routes = [
     },
   },
   {
+    name: "v-88e6897a",
+    path: "/plugin/official/plugin-search.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-88e6897a").then(next)
+    },
+  },
+  {
     name: "v-741a7960",
     path: "/plugin/using-a-plugin.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-741a7960").then(next)
+    },
+  },
+  {
+    name: "v-1946c1e0",
+    path: "/plugin/option-api.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1946c1e0").then(next)
     },
   },
   {
@@ -865,22 +1097,6 @@ export const routes = [
     redirect: "/redis/Redis%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%BB%B4%E5%BA%A6%EF%BC%8C%E4%B8%89%E5%A4%A7%E4%B8%BB%E7%BA%BF.html"
   },
   {
-    name: "v-5260bf8e",
-    path: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5260bf8e").then(next)
-    },
-  },
-  {
-    path: "/redis/other/Redis操作速查手册.html",
-    redirect: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html"
-  },
-  {
-    path: "/redis/other/Redis操作速查手册.html",
-    redirect: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html"
-  },
-  {
     name: "v-b54865b4",
     path: "/redis/%E2%80%9C%E4%B8%87%E9%87%91%E6%B2%B9%E2%80%9D%E7%9A%84String%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%A5%BD%E7%94%A8%E4%BA%86%EF%BC%9F.html",
     component: GlobalLayout,
@@ -897,20 +1113,20 @@ export const routes = [
     redirect: "/redis/%E2%80%9C%E4%B8%87%E9%87%91%E6%B2%B9%E2%80%9D%E7%9A%84String%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%A5%BD%E7%94%A8%E4%BA%86%EF%BC%9F.html"
   },
   {
-    name: "v-369670c2",
-    path: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
+    name: "v-5260bf8e",
+    path: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-369670c2").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-5260bf8e").then(next)
     },
   },
   {
-    path: "/redis/主从机制：主从库如何实现数据一致？.html",
-    redirect: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html"
+    path: "/redis/other/Redis操作速查手册.html",
+    redirect: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html"
   },
   {
-    path: "/redis/主从机制：主从库如何实现数据一致？.html",
-    redirect: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html"
+    path: "/redis/other/Redis操作速查手册.html",
+    redirect: "/redis/other/Redis%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html"
   },
   {
     name: "v-745c37de",
@@ -929,20 +1145,20 @@ export const routes = [
     redirect: "/redis/%E5%88%87%E7%89%87%E9%9B%86%E7%BE%A4%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%A2%9E%E5%A4%9A%E4%BA%86%EF%BC%8C%E6%98%AF%E8%AF%A5%E5%8A%A0%E5%86%85%E5%AD%98%E8%BF%98%E6%98%AF%E5%8A%A0%E5%AE%9E%E4%BE%8B%EF%BC%9F.html"
   },
   {
-    name: "v-88fe6fe2",
-    path: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
+    name: "v-369670c2",
+    path: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-88fe6fe2").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-369670c2").then(next)
     },
   },
   {
-    path: "/redis/哨兵机制：主库挂了，如何不间断服务.html",
-    redirect: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html"
+    path: "/redis/主从机制：主从库如何实现数据一致？.html",
+    redirect: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html"
   },
   {
-    path: "/redis/哨兵机制：主库挂了，如何不间断服务.html",
-    redirect: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html"
+    path: "/redis/主从机制：主从库如何实现数据一致？.html",
+    redirect: "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html"
   },
   {
     name: "v-7818c4ec",
@@ -961,20 +1177,20 @@ export const routes = [
     redirect: "/redis/%E5%93%A8%E5%85%B5%E9%9B%86%E7%BE%A4%EF%BC%9A%E5%93%A8%E5%85%B5%E6%8C%82%E4%BA%86%EF%BC%8C%E4%B8%BB%E4%BB%8E%E5%BA%93%E8%BF%98%E8%83%BD%E5%88%87%E6%8D%A2%E5%90%97%EF%BC%9F.html"
   },
   {
-    name: "v-de9b6fec",
-    path: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html",
+    name: "v-88fe6fe2",
+    path: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-de9b6fec").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-88fe6fe2").then(next)
     },
   },
   {
-    path: "/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.html",
-    redirect: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html"
+    path: "/redis/哨兵机制：主库挂了，如何不间断服务.html",
+    redirect: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html"
   },
   {
-    path: "/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.html",
-    redirect: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html"
+    path: "/redis/哨兵机制：主库挂了，如何不间断服务.html",
+    redirect: "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html"
   },
   {
     name: "v-68a73b36",
@@ -991,6 +1207,22 @@ export const routes = [
   {
     path: "/redis/基本架构：一个K-V数据库应该包含哪些.html",
     redirect: "/redis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E4%B8%AAK-V%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B.html"
+  },
+  {
+    name: "v-de9b6fec",
+    path: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-de9b6fec").then(next)
+    },
+  },
+  {
+    path: "/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.html",
+    redirect: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html"
+  },
+  {
+    path: "/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.html",
+    redirect: "/redis/%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9ARedis%E5%BF%AB%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E6%85%A2%E6%93%8D%E4%BD%9C%EF%BC%9F.html"
   },
   {
     name: "v-d49759ec",
@@ -1037,6 +1269,14 @@ export const routes = [
     redirect: "/theme/"
   },
   {
+    name: "v-5f4ff0ba",
+    path: "/theme/blog-theme.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-5f4ff0ba").then(next)
+    },
+  },
+  {
     name: "v-a7ce545c",
     path: "/theme/default-theme-config.html",
     component: GlobalLayout,
@@ -1050,14 +1290,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-7ff8f596").then(next)
-    },
-  },
-  {
-    name: "v-5f4ff0ba",
-    path: "/theme/blog-theme.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5f4ff0ba").then(next)
     },
   },
   {

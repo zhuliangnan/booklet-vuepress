@@ -1,6 +1,7 @@
 ## AOF日志：宕机了，Redis如何避免数据丢失？
-> 目前，Redis 的持久化主要有两大机制，即 AOF（Append Only File）日志和 RDB 快照
-
+::: tip
+ 目前，Redis 的持久化主要有两大机制，即 AOF（Append Only File）日志和 RDB 快照
+::: 
 ### AOF 日志是如何实现的？
 
 ![img](/redis/base/407f2686083afc37351cfd9107319a1f.jpg)
