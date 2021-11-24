@@ -127,28 +127,6 @@ Q
 +docs/golang-note/Go语言生成二维码.md,5\b\5baa501ac0ecdbfb18de6b03365f86a418234f5f
 u
 Edocs/golang-note/GoLand 控制台输出中文乱码的解决方案.md,4\7\479a0bcf3e408f392981caa106e57b94cfb3d415
-Z
-*docs/golang/数组和切片深入解析.md,7\9\79bf53f44fd834f9ccf47b658b228537ff8bd774
-M
-docs/golang/range的使用.md,d\a\da2079d6036d79af999f9ba6d6df839374eb3f67
-S
-#docs/golang/条件 选择 循环.md,5\6\56ac72cec89020dd28d50fe657d665327c35eb70
-T
-$docs/golang/常量和类型转换.md,9\c\9cb42c06352a5b1fb51cb3f1237f6f75bd709254
-b
-2docs/golang/Go的数据类型以及变量声明.md,c\3\c357c34f49312da0dd27ec8679d9bc423e48f611
-S
-#docs/golang/Go的安装与配置.md,f\2\f270b01c4c56d0c06bf1bb8c93621cdea1cd6bfa
-Z
-*docs/golang/浅析Goroutines和Channels.md,a\f\aff571c790b299486c821c0211cc822465e4c969
-Q
-!docs/golang/函数深入分析.md,b\7\b7260841cd30eada1f87a7706a523c23f0e38af9
-T
-$docs/golang/结构体深入解析.md,7\7\7715af11eb61910397c123267373b8db5c0532be
-N
-docs/golang/Map深入解析.md,c\f\cf2f8fea3a496ce1560946ff0f5d222c1a7140c2
-E
-docs/golang/README.md,1\d\1d5969e488c94c9148da8dd721326bcc9c13f98c
 D
 docs/qiany/迁移.md,3\0\3068e6a3f853d108a5b4a661ca840c9b78588b50
 H
@@ -159,11 +137,87 @@ M
 docs/theme/writing-a-theme.md,e\c\ec121abc402b3d2be5e407ae877b2182154da506
 [
 +docs/redis/other/Redis操作速查手册.md,9\a\9a8a3651e57bac0fbe6951f9aaf6bfed59e705e5
-w
-Gdocs/golang/Go的接口及Go中标准接口库,类型断言的使用.md,f\2\f2c6cc9cf40bb40dfb0c6a22486c1b687d854266
 F
 site/service-worker.js,3\7\372195342ccccb01da973dfce030ee219df12970
 I
 docs/plugin/option-api.md,4\1\41867fbff164dfe699c53fe34d01716e62668142
 E
 docs/plugin/README.md,d\8\d88189a43b364c15fd4849dfb717724dab3541a4
+g
+7docs/redis/问题查找：Redis问题查找画像图.md,1\2\12980411e94bca217593122cd7191868865789bb
+D
+docs/notes/README.md,2\5\25b35cb2c67701e961439eb958224128c3bcbd57
+I
+docs/plugin/life-cycle.md,2\0\200ddbec7bdabcfa600d78306a5deff029c8c6a4
+a
+1docs/redis/Redis的两大维度，三大主线.md,c\f\cf6fd9051030a409a6fce9a151b3a3e7d5ac5259
+B
+docs/faq/README.md,3\7\37b45a46276d279d3fa94d50080a2bca9f3b92ba
+M
+docs/guide/getting-started.md,7\7\770af59c374329e895893d1900b573c1b4ab6107
+Q
+!docs/guide/directory-structure.md,5\e\5ee77798b2f3cf07605fc4f649396280b169d652
+i
+9docs/java-note/Error-java无效的源发行版11错误.md,d\c\dcb4a344de8387e7b60933eb8649532619635a35
+D
+docs/guide/assets.md,e\2\e296f37ca379a2b11b92fbd2d6b9656c1de1820a
+�
+Ydocs/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.md,b\3\b370afc2a3afdbb9c435d327aa5c4a9a766bab26
+V
+&docs/java-note/fastjson基本使用.md,f\a\fa37638cc57b2b8e48a3b2b34e2452e789ed1ee0
+t
+Ddocs/oracle-note/ORA-01756报错的解决方案中文编码错误.md,8\f\8f9a525053d1ddccc5e550f9f0a8d6971eeb2ed0
+Z
+*docs/linux/deploy/zookeeper环境安装.md,a\6\a6b2aaff03ab67d3f1b7e6d64df6b1b4a113030c
+V
+&docs/linux/deploy/KafKa安装教程.md,b\c\bcade66888acf1b8078cfdf62301ac20e41f2e40
+U
+%docs/linux/deploy/java环境安装.md,d\9\d98a410d4d83e9e72c7b13afcd55196471cbdd99
+]
+-docs/gradle-note/Idea实现gradle打jar包.md,4\e\4e1baa2d06f28938f75e41aec575628529f03a42
+D
+docs/redis/README.md,c\a\cae755946b5785082c5c5e9a8965a1b7c49d8cdb
+a
+1docs/java-note/spring项目中手动获取bean.md,3\0\300d373f79a382315fee013cd89f9458badb1517
+s
+Cdocs/redis/AOF日志：宕机了，Redis如何避免数据丢失.md,a\f\af1a1277804e3644937fc1e84878ac4f355a02eb
+r
+Bdocs/redis/高性IO模型：为什么单线程Redis能那么快.md,2\7\2703390f07d4095c198a5c36512edad067f7302b
+
+Odocs/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.md,1\6\16cacb4d76d17f2399e65a51457d1fd54187ab01
+q
+Adocs/redis/基本架构：一个K-V数据库应该包含哪些.md,b\e\be29692273d9c35eca50ad56ae22f7d269f9247b
+y
+Idocs/java-note/Springboot引用外部jar包并打包成jar程序运行.md,6\0\601b79233d459d24999a4ae99af019ab84c4b33a
+r
+Bdocs/golang-note/GoLand 解决无法导入自定义包的问题.md,d\a\da99f55ab1754020891128dc05f0c87a949f3cd6
+k
+;docs/golang-note/Golang 新手可能会踩的 50+ 个坑.md,e\3\e3523a266aecad6ce3caa96c2c014aa344e9bb4d
+]
+-docs/mysql-note/MySQL索引及实际应用.md,6\b\6b9c6fc7c821dcdd381d71f122c0adef0eeddb22
+V
+&docs/linux/deploy/redis环境安装.md,9\b\9ba8191e33459a996af4017b0dbef69daff840d3
+D
+docs/mysql/README.md,7\1\71fd27698c11372a95e0b9864c92f28b9d128806
+^
+.docs/flowable/Flowable工作流快速入门.md,0\d\0d11bd9a7879db4d606ab35f58fb29b556e51735
+�
+Pdocs/redis/切片集群：数据增多了，是该加内存还是加实例？.md,9\c\9c3d0d462cb055e3468150e67f1bc3eb221b87f8
+Z
+*docs/git/git-clone-10054或者443问题.md,1\d\1d1f86e98dcc99dd07653d5f0d2fff43297c2eb7
+p
+@docs/java-note/基于Spring Aop实现用户操作日志监控.md,b\5\b544b552de230c96fde64fab2433b1b27ff90171
+w
+Gdocs/redis/哨兵集群：哨兵挂了，主从库还能切换吗？.md,1\0\10c1604016af5fb82605e20301feecc41bd84103
+q
+Adocs/redis/哨兵机制：主库挂了，如何不间断服务.md,8\d\8d63af9f39c9bd517ddfce0aba23abf22b42bf96
+q
+Adocs/redis/主从机制：主从库如何实现数据一致？.md,a\3\a3c1bca7005ccc29979e1baab0c6361d2e2d34b8
+v
+Fdocs/redis/RDB内存快照：宕机后，Redis如何快速恢复？.md,1\2\12bf949ffa11058b9da46d27dedc36253e59adfe
+U
+%docs/linux/Linux常用操作速查.md,8\0\80e85e94a9d51c02dbb619af9ea7e216717043e7
+S
+#docs/golang/Go的安装与配置.md,f\2\f270b01c4c56d0c06bf1bb8c93621cdea1cd6bfa
+q
+Adocs/redis/“万金油”的String，为什么不好用了？.md,0\6\06f0953e107ea44aa68f190128ebd1f4a0a2df21

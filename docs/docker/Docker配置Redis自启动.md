@@ -1,7 +1,8 @@
 ## Docker配置Redis自启动
 
+### 1.获取redis镜像
 ```bash
-1.获取redis镜像
+#获取redis镜像
 
 docker pull redis
 
@@ -10,11 +11,12 @@ docker pull redis
 docker pull redis:4.0.9
 不加版本号默认获取最新版本，也可以使用 docker search redis 查看镜像来源
 
-2.查看本地镜像 
+#查看本地镜像 
 docker images
+```
 
-3.然后启动容器，做映射
-
+### 2.启动容器，做映射
+```bash
 ①创建配置文件目录存放redis.conf，文件从官网下载。
 
  
@@ -40,7 +42,11 @@ dir  ./ #输入本地redis数据库存放文件夹（可选）
 
 appendonly yes #redis持久化（可选）
 
-4.docker启动redis命令
+```
+### 3.docker启动redis
+```bash
+
+#docker启动redis命令
 
 docker run -p 6379:6379 --name myredis -v /usr/local/docker/redis.conf:/etc/redis/redis.conf -v /usr/local/docker/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 
@@ -62,7 +68,11 @@ redis-server /etc/redis/redis.conf  以配置文件启动redis，加载容器�
 
 
 --appendonly yes  开启redis 持久化
-5.查看是否运行成功
+
+```
+### 4.结果
+```bash
+#查看是否运行成功
 
 docker ps 查看运行的容器
 dockers logs myredis/27ddba64faa6  (容器名称/id)

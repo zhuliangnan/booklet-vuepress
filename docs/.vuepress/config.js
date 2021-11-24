@@ -6,8 +6,8 @@ module.exports = ctx => ({
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: '记录的小册',
-            description: '包含: Java 基础，面经手册，Go语言教程，Redis从入门到入土，设计模式，杂文，摄影...'
+            title: '记在小本本上',
+            description: 'Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...'
         }
     },
     head: [
@@ -247,14 +247,21 @@ function getMysqlSidebar(groupA, introductionA, groupB) {
             sidebarDepth: 2,
             children: [
                 ['', introductionA],
-                '基础架构：一条SQL查询语句是如何执行的？'
+                '基础架构：一条SQL查询语句是如何执行的？',
+                '日志系统：一条SQL更新语句是如何执行的？',
+                '事务隔离：为什么你改了我还看不见？',
+                '深入浅出索引一',
+                '深入浅出索引二',
+                '全局锁和表锁 ：给表加个字段怎么有这么多阻碍？',
+                '行锁功过：怎么减少行锁对性能的影响？',
+                '事务到底是隔离的还是不隔离的？'
             ]
         },
         {
             title: groupB,
             collapsable: false,
             children: [
-                '“万金油”的String，为什么不好用了？'
+                '基础架构：一条SQL查询语句是如何执行的？'
             ]
         }
     ]
@@ -339,7 +346,6 @@ function getDockerSidebar(groupA, introductionA) {
             children: [
                 ['', introductionA],
                 'Docker基础命令',
-                'Docker部署jar包运行',
                 'Docker配置Redis自启动'
             ]
         }

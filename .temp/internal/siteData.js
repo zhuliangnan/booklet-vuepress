@@ -81,232 +81,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "命令行接口",
-      "frontmatter": {},
-      "regularPath": "/api/cli.html",
-      "relativePath": "api/cli.md",
-      "key": "v-29d16f94",
-      "path": "/api/cli.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基本用法",
-          "slug": "基本用法"
-        },
-        {
-          "level": 2,
-          "title": "build",
-          "slug": "build"
-        },
-        {
-          "level": 3,
-          "title": "-p, --port <port>",
-          "slug": "p-port-port"
-        },
-        {
-          "level": 3,
-          "title": "-t, --temp <temp>",
-          "slug": "t-temp-temp"
-        },
-        {
-          "level": 3,
-          "title": "-c, --cache [cache]",
-          "slug": "c-cache-cache"
-        },
-        {
-          "level": 3,
-          "title": "--no-cache",
-          "slug": "no-cache"
-        },
-        {
-          "level": 3,
-          "title": "--dest <dest>",
-          "slug": "dest-dest"
-        },
-        {
-          "level": 3,
-          "title": "--debug",
-          "slug": "debug"
-        },
-        {
-          "level": 3,
-          "title": "--silent",
-          "slug": "silent"
-        },
-        {
-          "level": 2,
-          "title": "dev",
-          "slug": "dev"
-        },
-        {
-          "level": 3,
-          "title": "--host <host>",
-          "slug": "host-host"
-        },
-        {
-          "level": 3,
-          "title": "--open",
-          "slug": "open"
-        },
-        {
-          "level": 3,
-          "title": "--no-clear-screen",
-          "slug": "no-clear-screen"
-        },
-        {
-          "level": 2,
-          "title": "eject",
-          "slug": "eject"
-        },
-        {
-          "level": 2,
-          "title": "更多指令",
-          "slug": "更多指令"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Node.js API",
-      "frontmatter": {},
-      "regularPath": "/api/node.html",
-      "relativePath": "api/node.md",
-      "key": "v-c66ccb58",
-      "path": "/api/node.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "方法",
-          "slug": "方法"
-        },
-        {
-          "level": 3,
-          "title": "createApp(\\[options]): Promise<App>",
-          "slug": "createapp-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "dev(\\[options]): Promise<App>",
-          "slug": "dev-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "build(\\[options]): Promise<App>",
-          "slug": "build-options-promise-app"
-        },
-        {
-          "level": 3,
-          "title": "eject(targetDir): Promise<void>",
-          "slug": "eject-targetdir-promise-void"
-        },
-        {
-          "level": 2,
-          "title": "Options",
-          "slug": "options"
-        },
-        {
-          "level": 3,
-          "title": "sourceDir",
-          "slug": "sourcedir"
-        },
-        {
-          "level": 3,
-          "title": "theme",
-          "slug": "theme"
-        },
-        {
-          "level": 3,
-          "title": "plugins",
-          "slug": "plugins"
-        },
-        {
-          "level": 3,
-          "title": "temp",
-          "slug": "temp"
-        },
-        {
-          "level": 3,
-          "title": "dest",
-          "slug": "dest"
-        },
-        {
-          "level": 3,
-          "title": "siteConfig",
-          "slug": "siteconfig"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Docker基础命令",
-      "frontmatter": {},
-      "regularPath": "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html",
-      "relativePath": "docker/Docker基础命令.md",
-      "key": "v-971ae0c6",
-      "path": "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Docker基础命令",
-          "slug": "docker基础命令"
-        },
-        {
-          "level": 3,
-          "title": "Docker的启动与停止",
-          "slug": "docker的启动与停止"
-        },
-        {
-          "level": 3,
-          "title": "Docker容器信息",
-          "slug": "docker容器信息"
-        },
-        {
-          "level": 3,
-          "title": "镜像操作",
-          "slug": "镜像操作"
-        },
-        {
-          "level": 3,
-          "title": "镜像启动",
-          "slug": "镜像启动"
-        },
-        {
-          "level": 3,
-          "title": "容器操作",
-          "slug": "容器操作"
-        }
-      ],
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "配置",
       "frontmatter": {
         "sidebarDepth": 3,
@@ -539,26 +313,139 @@ export const siteData = {
       }
     },
     {
-      "title": "Docker时间与linux不一致",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html",
-      "relativePath": "docker-note/Docker时间与linux不一致.md",
-      "key": "v-2fb2e884",
-      "path": "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html",
+      "title": "命令行接口",
+      "frontmatter": {},
+      "regularPath": "/api/cli.html",
+      "relativePath": "api/cli.md",
+      "key": "v-29d16f94",
+      "path": "/api/cli.html",
       "headers": [
         {
           "level": 2,
-          "title": "Docker时间与linux不一致",
-          "slug": "docker时间与linux不一致"
+          "title": "基本用法",
+          "slug": "基本用法"
         },
         {
           "level": 2,
-          "title": "1.Docker时间与linux不一致，java项目获取时间也不对",
-          "slug": "_1-docker时间与linux不一致-java项目获取时间也不对"
+          "title": "build",
+          "slug": "build"
+        },
+        {
+          "level": 3,
+          "title": "-p, --port <port>",
+          "slug": "p-port-port"
+        },
+        {
+          "level": 3,
+          "title": "-t, --temp <temp>",
+          "slug": "t-temp-temp"
+        },
+        {
+          "level": 3,
+          "title": "-c, --cache [cache]",
+          "slug": "c-cache-cache"
+        },
+        {
+          "level": 3,
+          "title": "--no-cache",
+          "slug": "no-cache"
+        },
+        {
+          "level": 3,
+          "title": "--dest <dest>",
+          "slug": "dest-dest"
+        },
+        {
+          "level": 3,
+          "title": "--debug",
+          "slug": "debug"
+        },
+        {
+          "level": 3,
+          "title": "--silent",
+          "slug": "silent"
+        },
+        {
+          "level": 2,
+          "title": "dev",
+          "slug": "dev"
+        },
+        {
+          "level": 3,
+          "title": "--host <host>",
+          "slug": "host-host"
+        },
+        {
+          "level": 3,
+          "title": "--open",
+          "slug": "open"
+        },
+        {
+          "level": 3,
+          "title": "--no-clear-screen",
+          "slug": "no-clear-screen"
+        },
+        {
+          "level": 2,
+          "title": "eject",
+          "slug": "eject"
+        },
+        {
+          "level": 2,
+          "title": "更多指令",
+          "slug": "更多指令"
         }
       ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Docker基础命令",
+      "frontmatter": {},
+      "regularPath": "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html",
+      "relativePath": "docker/Docker基础命令.md",
+      "key": "v-971ae0c6",
+      "path": "/docker/Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Docker基础命令",
+          "slug": "docker基础命令"
+        },
+        {
+          "level": 3,
+          "title": "Docker的启动与停止",
+          "slug": "docker的启动与停止"
+        },
+        {
+          "level": 3,
+          "title": "Docker容器信息",
+          "slug": "docker容器信息"
+        },
+        {
+          "level": 3,
+          "title": "镜像操作",
+          "slug": "镜像操作"
+        },
+        {
+          "level": 3,
+          "title": "镜像启动",
+          "slug": "镜像启动"
+        },
+        {
+          "level": 3,
+          "title": "容器操作",
+          "slug": "容器操作"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -582,6 +469,166 @@ export const siteData = {
           "slug": "docker部署jar包运行"
         }
       ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Node.js API",
+      "frontmatter": {},
+      "regularPath": "/api/node.html",
+      "relativePath": "api/node.md",
+      "key": "v-c66ccb58",
+      "path": "/api/node.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 2,
+          "title": "方法",
+          "slug": "方法"
+        },
+        {
+          "level": 3,
+          "title": "createApp(\\[options]): Promise<App>",
+          "slug": "createapp-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "dev(\\[options]): Promise<App>",
+          "slug": "dev-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "build(\\[options]): Promise<App>",
+          "slug": "build-options-promise-app"
+        },
+        {
+          "level": 3,
+          "title": "eject(targetDir): Promise<void>",
+          "slug": "eject-targetdir-promise-void"
+        },
+        {
+          "level": 2,
+          "title": "Options",
+          "slug": "options"
+        },
+        {
+          "level": 3,
+          "title": "sourceDir",
+          "slug": "sourcedir"
+        },
+        {
+          "level": 3,
+          "title": "theme",
+          "slug": "theme"
+        },
+        {
+          "level": 3,
+          "title": "plugins",
+          "slug": "plugins"
+        },
+        {
+          "level": 3,
+          "title": "temp",
+          "slug": "temp"
+        },
+        {
+          "level": 3,
+          "title": "dest",
+          "slug": "dest"
+        },
+        {
+          "level": 3,
+          "title": "siteConfig",
+          "slug": "siteconfig"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Docker配置Redis自启动",
+      "frontmatter": {},
+      "regularPath": "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html",
+      "relativePath": "docker/Docker配置Redis自启动.md",
+      "key": "v-bb9db62c",
+      "path": "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Docker配置Redis自启动",
+          "slug": "docker配置redis自启动"
+        },
+        {
+          "level": 3,
+          "title": "1.获取redis镜像",
+          "slug": "_1-获取redis镜像"
+        },
+        {
+          "level": 3,
+          "title": "2.启动容器，做映射",
+          "slug": "_2-启动容器-做映射"
+        },
+        {
+          "level": 3,
+          "title": "3.docker启动redis",
+          "slug": "_3-docker启动redis"
+        },
+        {
+          "level": 3,
+          "title": "4.结果",
+          "slug": "_4-结果"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Docker时间与linux不一致",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html",
+      "relativePath": "docker-note/Docker时间与linux不一致.md",
+      "key": "v-2fb2e884",
+      "path": "/docker-note/Docker%E6%97%B6%E9%97%B4%E4%B8%8Elinux%E4%B8%8D%E4%B8%80%E8%87%B4.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Docker时间与linux不一致",
+          "slug": "docker时间与linux不一致"
+        },
+        {
+          "level": 2,
+          "title": "1.Docker时间与linux不一致，java项目获取时间也不对",
+          "slug": "_1-docker时间与linux不一致-java项目获取时间也不对"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -616,76 +663,13 @@ export const siteData = {
       }
     },
     {
-      "title": "Docker配置Redis自启动",
-      "frontmatter": {},
-      "regularPath": "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html",
-      "relativePath": "docker/Docker配置Redis自启动.md",
-      "key": "v-bb9db62c",
-      "path": "/docker/Docker%E9%85%8D%E7%BD%AERedis%E8%87%AA%E5%90%AF%E5%8A%A8.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Docker配置Redis自启动",
-          "slug": "docker配置redis自启动"
-        }
-      ],
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "前言",
       "frontmatter": {},
       "regularPath": "/docker/",
       "relativePath": "docker/README.md",
       "key": "v-4b48924a",
       "path": "/docker/",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "FAQ",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/faq/",
-      "relativePath": "faq/README.md",
-      "key": "v-0e1ddb52",
-      "path": "/faq/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "为什么不能把 palette.styl 和 index.styl 合并到一个 API?",
-          "slug": "为什么不能把-palette-styl-和-index-styl-合并到一个-api"
-        },
-        {
-          "level": 2,
-          "title": "clientDynamicModules 和 enhanceAppFiles 的区别是什么?",
-          "slug": "clientdynamicmodules-和-enhanceappfiles-的区别是什么"
-        },
-        {
-          "level": 2,
-          "title": "什么时候需要使用 enhanceAppFiles?",
-          "slug": "什么时候需要使用-enhanceappfiles"
-        },
-        {
-          "level": 2,
-          "title": "什么时候需要使用 clientDynamicModules?",
-          "slug": "什么时候需要使用-clientdynamicmodules"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -756,6 +740,48 @@ export const siteData = {
           "slug": "ps-本地部署"
         }
       ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "FAQ",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/faq/",
+      "relativePath": "faq/README.md",
+      "key": "v-0e1ddb52",
+      "path": "/faq/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "为什么不能把 palette.styl 和 index.styl 合并到一个 API?",
+          "slug": "为什么不能把-palette-styl-和-index-styl-合并到一个-api"
+        },
+        {
+          "level": 2,
+          "title": "clientDynamicModules 和 enhanceAppFiles 的区别是什么?",
+          "slug": "clientdynamicmodules-和-enhanceappfiles-的区别是什么"
+        },
+        {
+          "level": 2,
+          "title": "什么时候需要使用 enhanceAppFiles?",
+          "slug": "什么时候需要使用-enhanceappfiles"
+        },
+        {
+          "level": 2,
+          "title": "什么时候需要使用 clientDynamicModules?",
+          "slug": "什么时候需要使用-clientdynamicmodules"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -773,6 +799,7 @@ export const siteData = {
       "relativePath": "front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.md",
       "key": "v-052151d2",
       "path": "/front/webpack-dev-server%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E6%88%96%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E5%8F%AF%E8%BF%90%E8%A1%8C%E7%9A%84%E7%A8%8B%E5%BA%8F.html",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -798,6 +825,7 @@ export const siteData = {
           "slug": "git-clone-10054或者443问题"
         }
       ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -808,24 +836,27 @@ export const siteData = {
       }
     },
     {
-      "title": "GoLand 解决无法导入自定义包的问题",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/golang-note/GoLand%20%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.html",
-      "relativePath": "golang-note/GoLand 解决无法导入自定义包的问题.md",
-      "key": "v-fefb7a04",
-      "path": "/golang-note/GoLand%20%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.html",
+      "title": "Go的安装与配置",
+      "frontmatter": {},
+      "regularPath": "/golang/Go%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.html",
+      "relativePath": "golang/Go的安装与配置.md",
+      "key": "v-19a6b802",
+      "path": "/golang/Go%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.html",
       "headers": [
         {
           "level": 2,
-          "title": "GoLand 解决无法导入自定义包的问题",
-          "slug": "goland-解决无法导入自定义包的问题"
+          "title": "Go的安装与配置",
+          "slug": "go的安装与配置"
         },
         {
-          "level": 3,
-          "title": "解决：",
-          "slug": "解决"
+          "level": 2,
+          "title": "下载Go",
+          "slug": "下载go"
+        },
+        {
+          "level": 2,
+          "title": "环境变量配置",
+          "slug": "环境变量配置"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -885,27 +916,78 @@ export const siteData = {
       }
     },
     {
-      "title": "Go的安装与配置",
-      "frontmatter": {},
-      "regularPath": "/golang/Go%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.html",
-      "relativePath": "golang/Go的安装与配置.md",
-      "key": "v-19a6b802",
-      "path": "/golang/Go%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.html",
+      "title": "GoLand 解决无法导入自定义包的问题",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/golang-note/GoLand%20%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.html",
+      "relativePath": "golang-note/GoLand 解决无法导入自定义包的问题.md",
+      "key": "v-fefb7a04",
+      "path": "/golang-note/GoLand%20%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.html",
       "headers": [
         {
           "level": 2,
-          "title": "Go的安装与配置",
-          "slug": "go的安装与配置"
+          "title": "GoLand 解决无法导入自定义包的问题",
+          "slug": "goland-解决无法导入自定义包的问题"
+        },
+        {
+          "level": 3,
+          "title": "解决：",
+          "slug": "解决"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Go的接口及Go中标准接口库,类型断言的使用",
+      "frontmatter": {},
+      "regularPath": "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
+      "relativePath": "golang/Go的接口及Go中标准接口库,类型断言的使用.md",
+      "key": "v-5ed98bc6",
+      "path": "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Go的接口及Go中标准接口库,类型断言的使用",
+          "slug": "go的接口及go中标准接口库-类型断言的使用"
         },
         {
           "level": 2,
-          "title": "下载Go",
-          "slug": "下载go"
+          "title": "前言",
+          "slug": "前言"
         },
         {
-          "level": 2,
-          "title": "环境变量配置",
-          "slug": "环境变量配置"
+          "level": 3,
+          "title": "接口的实现和使用",
+          "slug": "接口的实现和使用"
+        },
+        {
+          "level": 3,
+          "title": "接口的多态",
+          "slug": "接口的多态"
+        },
+        {
+          "level": 3,
+          "title": "接口的嵌入",
+          "slug": "接口的嵌入"
+        },
+        {
+          "level": 3,
+          "title": "Go中标准的接口库",
+          "slug": "go中标准的接口库"
+        },
+        {
+          "level": 3,
+          "title": "Go中类型断言",
+          "slug": "go中类型断言"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -952,6 +1034,114 @@ export const siteData = {
           "level": 3,
           "title": "自定义二维码",
           "slug": "自定义二维码"
+        }
+      ],
+      "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Go的数据类型以及变量声明",
+      "frontmatter": {},
+      "regularPath": "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html",
+      "relativePath": "golang/Go的数据类型以及变量声明.md",
+      "key": "v-4715584e",
+      "path": "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Go的数据类型以及变量声明",
+          "slug": "go的数据类型以及变量声明"
+        },
+        {
+          "level": 2,
+          "title": "前言",
+          "slug": "前言"
+        },
+        {
+          "level": 2,
+          "title": "Go中的数据类型",
+          "slug": "go中的数据类型"
+        },
+        {
+          "level": 2,
+          "title": "Go语言声明方式",
+          "slug": "go语言声明方式"
+        },
+        {
+          "level": 3,
+          "title": "第一种声明方式 var",
+          "slug": "第一种声明方式-var"
+        },
+        {
+          "level": 2,
+          "title": "第二种声明方式 :=  (声明+赋值)",
+          "slug": "第二种声明方式-声明-赋值"
+        }
+      ],
+      "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Map深入解析",
+      "frontmatter": {},
+      "regularPath": "/golang/Map%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
+      "relativePath": "golang/Map深入解析.md",
+      "key": "v-1642200c",
+      "path": "/golang/Map%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Map深入解析",
+          "slug": "map深入解析"
+        },
+        {
+          "level": 2,
+          "title": "前言",
+          "slug": "前言"
+        },
+        {
+          "level": 2,
+          "title": "Map",
+          "slug": "map"
+        },
+        {
+          "level": 3,
+          "title": "Map的两种创建方法及普通操作",
+          "slug": "map的两种创建方法及普通操作"
+        },
+        {
+          "level": 3,
+          "title": "Map值得注意的地方",
+          "slug": "map值得注意的地方"
+        },
+        {
+          "level": 3,
+          "title": "Map的比较",
+          "slug": "map的比较"
+        },
+        {
+          "level": 3,
+          "title": "Map的排序输出",
+          "slug": "map的排序输出"
+        },
+        {
+          "level": 3,
+          "title": "Map的并发",
+          "slug": "map的并发"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -1270,193 +1460,7 @@ export const siteData = {
           "slug": "_56-读写操作的重新排序"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Go的接口及Go中标准接口库,类型断言的使用",
-      "frontmatter": {},
-      "regularPath": "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
-      "relativePath": "golang/Go的接口及Go中标准接口库,类型断言的使用.md",
-      "key": "v-5ed98bc6",
-      "path": "/golang/Go%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%8AGo%E4%B8%AD%E6%A0%87%E5%87%86%E6%8E%A5%E5%8F%A3%E5%BA%93,%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Go的接口及Go中标准接口库,类型断言的使用",
-          "slug": "go的接口及go中标准接口库-类型断言的使用"
-        },
-        {
-          "level": 2,
-          "title": "前言",
-          "slug": "前言"
-        },
-        {
-          "level": 3,
-          "title": "接口的实现和使用",
-          "slug": "接口的实现和使用"
-        },
-        {
-          "level": 3,
-          "title": "接口的多态",
-          "slug": "接口的多态"
-        },
-        {
-          "level": 3,
-          "title": "接口的嵌入",
-          "slug": "接口的嵌入"
-        },
-        {
-          "level": 3,
-          "title": "Go中标准的接口库",
-          "slug": "go中标准的接口库"
-        },
-        {
-          "level": 3,
-          "title": "Go中类型断言",
-          "slug": "go中类型断言"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Go的数据类型以及变量声明",
-      "frontmatter": {},
-      "regularPath": "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html",
-      "relativePath": "golang/Go的数据类型以及变量声明.md",
-      "key": "v-4715584e",
-      "path": "/golang/Go%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Go的数据类型以及变量声明",
-          "slug": "go的数据类型以及变量声明"
-        },
-        {
-          "level": 2,
-          "title": "前言",
-          "slug": "前言"
-        },
-        {
-          "level": 2,
-          "title": "Go中的数据类型",
-          "slug": "go中的数据类型"
-        },
-        {
-          "level": 2,
-          "title": "Go语言声明方式",
-          "slug": "go语言声明方式"
-        },
-        {
-          "level": 3,
-          "title": "第一种声明方式 var",
-          "slug": "第一种声明方式-var"
-        },
-        {
-          "level": 2,
-          "title": "第二种声明方式 :=  (声明+赋值)",
-          "slug": "第二种声明方式-声明-赋值"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Golang的介绍",
-      "frontmatter": {},
-      "regularPath": "/golang/",
-      "relativePath": "golang/README.md",
-      "key": "v-0eb467ca",
-      "path": "/golang/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Golang的介绍",
-          "slug": "golang的介绍"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Map深入解析",
-      "frontmatter": {},
-      "regularPath": "/golang/Map%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
-      "relativePath": "golang/Map深入解析.md",
-      "key": "v-1642200c",
-      "path": "/golang/Map%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Map深入解析",
-          "slug": "map深入解析"
-        },
-        {
-          "level": 2,
-          "title": "前言",
-          "slug": "前言"
-        },
-        {
-          "level": 2,
-          "title": "Map",
-          "slug": "map"
-        },
-        {
-          "level": 3,
-          "title": "Map的两种创建方法及普通操作",
-          "slug": "map的两种创建方法及普通操作"
-        },
-        {
-          "level": 3,
-          "title": "Map值得注意的地方",
-          "slug": "map值得注意的地方"
-        },
-        {
-          "level": 3,
-          "title": "Map的比较",
-          "slug": "map的比较"
-        },
-        {
-          "level": 3,
-          "title": "Map的排序输出",
-          "slug": "map的排序输出"
-        },
-        {
-          "level": 3,
-          "title": "Map的并发",
-          "slug": "map的并发"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -1496,37 +1500,17 @@ export const siteData = {
       }
     },
     {
-      "title": "常量和类型转换",
+      "title": "Golang的介绍",
       "frontmatter": {},
-      "regularPath": "/golang/%E5%B8%B8%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html",
-      "relativePath": "golang/常量和类型转换.md",
-      "key": "v-6eae755e",
-      "path": "/golang/%E5%B8%B8%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html",
+      "regularPath": "/golang/",
+      "relativePath": "golang/README.md",
+      "key": "v-0eb467ca",
+      "path": "/golang/",
       "headers": [
         {
           "level": 2,
-          "title": "常量和类型转换",
-          "slug": "常量和类型转换"
-        },
-        {
-          "level": 2,
-          "title": "附录",
-          "slug": "附录"
-        },
-        {
-          "level": 2,
-          "title": "常量",
-          "slug": "常量"
-        },
-        {
-          "level": 2,
-          "title": "iota常量生成器",
-          "slug": "iota常量生成器"
-        },
-        {
-          "level": 2,
-          "title": "类型转换",
-          "slug": "类型转换"
+          "title": "Golang的介绍",
+          "slug": "golang的介绍"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -1586,6 +1570,158 @@ export const siteData = {
           "level": 3,
           "title": "可变参数",
           "slug": "可变参数"
+        }
+      ],
+      "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "条件 选择 循环",
+      "frontmatter": {},
+      "regularPath": "/golang/%E6%9D%A1%E4%BB%B6%20%E9%80%89%E6%8B%A9%20%E5%BE%AA%E7%8E%AF.html",
+      "relativePath": "golang/条件 选择 循环.md",
+      "key": "v-41b78a02",
+      "path": "/golang/%E6%9D%A1%E4%BB%B6%20%E9%80%89%E6%8B%A9%20%E5%BE%AA%E7%8E%AF.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "条件 选择 循环",
+          "slug": "条件-选择-循环"
+        },
+        {
+          "level": 2,
+          "title": "前言",
+          "slug": "前言"
+        },
+        {
+          "level": 3,
+          "title": "条件",
+          "slug": "条件"
+        },
+        {
+          "level": 3,
+          "title": "选择",
+          "slug": "选择"
+        },
+        {
+          "level": 3,
+          "title": "循环",
+          "slug": "循环"
+        }
+      ],
+      "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "常量和类型转换",
+      "frontmatter": {},
+      "regularPath": "/golang/%E5%B8%B8%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html",
+      "relativePath": "golang/常量和类型转换.md",
+      "key": "v-6eae755e",
+      "path": "/golang/%E5%B8%B8%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "常量和类型转换",
+          "slug": "常量和类型转换"
+        },
+        {
+          "level": 2,
+          "title": "附录",
+          "slug": "附录"
+        },
+        {
+          "level": 2,
+          "title": "常量",
+          "slug": "常量"
+        },
+        {
+          "level": 2,
+          "title": "iota常量生成器",
+          "slug": "iota常量生成器"
+        },
+        {
+          "level": 2,
+          "title": "类型转换",
+          "slug": "类型转换"
+        }
+      ],
+      "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "浅析Goroutines和Channels",
+      "frontmatter": {},
+      "regularPath": "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
+      "relativePath": "golang/浅析Goroutines和Channels.md",
+      "key": "v-19a2b555",
+      "path": "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "浅析Goroutines和Channels",
+          "slug": "浅析goroutines和channels"
+        },
+        {
+          "level": 2,
+          "title": "一. 概念",
+          "slug": "一-概念"
+        },
+        {
+          "level": 3,
+          "title": "1.1 协程和线程的区别",
+          "slug": "_1-1-协程和线程的区别"
+        },
+        {
+          "level": 3,
+          "title": "1.2 goroutine和协程的区别",
+          "slug": "_1-2-goroutine和协程的区别"
+        },
+        {
+          "level": 3,
+          "title": "1.3 Channel",
+          "slug": "_1-3-channel"
+        },
+        {
+          "level": 2,
+          "title": "二. Go的协程和通道",
+          "slug": "二-go的协程和通道"
+        },
+        {
+          "level": 3,
+          "title": "2.1 goroutine的创建和使用",
+          "slug": "_2-1-goroutine的创建和使用"
+        },
+        {
+          "level": 3,
+          "title": "2.2 channel的创建和使用",
+          "slug": "_2-2-channel的创建和使用"
+        },
+        {
+          "level": 3,
+          "title": "2.3 channel关闭",
+          "slug": "_2-3-channel关闭"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -1673,17 +1809,17 @@ export const siteData = {
       }
     },
     {
-      "title": "条件 选择 循环",
+      "title": "结构体深入解析",
       "frontmatter": {},
-      "regularPath": "/golang/%E6%9D%A1%E4%BB%B6%20%E9%80%89%E6%8B%A9%20%E5%BE%AA%E7%8E%AF.html",
-      "relativePath": "golang/条件 选择 循环.md",
-      "key": "v-41b78a02",
-      "path": "/golang/%E6%9D%A1%E4%BB%B6%20%E9%80%89%E6%8B%A9%20%E5%BE%AA%E7%8E%AF.html",
+      "regularPath": "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
+      "relativePath": "golang/结构体深入解析.md",
+      "key": "v-7eb0148b",
+      "path": "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
       "headers": [
         {
           "level": 2,
-          "title": "条件 选择 循环",
-          "slug": "条件-选择-循环"
+          "title": "结构体深入解析",
+          "slug": "结构体深入解析"
         },
         {
           "level": 2,
@@ -1692,21 +1828,67 @@ export const siteData = {
         },
         {
           "level": 3,
-          "title": "条件",
-          "slug": "条件"
+          "title": "结构体的声明",
+          "slug": "结构体的声明"
         },
         {
           "level": 3,
-          "title": "选择",
-          "slug": "选择"
+          "title": "结构体的比较",
+          "slug": "结构体的比较"
         },
         {
           "level": 3,
-          "title": "循环",
-          "slug": "循环"
+          "title": "结构体嵌入和匿名成员",
+          "slug": "结构体嵌入和匿名成员"
+        },
+        {
+          "level": 3,
+          "title": "结构体的函数绑定的两种方式",
+          "slug": "结构体的函数绑定的两种方式"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "Idea实现gradle打jar包",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html",
+      "relativePath": "gradle-note/Idea实现gradle打jar包.md",
+      "key": "v-7c5d6581",
+      "path": "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Idea实现gradle打jar包",
+          "slug": "idea实现gradle打jar包"
+        },
+        {
+          "level": 2,
+          "title": "序言",
+          "slug": "序言"
+        },
+        {
+          "level": 2,
+          "title": "第一步",
+          "slug": "第一步"
+        },
+        {
+          "level": 2,
+          "title": "第二步",
+          "slug": "第二步"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -1794,56 +1976,7 @@ export const siteData = {
           "slug": "基础路径"
         }
       ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "结构体深入解析",
-      "frontmatter": {},
-      "regularPath": "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
-      "relativePath": "golang/结构体深入解析.md",
-      "key": "v-7eb0148b",
-      "path": "/golang/%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "结构体深入解析",
-          "slug": "结构体深入解析"
-        },
-        {
-          "level": 2,
-          "title": "前言",
-          "slug": "前言"
-        },
-        {
-          "level": 3,
-          "title": "结构体的声明",
-          "slug": "结构体的声明"
-        },
-        {
-          "level": 3,
-          "title": "结构体的比较",
-          "slug": "结构体的比较"
-        },
-        {
-          "level": 3,
-          "title": "结构体嵌入和匿名成员",
-          "slug": "结构体嵌入和匿名成员"
-        },
-        {
-          "level": 3,
-          "title": "结构体的函数绑定的两种方式",
-          "slug": "结构体的函数绑定的两种方式"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -1981,36 +2114,13 @@ export const siteData = {
       }
     },
     {
-      "title": "Idea实现gradle打jar包",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html",
-      "relativePath": "gradle-note/Idea实现gradle打jar包.md",
-      "key": "v-7c5d6581",
-      "path": "/gradle-note/Idea%E5%AE%9E%E7%8E%B0gradle%E6%89%93jar%E5%8C%85.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Idea实现gradle打jar包",
-          "slug": "idea实现gradle打jar包"
-        },
-        {
-          "level": 2,
-          "title": "序言",
-          "slug": "序言"
-        },
-        {
-          "level": 2,
-          "title": "第一步",
-          "slug": "第一步"
-        },
-        {
-          "level": 2,
-          "title": "第二步",
-          "slug": "第二步"
-        }
-      ],
+      "title": "快速上手",
+      "frontmatter": {},
+      "regularPath": "/guide/getting-started.html",
+      "relativePath": "guide/getting-started.md",
+      "key": "v-0c171076",
+      "path": "/guide/getting-started.html",
+      "lastUpdated": "2021/11/8下午5:45:42",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2120,23 +2230,6 @@ export const siteData = {
       }
     },
     {
-      "title": "快速上手",
-      "frontmatter": {},
-      "regularPath": "/guide/getting-started.html",
-      "relativePath": "guide/getting-started.md",
-      "key": "v-0c171076",
-      "path": "/guide/getting-started.html",
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "全局计算属性",
       "frontmatter": {},
       "regularPath": "/guide/global-computed.html",
@@ -2183,6 +2276,35 @@ export const siteData = {
           "level": 2,
           "title": "$themeConfig",
           "slug": "themeconfig"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "多语言支持",
+      "frontmatter": {},
+      "regularPath": "/guide/i18n.html",
+      "relativePath": "guide/i18n.md",
+      "key": "v-2667aa40",
+      "path": "/guide/i18n.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "站点多语言配置",
+          "slug": "站点多语言配置"
+        },
+        {
+          "level": 2,
+          "title": "默认主题多语言配置",
+          "slug": "默认主题多语言配置"
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
@@ -2309,99 +2431,6 @@ export const siteData = {
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "多语言支持",
-      "frontmatter": {},
-      "regularPath": "/guide/i18n.html",
-      "relativePath": "guide/i18n.md",
-      "key": "v-2667aa40",
-      "path": "/guide/i18n.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "站点多语言配置",
-          "slug": "站点多语言配置"
-        },
-        {
-          "level": 2,
-          "title": "默认主题多语言配置",
-          "slug": "默认主题多语言配置"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "浅析Goroutines和Channels",
-      "frontmatter": {},
-      "regularPath": "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
-      "relativePath": "golang/浅析Goroutines和Channels.md",
-      "key": "v-19a2b555",
-      "path": "/golang/%E6%B5%85%E6%9E%90Goroutines%E5%92%8CChannels.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "浅析Goroutines和Channels",
-          "slug": "浅析goroutines和channels"
-        },
-        {
-          "level": 2,
-          "title": "一. 概念",
-          "slug": "一-概念"
-        },
-        {
-          "level": 3,
-          "title": "1.1 协程和线程的区别",
-          "slug": "_1-1-协程和线程的区别"
-        },
-        {
-          "level": 3,
-          "title": "1.2 goroutine和协程的区别",
-          "slug": "_1-2-goroutine和协程的区别"
-        },
-        {
-          "level": 3,
-          "title": "1.3 Channel",
-          "slug": "_1-3-channel"
-        },
-        {
-          "level": 2,
-          "title": "二. Go的协程和通道",
-          "slug": "二-go的协程和通道"
-        },
-        {
-          "level": 3,
-          "title": "2.1 goroutine的创建和使用",
-          "slug": "_2-1-goroutine的创建和使用"
-        },
-        {
-          "level": 3,
-          "title": "2.2 channel的创建和使用",
-          "slug": "_2-2-channel的创建和使用"
-        },
-        {
-          "level": 3,
-          "title": "2.3 channel关闭",
-          "slug": "_2-3-channel关闭"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2633,6 +2662,32 @@ export const siteData = {
       }
     },
     {
+      "title": "spring项目中手动获取bean",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html",
+      "relativePath": "java-note/spring项目中手动获取bean.md",
+      "key": "v-7a302b93",
+      "path": "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "spring项目中手动获取bean",
+          "slug": "spring项目中手动获取bean"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
       "title": "Springboot引用外部jar包并打包成jar程序运行",
       "frontmatter": {
         "sidebar": "auto"
@@ -2663,7 +2718,7 @@ export const siteData = {
           "slug": "第三步-修改pom-xml"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2689,32 +2744,7 @@ export const siteData = {
           "slug": "fastjson基本使用"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "spring项目中手动获取bean",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html",
-      "relativePath": "java-note/spring项目中手动获取bean.md",
-      "key": "v-7a302b93",
-      "path": "/java-note/spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%8E%B7%E5%8F%96bean.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "spring项目中手动获取bean",
-          "slug": "spring项目中手动获取bean"
-        }
-      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2755,7 +2785,103 @@ export const siteData = {
           "slug": "测试"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "KafKa安装教程",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html",
+      "relativePath": "linux/deploy/KafKa安装教程.md",
+      "key": "v-83130864",
+      "path": "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "KafKa安装教程",
+          "slug": "kafka安装教程"
+        },
+        {
+          "level": 3,
+          "title": "安装环境",
+          "slug": "安装环境"
+        },
+        {
+          "level": 2,
+          "title": "Zookeeper的安装",
+          "slug": "zookeeper的安装"
+        },
+        {
+          "level": 3,
+          "title": "zk上传命令解压改名",
+          "slug": "zk上传命令解压改名"
+        },
+        {
+          "level": 3,
+          "title": "编辑配置文件",
+          "slug": "编辑配置文件"
+        },
+        {
+          "level": 3,
+          "title": "创建文件夹",
+          "slug": "创建文件夹"
+        },
+        {
+          "level": 3,
+          "title": "对于集群配置文件",
+          "slug": "对于集群配置文件"
+        },
+        {
+          "level": 3,
+          "title": "配置环境变量",
+          "slug": "配置环境变量"
+        },
+        {
+          "level": 3,
+          "title": "启动zookeeper",
+          "slug": "启动zookeeper"
+        },
+        {
+          "level": 3,
+          "title": "启动zookeeper",
+          "slug": "启动zookeeper-2"
+        },
+        {
+          "level": 2,
+          "title": "KafKa的安装",
+          "slug": "kafka的安装"
+        },
+        {
+          "level": 3,
+          "title": "上传解压",
+          "slug": "上传解压"
+        },
+        {
+          "level": 3,
+          "title": "配置修改",
+          "slug": "配置修改"
+        },
+        {
+          "level": 3,
+          "title": "启动",
+          "slug": "启动"
+        },
+        {
+          "level": 3,
+          "title": "测试",
+          "slug": "测试"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2862,101 +2988,6 @@ export const siteData = {
       }
     },
     {
-      "title": "KafKa安装教程",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html",
-      "relativePath": "linux/deploy/KafKa安装教程.md",
-      "key": "v-83130864",
-      "path": "/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "KafKa安装教程",
-          "slug": "kafka安装教程"
-        },
-        {
-          "level": 3,
-          "title": "安装环境",
-          "slug": "安装环境"
-        },
-        {
-          "level": 2,
-          "title": "Zookeeper的安装",
-          "slug": "zookeeper的安装"
-        },
-        {
-          "level": 3,
-          "title": "zk上传命令解压改名",
-          "slug": "zk上传命令解压改名"
-        },
-        {
-          "level": 3,
-          "title": "编辑配置文件",
-          "slug": "编辑配置文件"
-        },
-        {
-          "level": 3,
-          "title": "创建文件夹",
-          "slug": "创建文件夹"
-        },
-        {
-          "level": 3,
-          "title": "对于集群配置文件",
-          "slug": "对于集群配置文件"
-        },
-        {
-          "level": 3,
-          "title": "配置环境变量",
-          "slug": "配置环境变量"
-        },
-        {
-          "level": 3,
-          "title": "启动zookeeper",
-          "slug": "启动zookeeper"
-        },
-        {
-          "level": 3,
-          "title": "启动zookeeper",
-          "slug": "启动zookeeper-2"
-        },
-        {
-          "level": 2,
-          "title": "KafKa的安装",
-          "slug": "kafka的安装"
-        },
-        {
-          "level": 3,
-          "title": "上传解压",
-          "slug": "上传解压"
-        },
-        {
-          "level": 3,
-          "title": "配置修改",
-          "slug": "配置修改"
-        },
-        {
-          "level": 3,
-          "title": "启动",
-          "slug": "启动"
-        },
-        {
-          "level": 3,
-          "title": "测试",
-          "slug": "测试"
-        }
-      ],
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "java环境安装",
       "frontmatter": {
         "sidebar": "auto"
@@ -2972,7 +3003,7 @@ export const siteData = {
           "slug": "java环境安装"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -2983,59 +3014,22 @@ export const siteData = {
       }
     },
     {
-      "title": "redis环境安装",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
-      "relativePath": "linux/deploy/redis环境安装.md",
-      "key": "v-4175c322",
-      "path": "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+      "title": "MySql篇",
+      "frontmatter": {},
+      "regularPath": "/mianshi/MySql%E7%AF%87.html",
+      "relativePath": "mianshi/MySql篇.md",
+      "key": "v-ceb963b4",
+      "path": "/mianshi/MySql%E7%AF%87.html",
       "headers": [
         {
           "level": 2,
-          "title": "redis环境安装",
-          "slug": "redis环境安装"
+          "title": "MySql篇",
+          "slug": "mysql篇"
         },
         {
           "level": 3,
-          "title": "安装前置",
-          "slug": "安装前置"
-        },
-        {
-          "level": 3,
-          "title": "解压并编译安装",
-          "slug": "解压并编译安装"
-        },
-        {
-          "level": 3,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 3,
-          "title": "配置文件下载",
-          "slug": "配置文件下载"
-        },
-        {
-          "level": 3,
-          "title": "配置文件修改",
-          "slug": "配置文件修改"
-        },
-        {
-          "level": 3,
-          "title": "启动一  一般方式",
-          "slug": "启动一-一般方式"
-        },
-        {
-          "level": 3,
-          "title": "启动二  针对于docker以挂载启动",
-          "slug": "启动二-针对于docker以挂载启动"
-        },
-        {
-          "level": 3,
-          "title": "验证",
-          "slug": "验证"
+          "title": "1. MySQL 索引使用有哪些注意事项呢？",
+          "slug": "_1-mysql-索引使用有哪些注意事项呢"
         }
       ],
       "lastUpdated": "2021/11/16上午9:35:24",
@@ -3089,35 +3083,7 @@ export const siteData = {
           "slug": "启动"
         }
       ],
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "MySql篇",
-      "frontmatter": {},
-      "regularPath": "/mianshi/MySql%E7%AF%87.html",
-      "relativePath": "mianshi/MySql篇.md",
-      "key": "v-ceb963b4",
-      "path": "/mianshi/MySql%E7%AF%87.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "MySql篇",
-          "slug": "mysql篇"
-        },
-        {
-          "level": 3,
-          "title": "1. MySQL 索引使用有哪些注意事项呢？",
-          "slug": "_1-mysql-索引使用有哪些注意事项呢"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3194,6 +3160,72 @@ export const siteData = {
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "redis环境安装",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+      "relativePath": "linux/deploy/redis环境安装.md",
+      "key": "v-4175c322",
+      "path": "/linux/deploy/redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "redis环境安装",
+          "slug": "redis环境安装"
+        },
+        {
+          "level": 3,
+          "title": "安装前置",
+          "slug": "安装前置"
+        },
+        {
+          "level": 3,
+          "title": "解压并编译安装",
+          "slug": "解压并编译安装"
+        },
+        {
+          "level": 3,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 3,
+          "title": "配置文件下载",
+          "slug": "配置文件下载"
+        },
+        {
+          "level": 3,
+          "title": "配置文件修改",
+          "slug": "配置文件修改"
+        },
+        {
+          "level": 3,
+          "title": "启动一  一般方式",
+          "slug": "启动一-一般方式"
+        },
+        {
+          "level": 3,
+          "title": "启动二  针对于docker以挂载启动",
+          "slug": "启动二-针对于docker以挂载启动"
+        },
+        {
+          "level": 3,
+          "title": "验证",
+          "slug": "验证"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3285,57 +3317,6 @@ export const siteData = {
       }
     },
     {
-      "title": "本地开发",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/miscellaneous/local-development.html",
-      "relativePath": "miscellaneous/local-development.md",
-      "key": "v-2b4c7216",
-      "path": "/miscellaneous/local-development.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "摘要",
-          "slug": "摘要"
-        },
-        {
-          "level": 2,
-          "title": "初始化 package",
-          "slug": "初始化-package"
-        },
-        {
-          "level": 2,
-          "title": "链接",
-          "slug": "链接"
-        },
-        {
-          "level": 2,
-          "title": "取消链接",
-          "slug": "取消链接"
-        },
-        {
-          "level": 2,
-          "title": "BUGS / 问答",
-          "slug": "bugs-问答"
-        },
-        {
-          "level": 2,
-          "title": "更多相关",
-          "slug": "更多相关"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "从 VuePress 0.x 迁移",
       "frontmatter": {
         "sidebar": "auto"
@@ -3382,6 +3363,23 @@ export const siteData = {
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "目录",
+      "frontmatter": {},
+      "regularPath": "/mysql/",
+      "relativePath": "mysql/README.md",
+      "key": "v-e125ea82",
+      "path": "/mysql/",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3562,7 +3560,7 @@ export const siteData = {
           "slug": "_5-一个6亿的表-a-一个3亿的表-b-通过外键-tid-关联-如何最快的查询出满足条件的第50000到第50200中的这200条数据记录"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3573,12 +3571,338 @@ export const siteData = {
       }
     },
     {
-      "title": "目录",
+      "title": "事务隔离：为什么你改了我还看不见？",
       "frontmatter": {},
-      "regularPath": "/mysql/",
-      "relativePath": "mysql/README.md",
-      "key": "v-e125ea82",
-      "path": "/mysql/",
+      "regularPath": "/mysql/%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%94%B9%E4%BA%86%E6%88%91%E8%BF%98%E7%9C%8B%E4%B8%8D%E8%A7%81%EF%BC%9F.html",
+      "relativePath": "mysql/事务隔离：为什么你改了我还看不见？.md",
+      "key": "v-7b5b43c8",
+      "path": "/mysql/%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%94%B9%E4%BA%86%E6%88%91%E8%BF%98%E7%9C%8B%E4%B8%8D%E8%A7%81%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "事务隔离：为什么你改了我还看不见？",
+          "slug": "事务隔离-为什么你改了我还看不见"
+        },
+        {
+          "level": 3,
+          "title": "事物的特点",
+          "slug": "事物的特点"
+        },
+        {
+          "level": 3,
+          "title": "隔离性与隔离级别",
+          "slug": "隔离性与隔离级别"
+        },
+        {
+          "level": 3,
+          "title": "事务隔离的实现",
+          "slug": "事务隔离的实现"
+        },
+        {
+          "level": 3,
+          "title": "事务的启动方式",
+          "slug": "事务的启动方式"
+        },
+        {
+          "level": 3,
+          "title": "事务查询",
+          "slug": "事务查询"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "本地开发",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/miscellaneous/local-development.html",
+      "relativePath": "miscellaneous/local-development.md",
+      "key": "v-2b4c7216",
+      "path": "/miscellaneous/local-development.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "摘要",
+          "slug": "摘要"
+        },
+        {
+          "level": 2,
+          "title": "初始化 package",
+          "slug": "初始化-package"
+        },
+        {
+          "level": 2,
+          "title": "链接",
+          "slug": "链接"
+        },
+        {
+          "level": 2,
+          "title": "取消链接",
+          "slug": "取消链接"
+        },
+        {
+          "level": 2,
+          "title": "BUGS / 问答",
+          "slug": "bugs-问答"
+        },
+        {
+          "level": 2,
+          "title": "更多相关",
+          "slug": "更多相关"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "全局锁和表锁 ：给表加个字段怎么有这么多阻碍？",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E5%85%A8%E5%B1%80%E9%94%81%E5%92%8C%E8%A1%A8%E9%94%81%20%EF%BC%9A%E7%BB%99%E8%A1%A8%E5%8A%A0%E4%B8%AA%E5%AD%97%E6%AE%B5%E6%80%8E%E4%B9%88%E6%9C%89%E8%BF%99%E4%B9%88%E5%A4%9A%E9%98%BB%E7%A2%8D%EF%BC%9F.html",
+      "relativePath": "mysql/全局锁和表锁 ：给表加个字段怎么有这么多阻碍？.md",
+      "key": "v-02ea2f47",
+      "path": "/mysql/%E5%85%A8%E5%B1%80%E9%94%81%E5%92%8C%E8%A1%A8%E9%94%81%20%EF%BC%9A%E7%BB%99%E8%A1%A8%E5%8A%A0%E4%B8%AA%E5%AD%97%E6%AE%B5%E6%80%8E%E4%B9%88%E6%9C%89%E8%BF%99%E4%B9%88%E5%A4%9A%E9%98%BB%E7%A2%8D%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "全局锁和表锁 ：给表加个字段怎么有这么多阻碍？",
+          "slug": "全局锁和表锁-给表加个字段怎么有这么多阻碍"
+        },
+        {
+          "level": 3,
+          "title": "全局锁",
+          "slug": "全局锁"
+        },
+        {
+          "level": 3,
+          "title": "表级锁",
+          "slug": "表级锁"
+        },
+        {
+          "level": 3,
+          "title": "探讨:给一个小表加个字段，导致整个库挂了。",
+          "slug": "探讨-给一个小表加个字段-导致整个库挂了。"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "深入浅出索引一",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B4%A2%E5%BC%95%E4%B8%80.html",
+      "relativePath": "mysql/深入浅出索引一.md",
+      "key": "v-2d0256af",
+      "path": "/mysql/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B4%A2%E5%BC%95%E4%B8%80.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "深入浅出索引一",
+          "slug": "深入浅出索引一"
+        },
+        {
+          "level": 3,
+          "title": "索引的常见模型",
+          "slug": "索引的常见模型"
+        },
+        {
+          "level": 3,
+          "title": "数据库索引的原理，为什么要用 B+树，为什么不用二叉树？",
+          "slug": "数据库索引的原理-为什么要用-b-树-为什么不用二叉树"
+        },
+        {
+          "level": 3,
+          "title": "InnoDB 的索引模型",
+          "slug": "innodb-的索引模型"
+        },
+        {
+          "level": 3,
+          "title": "索引维护",
+          "slug": "索引维护"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "日志系统：一条SQL更新语句是如何执行的？",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%B8%80%E6%9D%A1SQL%E6%9B%B4%E6%96%B0%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84%EF%BC%9F.html",
+      "relativePath": "mysql/日志系统：一条SQL更新语句是如何执行的？.md",
+      "key": "v-708b89b4",
+      "path": "/mysql/%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%B8%80%E6%9D%A1SQL%E6%9B%B4%E6%96%B0%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "日志系统：一条SQL更新语句是如何执行的？",
+          "slug": "日志系统-一条sql更新语句是如何执行的"
+        },
+        {
+          "level": 3,
+          "title": "重要的日志模块：redo log",
+          "slug": "重要的日志模块-redo-log"
+        },
+        {
+          "level": 3,
+          "title": "重要的日志模块：binlog",
+          "slug": "重要的日志模块-binlog"
+        },
+        {
+          "level": 3,
+          "title": "两阶段提交",
+          "slug": "两阶段提交"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "事务到底是隔离的还是不隔离的？",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E4%BA%8B%E5%8A%A1%E5%88%B0%E5%BA%95%E6%98%AF%E9%9A%94%E7%A6%BB%E7%9A%84%E8%BF%98%E6%98%AF%E4%B8%8D%E9%9A%94%E7%A6%BB%E7%9A%84%EF%BC%9F.html",
+      "relativePath": "mysql/事务到底是隔离的还是不隔离的？.md",
+      "key": "v-180bfba8",
+      "path": "/mysql/%E4%BA%8B%E5%8A%A1%E5%88%B0%E5%BA%95%E6%98%AF%E9%9A%94%E7%A6%BB%E7%9A%84%E8%BF%98%E6%98%AF%E4%B8%8D%E9%9A%94%E7%A6%BB%E7%9A%84%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "事务到底是隔离的还是不隔离的？",
+          "slug": "事务到底是隔离的还是不隔离的"
+        },
+        {
+          "level": 3,
+          "title": "“快照”在 MVCC(一致性读) 里是怎么工作的？",
+          "slug": "快照-在-mvcc-一致性读-里是怎么工作的"
+        },
+        {
+          "level": 3,
+          "title": "更新逻辑",
+          "slug": "更新逻辑"
+        },
+        {
+          "level": 3,
+          "title": "事务的可重复读的能力是怎么实现的？",
+          "slug": "事务的可重复读的能力是怎么实现的"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "深入浅出索引二",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B4%A2%E5%BC%95%E4%BA%8C.html",
+      "relativePath": "mysql/深入浅出索引二.md",
+      "key": "v-6e320d11",
+      "path": "/mysql/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B4%A2%E5%BC%95%E4%BA%8C.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "深入浅出索引二",
+          "slug": "深入浅出索引二"
+        },
+        {
+          "level": 3,
+          "title": "索引的执行案例分析",
+          "slug": "索引的执行案例分析"
+        },
+        {
+          "level": 3,
+          "title": "覆盖索引",
+          "slug": "覆盖索引"
+        },
+        {
+          "level": 3,
+          "title": "最左前缀原则",
+          "slug": "最左前缀原则"
+        },
+        {
+          "level": 3,
+          "title": "索引下推",
+          "slug": "索引下推"
+        }
+      ],
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "行锁功过：怎么减少行锁对性能的影响？",
+      "frontmatter": {},
+      "regularPath": "/mysql/%E8%A1%8C%E9%94%81%E5%8A%9F%E8%BF%87%EF%BC%9A%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E8%A1%8C%E9%94%81%E5%AF%B9%E6%80%A7%E8%83%BD%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%9F.html",
+      "relativePath": "mysql/行锁功过：怎么减少行锁对性能的影响？.md",
+      "key": "v-f60a2a58",
+      "path": "/mysql/%E8%A1%8C%E9%94%81%E5%8A%9F%E8%BF%87%EF%BC%9A%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E8%A1%8C%E9%94%81%E5%AF%B9%E6%80%A7%E8%83%BD%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "行锁功过：怎么减少行锁对性能的影响？",
+          "slug": "行锁功过-怎么减少行锁对性能的影响"
+        },
+        {
+          "level": 2,
+          "title": "",
+          "slug": ""
+        },
+        {
+          "level": 3,
+          "title": "两阶段锁协议。",
+          "slug": "两阶段锁协议。"
+        },
+        {
+          "level": 3,
+          "title": "死锁和死锁检测",
+          "slug": "死锁和死锁检测"
+        },
+        {
+          "level": 3,
+          "title": "怎么解决由这种热点行更新导致的性能问题呢？",
+          "slug": "怎么解决由这种热点行更新导致的性能问题呢"
+        }
+      ],
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3620,8 +3944,19 @@ export const siteData = {
           "level": 3,
           "title": "分析器",
           "slug": "分析器"
+        },
+        {
+          "level": 3,
+          "title": "优化器",
+          "slug": "优化器"
+        },
+        {
+          "level": 3,
+          "title": "执行器",
+          "slug": "执行器"
         }
       ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3668,6 +4003,52 @@ export const siteData = {
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "ORA-01756报错的解决方案中文编码错误",
+      "frontmatter": {
+        "sidebar": "auto"
+      },
+      "regularPath": "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html",
+      "relativePath": "oracle-note/ORA-01756报错的解决方案中文编码错误.md",
+      "key": "v-3f8ab8f5",
+      "path": "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "ORA-01756报错的解决方案中文编码错误",
+          "slug": "ora-01756报错的解决方案中文编码错误"
+        },
+        {
+          "level": 3,
+          "title": "前言",
+          "slug": "前言"
+        },
+        {
+          "level": 3,
+          "title": "解决",
+          "slug": "解决"
+        },
+        {
+          "level": 3,
+          "title": "第二步 查看自己window设置的编码",
+          "slug": "第二步-查看自己window设置的编码"
+        },
+        {
+          "level": 3,
+          "title": "第三步 重启PLSql生效",
+          "slug": "第三步-重启plsql生效"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -3733,125 +4114,47 @@ export const siteData = {
       }
     },
     {
-      "title": "ORA-01756报错的解决方案中文编码错误",
-      "frontmatter": {
-        "sidebar": "auto"
-      },
-      "regularPath": "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html",
-      "relativePath": "oracle-note/ORA-01756报错的解决方案中文编码错误.md",
-      "key": "v-3f8ab8f5",
-      "path": "/oracle-note/ORA-01756%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.html",
+      "title": "Context API",
+      "frontmatter": {},
+      "regularPath": "/plugin/context-api.html",
+      "relativePath": "plugin/context-api.md",
+      "key": "v-04c1917c",
+      "path": "/plugin/context-api.html",
       "headers": [
         {
           "level": 2,
-          "title": "ORA-01756报错的解决方案中文编码错误",
-          "slug": "ora-01756报错的解决方案中文编码错误"
-        },
-        {
-          "level": 3,
-          "title": "前言",
-          "slug": "前言"
-        },
-        {
-          "level": 3,
-          "title": "解决",
-          "slug": "解决"
-        },
-        {
-          "level": 3,
-          "title": "第二步 查看自己window设置的编码",
-          "slug": "第二步-查看自己window设置的编码"
-        },
-        {
-          "level": 3,
-          "title": "第三步 重启PLSql生效",
-          "slug": "第三步-重启plsql生效"
-        }
-      ],
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "pwa",
-      "frontmatter": {
-        "title": "pwa",
-        "metaTitle": "PWA 插件 | VuePress"
-      },
-      "regularPath": "/notes/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8C%E6%95%B0%E5%AD%A6.html",
-      "relativePath": "notes/程序员和数学.md",
-      "key": "v-3aeebd98",
-      "path": "/notes/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8C%E6%95%B0%E5%AD%A6.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "一、前言",
-          "slug": "一、前言"
+          "title": "ctx.isProd",
+          "slug": "ctx-isprod"
         },
         {
           "level": 2,
-          "title": "二、把代码写好的四步",
-          "slug": "二、把代码写好的四步"
+          "title": "ctx.pages",
+          "slug": "ctx-pages"
         },
         {
           "level": 2,
-          "title": "三、for循环没算法快",
-          "slug": "三、for循环没算法快"
-        },
-        {
-          "level": 3,
-          "title": "1. for 循环实现",
-          "slug": "_1-for-循环实现"
-        },
-        {
-          "level": 3,
-          "title": "2. 算法逻辑实现",
-          "slug": "_2-算法逻辑实现"
-        },
-        {
-          "level": 3,
-          "title": "3. 耗时曲线对比",
-          "slug": "_3-耗时曲线对比"
+          "title": "ctx.sourceDir",
+          "slug": "ctx-sourcedir"
         },
         {
           "level": 2,
-          "title": "四、Java中的算法运用",
-          "slug": "四、java中的算法运用"
-        },
-        {
-          "level": 3,
-          "title": "1. HashMap的扰动函数",
-          "slug": "_1-hashmap的扰动函数"
-        },
-        {
-          "level": 3,
-          "title": "2. 斐波那契（Fibonacci）散列法",
-          "slug": "_2-斐波那契-fibonacci-散列法"
-        },
-        {
-          "level": 3,
-          "title": "3. 梅森旋转算法（Mersenne twister）",
-          "slug": "_3-梅森旋转算法-mersenne-twister"
+          "title": "ctx.tempPath",
+          "slug": "ctx-temppath"
         },
         {
           "level": 2,
-          "title": "五、程序员数学入门",
-          "slug": "五、程序员数学入门"
+          "title": "ctx.outDir",
+          "slug": "ctx-outdir"
         },
         {
           "level": 2,
-          "title": "六、总结",
-          "slug": "六、总结"
+          "title": "ctx.base",
+          "slug": "ctx-base"
         },
         {
           "level": 2,
-          "title": "七、系列推荐",
-          "slug": "七、系列推荐"
+          "title": "ctx.writeTemp",
+          "slug": "ctx-writetemp"
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
@@ -3896,60 +4199,6 @@ export const siteData = {
           "level": 2,
           "title": "架构",
           "slug": "架构"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "Context API",
-      "frontmatter": {},
-      "regularPath": "/plugin/context-api.html",
-      "relativePath": "plugin/context-api.md",
-      "key": "v-04c1917c",
-      "path": "/plugin/context-api.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "ctx.isProd",
-          "slug": "ctx-isprod"
-        },
-        {
-          "level": 2,
-          "title": "ctx.pages",
-          "slug": "ctx-pages"
-        },
-        {
-          "level": 2,
-          "title": "ctx.sourceDir",
-          "slug": "ctx-sourcedir"
-        },
-        {
-          "level": 2,
-          "title": "ctx.tempPath",
-          "slug": "ctx-temppath"
-        },
-        {
-          "level": 2,
-          "title": "ctx.outDir",
-          "slug": "ctx-outdir"
-        },
-        {
-          "level": 2,
-          "title": "ctx.base",
-          "slug": "ctx-base"
-        },
-        {
-          "level": 2,
-          "title": "ctx.writeTemp",
-          "slug": "ctx-writetemp"
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
@@ -4049,16 +4298,21 @@ export const siteData = {
       }
     },
     {
-      "title": "back-to-top",
+      "title": "blog",
       "frontmatter": {
-        "title": "back-to-top",
-        "metaTitle": "Back-To-Top 插件 | VuePress"
+        "title": "blog",
+        "metaTitle": "博客插件 | VuePress"
       },
-      "regularPath": "/plugin/official/plugin-back-to-top.html",
-      "relativePath": "plugin/official/plugin-back-to-top.md",
-      "key": "v-3f5d91fe",
-      "path": "/plugin/official/plugin-back-to-top.html",
+      "regularPath": "/plugin/official/plugin-blog.html",
+      "relativePath": "plugin/official/plugin-blog.md",
+      "key": "v-735f9383",
+      "path": "/plugin/official/plugin-blog.html",
       "headers": [
+        {
+          "level": 2,
+          "title": "功能",
+          "slug": "功能"
+        },
         {
           "level": 2,
           "title": "安装",
@@ -4081,21 +4335,16 @@ export const siteData = {
       }
     },
     {
-      "title": "blog",
+      "title": "back-to-top",
       "frontmatter": {
-        "title": "blog",
-        "metaTitle": "博客插件 | VuePress"
+        "title": "back-to-top",
+        "metaTitle": "Back-To-Top 插件 | VuePress"
       },
-      "regularPath": "/plugin/official/plugin-blog.html",
-      "relativePath": "plugin/official/plugin-blog.md",
-      "key": "v-735f9383",
-      "path": "/plugin/official/plugin-blog.html",
+      "regularPath": "/plugin/official/plugin-back-to-top.html",
+      "relativePath": "plugin/official/plugin-back-to-top.md",
+      "key": "v-3f5d91fe",
+      "path": "/plugin/official/plugin-back-to-top.html",
       "headers": [
-        {
-          "level": 2,
-          "title": "功能",
-          "slug": "功能"
-        },
         {
           "level": 2,
           "title": "安装",
@@ -4202,6 +4451,93 @@ export const siteData = {
       }
     },
     {
+      "title": "pwa",
+      "frontmatter": {
+        "title": "pwa",
+        "metaTitle": "PWA 插件 | VuePress"
+      },
+      "regularPath": "/notes/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8C%E6%95%B0%E5%AD%A6.html",
+      "relativePath": "notes/程序员和数学.md",
+      "key": "v-3aeebd98",
+      "path": "/notes/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8C%E6%95%B0%E5%AD%A6.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "一、前言",
+          "slug": "一、前言"
+        },
+        {
+          "level": 2,
+          "title": "二、把代码写好的四步",
+          "slug": "二、把代码写好的四步"
+        },
+        {
+          "level": 2,
+          "title": "三、for循环没算法快",
+          "slug": "三、for循环没算法快"
+        },
+        {
+          "level": 3,
+          "title": "1. for 循环实现",
+          "slug": "_1-for-循环实现"
+        },
+        {
+          "level": 3,
+          "title": "2. 算法逻辑实现",
+          "slug": "_2-算法逻辑实现"
+        },
+        {
+          "level": 3,
+          "title": "3. 耗时曲线对比",
+          "slug": "_3-耗时曲线对比"
+        },
+        {
+          "level": 2,
+          "title": "四、Java中的算法运用",
+          "slug": "四、java中的算法运用"
+        },
+        {
+          "level": 3,
+          "title": "1. HashMap的扰动函数",
+          "slug": "_1-hashmap的扰动函数"
+        },
+        {
+          "level": 3,
+          "title": "2. 斐波那契（Fibonacci）散列法",
+          "slug": "_2-斐波那契-fibonacci-散列法"
+        },
+        {
+          "level": 3,
+          "title": "3. 梅森旋转算法（Mersenne twister）",
+          "slug": "_3-梅森旋转算法-mersenne-twister"
+        },
+        {
+          "level": 2,
+          "title": "五、程序员数学入门",
+          "slug": "五、程序员数学入门"
+        },
+        {
+          "level": 2,
+          "title": "六、总结",
+          "slug": "六、总结"
+        },
+        {
+          "level": 2,
+          "title": "七、系列推荐",
+          "slug": "七、系列推荐"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
       "title": "medium-zoom",
       "frontmatter": {
         "title": "medium-zoom",
@@ -4273,6 +4609,58 @@ export const siteData = {
           "level": 2,
           "title": "自定义颜色",
           "slug": "自定义颜色"
+        }
+      ],
+      "lastUpdated": "2021/11/8下午5:45:42",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "register-components",
+      "frontmatter": {
+        "title": "register-components",
+        "metaTitle": "注册组件的插件 | VuePress"
+      },
+      "regularPath": "/plugin/official/plugin-register-components.html",
+      "relativePath": "plugin/official/plugin-register-components.md",
+      "key": "v-49b0f55a",
+      "path": "/plugin/official/plugin-register-components.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 2,
+          "title": "选项",
+          "slug": "选项"
+        },
+        {
+          "level": 3,
+          "title": "componentsDir",
+          "slug": "componentsdir"
+        },
+        {
+          "level": 3,
+          "title": "components",
+          "slug": "components"
+        },
+        {
+          "level": 3,
+          "title": "getComponentName",
+          "slug": "getcomponentname"
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
@@ -4363,58 +4751,6 @@ export const siteData = {
       }
     },
     {
-      "title": "register-components",
-      "frontmatter": {
-        "title": "register-components",
-        "metaTitle": "注册组件的插件 | VuePress"
-      },
-      "regularPath": "/plugin/official/plugin-register-components.html",
-      "relativePath": "plugin/official/plugin-register-components.md",
-      "key": "v-49b0f55a",
-      "path": "/plugin/official/plugin-register-components.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "选项",
-          "slug": "选项"
-        },
-        {
-          "level": 3,
-          "title": "componentsDir",
-          "slug": "componentsdir"
-        },
-        {
-          "level": 3,
-          "title": "components",
-          "slug": "components"
-        },
-        {
-          "level": 3,
-          "title": "getComponentName",
-          "slug": "getcomponentname"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
       "title": "search",
       "frontmatter": {
         "title": "search",
@@ -4454,50 +4790,6 @@ export const siteData = {
           "level": 3,
           "title": "调整默认颜色",
           "slug": "调整默认颜色"
-        }
-      ],
-      "lastUpdated": "2021/11/8下午5:45:42",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "使用插件",
-      "frontmatter": {},
-      "regularPath": "/plugin/using-a-plugin.html",
-      "relativePath": "plugin/using-a-plugin.md",
-      "key": "v-741a7960",
-      "path": "/plugin/using-a-plugin.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用来自依赖的插件",
-          "slug": "使用来自依赖的插件"
-        },
-        {
-          "level": 2,
-          "title": "插件的缩写",
-          "slug": "插件的缩写"
-        },
-        {
-          "level": 2,
-          "title": "插件的选项",
-          "slug": "插件的选项"
-        },
-        {
-          "level": 3,
-          "title": "Babel 式",
-          "slug": "babel-式"
-        },
-        {
-          "level": 3,
-          "title": "对象式",
-          "slug": "对象式"
         }
       ],
       "lastUpdated": "2021/11/8下午5:45:42",
@@ -4612,12 +4904,39 @@ export const siteData = {
       }
     },
     {
-      "title": "开发插件",
+      "title": "使用插件",
       "frontmatter": {},
-      "regularPath": "/plugin/writing-a-plugin.html",
-      "relativePath": "plugin/writing-a-plugin.md",
-      "key": "v-475d7a50",
-      "path": "/plugin/writing-a-plugin.html",
+      "regularPath": "/plugin/using-a-plugin.html",
+      "relativePath": "plugin/using-a-plugin.md",
+      "key": "v-741a7960",
+      "path": "/plugin/using-a-plugin.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用来自依赖的插件",
+          "slug": "使用来自依赖的插件"
+        },
+        {
+          "level": 2,
+          "title": "插件的缩写",
+          "slug": "插件的缩写"
+        },
+        {
+          "level": 2,
+          "title": "插件的选项",
+          "slug": "插件的选项"
+        },
+        {
+          "level": 3,
+          "title": "Babel 式",
+          "slug": "babel-式"
+        },
+        {
+          "level": 3,
+          "title": "对象式",
+          "slug": "对象式"
+        }
+      ],
       "lastUpdated": "2021/11/8下午5:45:42",
       "rightAnchor": {
         "showDepth": 2,
@@ -4653,40 +4972,13 @@ export const siteData = {
       }
     },
     {
-      "title": "AOF日志：宕机了，Redis如何避免数据丢失？",
+      "title": "开发插件",
       "frontmatter": {},
-      "regularPath": "/redis/AOF%E6%97%A5%E5%BF%97%EF%BC%9A%E5%AE%95%E6%9C%BA%E4%BA%86%EF%BC%8CRedis%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1.html",
-      "relativePath": "redis/AOF日志：宕机了，Redis如何避免数据丢失.md",
-      "key": "v-571b98cc",
-      "path": "/redis/AOF%E6%97%A5%E5%BF%97%EF%BC%9A%E5%AE%95%E6%9C%BA%E4%BA%86%EF%BC%8CRedis%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "AOF日志：宕机了，Redis如何避免数据丢失？",
-          "slug": "aof日志-宕机了-redis如何避免数据丢失"
-        },
-        {
-          "level": 3,
-          "title": "AOF 日志是如何实现的？",
-          "slug": "aof-日志是如何实现的"
-        },
-        {
-          "level": 3,
-          "title": "三种写回策略",
-          "slug": "三种写回策略"
-        },
-        {
-          "level": 3,
-          "title": "AOF日志文件太大了怎么办？",
-          "slug": "aof日志文件太大了怎么办"
-        },
-        {
-          "level": 3,
-          "title": "AOF 重写机制",
-          "slug": "aof-重写机制"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "regularPath": "/plugin/writing-a-plugin.html",
+      "relativePath": "plugin/writing-a-plugin.md",
+      "key": "v-475d7a50",
+      "path": "/plugin/writing-a-plugin.html",
+      "lastUpdated": "2021/11/8下午5:45:42",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4730,7 +5022,7 @@ export const siteData = {
           "slug": "混合使用aof日志和rdb的解决方案"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4741,13 +5033,40 @@ export const siteData = {
       }
     },
     {
-      "title": "目录",
+      "title": "AOF日志：宕机了，Redis如何避免数据丢失？",
       "frontmatter": {},
-      "regularPath": "/redis/",
-      "relativePath": "redis/README.md",
-      "key": "v-c8a6ed66",
-      "path": "/redis/",
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "regularPath": "/redis/AOF%E6%97%A5%E5%BF%97%EF%BC%9A%E5%AE%95%E6%9C%BA%E4%BA%86%EF%BC%8CRedis%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1.html",
+      "relativePath": "redis/AOF日志：宕机了，Redis如何避免数据丢失.md",
+      "key": "v-571b98cc",
+      "path": "/redis/AOF%E6%97%A5%E5%BF%97%EF%BC%9A%E5%AE%95%E6%9C%BA%E4%BA%86%EF%BC%8CRedis%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "AOF日志：宕机了，Redis如何避免数据丢失？",
+          "slug": "aof日志-宕机了-redis如何避免数据丢失"
+        },
+        {
+          "level": 3,
+          "title": "AOF 日志是如何实现的？",
+          "slug": "aof-日志是如何实现的"
+        },
+        {
+          "level": 3,
+          "title": "三种写回策略",
+          "slug": "三种写回策略"
+        },
+        {
+          "level": 3,
+          "title": "AOF日志文件太大了怎么办？",
+          "slug": "aof日志文件太大了怎么办"
+        },
+        {
+          "level": 3,
+          "title": "AOF 重写机制",
+          "slug": "aof-重写机制"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4782,6 +5101,23 @@ export const siteData = {
       }
     },
     {
+      "title": "目录",
+      "frontmatter": {},
+      "regularPath": "/redis/",
+      "relativePath": "redis/README.md",
+      "key": "v-c8a6ed66",
+      "path": "/redis/",
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
       "title": "“万金油”的String，为什么不好用了？",
       "frontmatter": {},
       "regularPath": "/redis/%E2%80%9C%E4%B8%87%E9%87%91%E6%B2%B9%E2%80%9D%E7%9A%84String%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%A5%BD%E7%94%A8%E4%BA%86%EF%BC%9F.html",
@@ -4800,7 +5136,51 @@ export const siteData = {
           "slug": "为什么-string-类型内存开销大"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "主从机制：主从库如何实现数据一致？",
+      "frontmatter": {},
+      "regularPath": "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
+      "relativePath": "redis/主从机制：主从库如何实现数据一致？.md",
+      "key": "v-369670c2",
+      "path": "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "主从机制：主从库如何实现数据一致？",
+          "slug": "主从机制-主从库如何实现数据一致"
+        },
+        {
+          "level": 3,
+          "title": "主从库间如何进行第一次同步？",
+          "slug": "主从库间如何进行第一次同步"
+        },
+        {
+          "level": 3,
+          "title": "主从级联模式分担全量复制时的主库压力(“主-从-从”模式)",
+          "slug": "主从级联模式分担全量复制时的主库压力-主-从-从-模式"
+        },
+        {
+          "level": 3,
+          "title": "主从库间网络断了怎么办？(增量复制)",
+          "slug": "主从库间网络断了怎么办-增量复制"
+        },
+        {
+          "level": 3,
+          "title": "提问：主从全量同步使用RDB而不使用AOF的原因",
+          "slug": "提问-主从全量同步使用rdb而不使用aof的原因"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4905,7 +5285,7 @@ export const siteData = {
           "slug": "redis-cluster为什么不采用把key直接映射到实例的方式-而采用哈希槽的方式"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4916,40 +5296,40 @@ export const siteData = {
       }
     },
     {
-      "title": "主从机制：主从库如何实现数据一致？",
+      "title": "哨兵机制：主库挂了，如何不间断服务",
       "frontmatter": {},
-      "regularPath": "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
-      "relativePath": "redis/主从机制：主从库如何实现数据一致？.md",
-      "key": "v-369670c2",
-      "path": "/redis/%E4%B8%BB%E4%BB%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%BA%93%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%EF%BC%9F.html",
+      "regularPath": "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
+      "relativePath": "redis/哨兵机制：主库挂了，如何不间断服务.md",
+      "key": "v-88fe6fe2",
+      "path": "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
       "headers": [
         {
           "level": 2,
-          "title": "主从机制：主从库如何实现数据一致？",
-          "slug": "主从机制-主从库如何实现数据一致"
+          "title": "哨兵机制：主库挂了，如何不间断服务",
+          "slug": "哨兵机制-主库挂了-如何不间断服务"
         },
         {
           "level": 3,
-          "title": "主从库间如何进行第一次同步？",
-          "slug": "主从库间如何进行第一次同步"
+          "title": "哨兵机制的基本流程",
+          "slug": "哨兵机制的基本流程"
         },
         {
           "level": 3,
-          "title": "主从级联模式分担全量复制时的主库压力(“主-从-从”模式)",
-          "slug": "主从级联模式分担全量复制时的主库压力-主-从-从-模式"
+          "title": "哨兵如何判断下线?(主观下线和客观下线)",
+          "slug": "哨兵如何判断下线-主观下线和客观下线"
         },
         {
           "level": 3,
-          "title": "主从库间网络断了怎么办？(增量复制)",
-          "slug": "主从库间网络断了怎么办-增量复制"
+          "title": "哨兵如何选定新主库？（筛选-打分）",
+          "slug": "哨兵如何选定新主库-筛选-打分"
         },
         {
           "level": 3,
-          "title": "提问：主从全量同步使用RDB而不使用AOF的原因",
-          "slug": "提问-主从全量同步使用rdb而不使用aof的原因"
+          "title": "提问：哨兵在操作主从切换的过程中，客户端能否正常地进行请求操作？",
+          "slug": "提问-哨兵在操作主从切换的过程中-客户端能否正常地进行请求操作"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -4998,75 +5378,7 @@ export const siteData = {
           "slug": "提问-1主4从-5个哨兵-哨兵配置quorum为2-如果3个哨兵故障-当主库宕机时-哨兵能否判断主库-客观下线-能否自动切换"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "哨兵机制：主库挂了，如何不间断服务",
-      "frontmatter": {},
-      "regularPath": "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
-      "relativePath": "redis/哨兵机制：主库挂了，如何不间断服务.md",
-      "key": "v-88fe6fe2",
-      "path": "/redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%BA%93%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9C%8D%E5%8A%A1.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "哨兵机制：主库挂了，如何不间断服务",
-          "slug": "哨兵机制-主库挂了-如何不间断服务"
-        },
-        {
-          "level": 3,
-          "title": "哨兵机制的基本流程",
-          "slug": "哨兵机制的基本流程"
-        },
-        {
-          "level": 3,
-          "title": "哨兵如何判断下线?(主观下线和客观下线)",
-          "slug": "哨兵如何判断下线-主观下线和客观下线"
-        },
-        {
-          "level": 3,
-          "title": "哨兵如何选定新主库？（筛选-打分）",
-          "slug": "哨兵如何选定新主库-筛选-打分"
-        },
-        {
-          "level": 3,
-          "title": "提问：哨兵在操作主从切换的过程中，客户端能否正常地进行请求操作？",
-          "slug": "提问-哨兵在操作主从切换的过程中-客户端能否正常地进行请求操作"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "基本架构：一个K-V数据库应该包含哪些",
-      "frontmatter": {},
-      "regularPath": "/redis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E4%B8%AAK-V%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B.html",
-      "relativePath": "redis/基本架构：一个K-V数据库应该包含哪些.md",
-      "key": "v-68a73b36",
-      "path": "/redis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E4%B8%AAK-V%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基本架构：一个K-V数据库应该包含哪些",
-          "slug": "基本架构-一个k-v数据库应该包含哪些"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -5110,31 +5422,7 @@ export const siteData = {
           "slug": "键值对中值的数据类型的底层数据结构"
         }
       ],
-      "lastUpdated": "2021/11/16上午9:35:24",
-      "rightAnchor": {
-        "showDepth": 2,
-        "expand": {
-          "trigger": "hover",
-          "clickModeDefaultOpen": true
-        },
-        "isIgnore": false
-      }
-    },
-    {
-      "title": "问题查找：Redis问题查找画像图",
-      "frontmatter": {},
-      "regularPath": "/redis/%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%EF%BC%9ARedis%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%E7%94%BB%E5%83%8F%E5%9B%BE.html",
-      "relativePath": "redis/问题查找：Redis问题查找画像图.md",
-      "key": "v-d49759ec",
-      "path": "/redis/%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%EF%BC%9ARedis%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%E7%94%BB%E5%83%8F%E5%9B%BE.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "问题查找：Redis问题查找画像图",
-          "slug": "问题查找-redis问题查找画像图"
-        }
-      ],
-      "lastUpdated": "2021/11/16上午9:35:24",
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -5178,7 +5466,55 @@ export const siteData = {
           "slug": "补充-redis单线程处理io请求性能瓶颈主要包括2个方面"
         }
       ],
+      "lastUpdated": "2021/11/19下午1:54:01",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "问题查找：Redis问题查找画像图",
+      "frontmatter": {},
+      "regularPath": "/redis/%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%EF%BC%9ARedis%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%E7%94%BB%E5%83%8F%E5%9B%BE.html",
+      "relativePath": "redis/问题查找：Redis问题查找画像图.md",
+      "key": "v-d49759ec",
+      "path": "/redis/%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%EF%BC%9ARedis%E9%97%AE%E9%A2%98%E6%9F%A5%E6%89%BE%E7%94%BB%E5%83%8F%E5%9B%BE.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "问题查找：Redis问题查找画像图",
+          "slug": "问题查找-redis问题查找画像图"
+        }
+      ],
       "lastUpdated": "2021/11/16上午9:35:24",
+      "rightAnchor": {
+        "showDepth": 2,
+        "expand": {
+          "trigger": "hover",
+          "clickModeDefaultOpen": true
+        },
+        "isIgnore": false
+      }
+    },
+    {
+      "title": "基本架构：一个K-V数据库应该包含哪些",
+      "frontmatter": {},
+      "regularPath": "/redis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E4%B8%AAK-V%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B.html",
+      "relativePath": "redis/基本架构：一个K-V数据库应该包含哪些.md",
+      "key": "v-68a73b36",
+      "path": "/redis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84%EF%BC%9A%E4%B8%80%E4%B8%AAK-V%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基本架构：一个K-V数据库应该包含哪些",
+          "slug": "基本架构-一个k-v数据库应该包含哪些"
+        }
+      ],
+      "lastUpdated": "2021/11/19下午1:54:01",
       "rightAnchor": {
         "showDepth": 2,
         "expand": {
@@ -5558,7 +5894,10 @@ export const siteData = {
     "sidebar": "auto",
     "editLinks": true,
     "docsDir": "packages/docs/docs",
-    "algolia": null,
+    "algolia": {
+      "apiKey": "3a539aab83105f01761a137c61004d85",
+      "indexName": "vuepress"
+    },
     "smoothScroll": true,
     "locales": {
       "sidebar": "auto",
@@ -5651,7 +5990,7 @@ export const siteData = {
                 "text": "Redis",
                 "items": [
                   {
-                    "text": "Redis基础到实战(详细)🎉",
+                    "text": "Redis基础到实战(详细)🎮",
                     "link": "/redis/"
                   },
                   {
@@ -5670,7 +6009,7 @@ export const siteData = {
                 "text": "Mysql",
                 "items": [
                   {
-                    "text": "Mysql基础到实战(详细)🎉",
+                    "text": "Mysql基础到实战(详细)🕹️",
                     "link": "/mysql/"
                   }
                 ]
@@ -6003,7 +6342,6 @@ export const siteData = {
                   "介绍"
                 ],
                 "Docker基础命令",
-                "Docker部署jar包运行",
                 "Docker配置Redis自启动"
               ]
             }
@@ -6018,14 +6356,21 @@ export const siteData = {
                   "",
                   "目录"
                 ],
-                "基础架构：一条SQL查询语句是如何执行的？"
+                "基础架构：一条SQL查询语句是如何执行的？",
+                "日志系统：一条SQL更新语句是如何执行的？",
+                "事务隔离：为什么你改了我还看不见？",
+                "深入浅出索引一",
+                "深入浅出索引二",
+                "全局锁和表锁 ：给表加个字段怎么有这么多阻碍？",
+                "行锁功过：怎么减少行锁对性能的影响？",
+                "事务到底是隔离的还是不隔离的？"
               ]
             },
             {
               "title": "Mysql实战必会",
               "collapsable": false,
               "children": [
-                "“万金油”的String，为什么不好用了？"
+                "基础架构：一条SQL查询语句是如何执行的？"
               ]
             }
           ]
@@ -6036,8 +6381,8 @@ export const siteData = {
   "locales": {
     "/": {
       "lang": "zh-CN",
-      "title": "记录的小册",
-      "description": "包含: Java 基础，面经手册，Go语言教程，Redis从入门到入土，设计模式，杂文，摄影...",
+      "title": "记在小本本上",
+      "description": "Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...",
       "path": "/"
     }
   }

@@ -123,7 +123,7 @@ ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that 
 
 一般语法错误会提示第一个出现错误的位置，所以你要关注的是紧接“`use near`”的内容。
 
-#### 优化器
+### 优化器
 ::: tip
  经过了分析器，MySQL 就知道你要做什么了。在开始执行之前，还要先经过优化器的处理。
 ::: 
@@ -136,7 +136,7 @@ ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that 
 
 Tip:比如一个表里面没有这个字段，也会在优化器阶段给出报错，比如用先执行哪个条件，使用哪个索引。如果没有对应的字段就会报错的。
 ::: 
-#### 执行器
+### 执行器
 ::: tip
  MySQL 通过分析器知道了你要做什么，通过优化器知道了该怎么做，于是就进入了执行器阶段，开始执行语句。
 ::: 

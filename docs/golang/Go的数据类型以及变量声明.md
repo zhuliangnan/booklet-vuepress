@@ -1,13 +1,17 @@
 ## Go的数据类型以及变量声明
 
 ##  前言
->> 为了快速入门 这里我不在细致的讨论每一种数据类型，之后会出相应的章节来详细介绍 **短 快 躲坑** 才是这个教程的宗旨
->> 参照 Go语言圣经-The Go Programming Language
+::: tip
+ 为了快速入门 这里我不在细致的讨论每一种数据类型，之后会出相应的章节来详细介绍 **短 快 躲坑** 才是这个教程的宗旨
+ 参照 Go语言圣经-The Go Programming Language
+::: 
 
 ## Go中的数据类型
->>Unix 一切皆文件
+::: tip
+Unix 一切皆文件
 C++/Java/Python 一切皆对象
 Golang 一切皆类型
+::: 
 - 值类型：基本数据类型int, float,bool, string以及数组和struct
 - 引用类型：指针，slice，map，chan等都是引用类型
 
@@ -23,8 +27,9 @@ Golang 一切皆类型
 
 
 ## Go语言声明方式
->> var、const、type和func,分别对应变量、常量、类型和函数实体对象的声明,这里先着重了解变量声明
-
+::: tip
+ var、const、type和func,分别对应变量、常量、类型和函数实体对象的声明,这里先着重了解变量声明
+::: 
 ### 第一种声明方式 var
 ````go
 ## 结构为var+变量名+类型  这个和java是反过来了的，包括函数声明也是

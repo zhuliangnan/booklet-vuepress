@@ -1,0 +1,1 @@
+export default ({ Vue }) => Vue.component("TOC", () => import("D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-table-of-contents\\lib\\components\\TableOfContents"))

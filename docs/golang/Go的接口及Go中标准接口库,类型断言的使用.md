@@ -1,11 +1,13 @@
 ## Go的接口及Go中标准接口库,类型断言的使用
 
 ## 前言
->>很多面向对象的语言都有相似的接口概念，但Go语言中接口类型的独特之处在于它是满足隐式实现的,不需要像 java 那样 implements interface 写出来
-
+::: tip
+很多面向对象的语言都有相似的接口概念，但Go语言中接口类型的独特之处在于它是满足隐式实现的,不需要像 java 那样 implements interface 写出来
+::: 
 ### 接口的实现和使用
->>一个类型如果拥有一个接口需要的**所有方法**，那么这个类型就实现了这个接口。
-
+::: tip
+一个类型如果拥有一个接口需要的**所有方法**，那么这个类型就实现了这个接口。
+::: 
 摘录-菜鸟编程
 ````go
 /* 定义接口 */
@@ -127,7 +129,9 @@ Dog's name is dog He cannot fly.Because he is dog,dog cannot fly
 Bird's name is bird she can fly.Because he is bird,bird can fly
 ````
 ### 接口的嵌入
->>Go语言的接口对嵌入支持的非常好，接口可以嵌入其他的接口，效果就像在接口中 直接添加被嵌入接口的方法一样。
+::: tip
+Go语言的接口对嵌入支持的非常好，接口可以嵌入其他的接口，效果就像在接口中 直接添加被嵌入接口的方法一样。
+::: 
 ````go
 type Dog interface {
    run()
@@ -145,7 +149,9 @@ type Animal interface {
 以上两个案例并不难，大家看完也就基本明白接口的一般操作了。
 ### Go中标准的接口库
 - **fmt.Stringer 接口**
->> 格式化打印 
+::: tip
+ 格式化打印 
+::: 
 ````go
 // Stringer is implemented by any value that has a String method,
 // which defines the ``native'' format for that value.
@@ -178,8 +184,9 @@ func main() {
 ````
 
 - **sort.Interface 接口**
->>Go语言的sort.Sort函数使用了一个接口类型sort.Interface来指定通用的排序算法和可能被排序到的序列类型之间的约定
-
+::: tip
+Go语言的sort.Sort函数使用了一个接口类型sort.Interface来指定通用的排序算法和可能被排序到的序列类型之间的约定
+::: 
 ````go
 package sort
 
@@ -261,9 +268,10 @@ func main() {
 2:{Go Anderson Reading 2018 3m38s} 
 ````
 - **errors.error 接口**
-
->> 调用errors.New函数是非常稀少的，因为有一个方便的封装函数fmt.Errorf，它还会处理字符串格式化
-创建一个error最简单的方法就是调用errors.New函数，它会根据传入的错误信息返回一个新 的error。整个errors包仅只有4行：
+::: tip
+ 调用errors.New函数是非常稀少的，因为有一个方便的封装函数fmt.Errorf，它还会处理字符串格式化
+ 创建一个error最简单的方法就是调用errors.New函数，它会根据传入的错误信息返回一个新 的error。整个errors包仅只有4行：
+::: 
 ````go
 package errors
 

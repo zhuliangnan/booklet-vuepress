@@ -98,7 +98,7 @@ module.exports = [
                 text: 'Redis',
                 items: [
                     {
-                        text: 'Redis基础到实战(详细)🎉',
+                        text: 'Redis基础到实战(详细)🎮',
                         link: '/redis/'
                     },
                     {
@@ -117,7 +117,7 @@ module.exports = [
                 text: 'Mysql',
                 items: [
                     {
-                        text: 'Mysql基础到实战(详细)🎉',
+                        text: 'Mysql基础到实战(详细)🕹️',
                         link: '/mysql/'
                     }
                 ]
