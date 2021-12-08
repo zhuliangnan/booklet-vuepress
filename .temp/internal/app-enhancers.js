@@ -13,6 +13,9 @@ import m11 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhanc
 import m12 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\9.js"
 import m13 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\10.js"
 import m14 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\11.js"
+import m15 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\12.js"
+import m16 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\13.js"
+import m17 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\.temp\\app-enhancers\\14.js"
 
 export default [
   m0,
@@ -29,5 +32,8 @@ export default [
   m11,
   m12,
   m13,
-  m14
+  m14,
+  m15,
+  m16,
+  m17
 ]

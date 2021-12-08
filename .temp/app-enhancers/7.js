@@ -1,1 +1,1 @@
-export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-tags\\enhanceAppFile.js"
+export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-baidu-tongji-analytics\\enhanceAppFile.js"

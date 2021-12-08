@@ -4,8 +4,8 @@ module.exports = [
         link: '/notes/'
     },*/
     {
-        text: '指南',
-        link: '/guide/'
+        text: 'Java开发避坑指南📝',
+        link: '/java-guide/'
     },
     /*{
         text: '配置',
@@ -239,6 +239,15 @@ module.exports = [
                     {
                         text: 'webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥',
                         link: '/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.md'
+                    }
+                ]
+            },
+            {
+                text: 'ES',
+                items: [
+                    {
+                        text: 'elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥',
+                        link: '/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.md'
                     }
                 ]
             }

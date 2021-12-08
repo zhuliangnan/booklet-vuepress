@@ -1,1 +1,1 @@
-export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\plugin-back-to-top\\enhanceAppFile.js"
+export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-social-share\\lib\\enhanceApp.js"

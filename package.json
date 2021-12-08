@@ -30,7 +30,7 @@
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
     "@vuepress/plugin-back-to-top": "1.8.0",
-    "@vuepress/plugin-google-analytics": "1.8.0",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "1.8.0",
     "@vuepress/plugin-pwa": "1.8.0",
     "@vuepress/theme-vue": "1.8.0",
@@ -50,16 +50,19 @@
     "textlint-rule-write-good": "^1.6.2",
     "vue-toasted": "^1.1.25",
     "vuepress": "1.8.0",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-catalog-graph": "^0.2.8",
     "vuepress-plugin-disqus": "^0.2.0",
     "vuepress-plugin-flowchart": "^1.4.2",
     "vuepress-plugin-right-anchor": "^0.5.4",
+    "vuepress-plugin-social-share": "^1.1.0",
     "vuepress-plugin-table-of-contents": "^1.1.7"
   },
   "dependencies": {
     "@vuepress/core": "^1.8.2",
     "to": "^0.2.9",
     "update": "^0.7.4",
+    "vuepress-plugin-baidu-tongji-analytics": "^1.0.2",
     "vuepress-plugin-gitalk-maker": "^0.1.0",
     "vuepress-plugin-global-toc": "^1.1.0",
     "vuepress-plugin-music-bar": "^3.7.6",
