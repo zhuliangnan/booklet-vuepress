@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>代码加锁：不要让“锁”事成为烦心事 | 记在小本本上</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script data-ad-client="ca-pub-2245427233262012" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.30e7c708.css" as="style"><link rel="preload" href="/assets/js/app.7cdf63a1.js" as="script"><link rel="preload" href="/assets/js/5.4faacd21.js" as="script"><link rel="preload" href="/assets/js/68.6b32dbdb.js" as="script"><link rel="preload" href="/assets/js/9.fd263465.js" as="script"><link rel="prefetch" href="/assets/js/10.e46aa002.js"><link rel="prefetch" href="/assets/js/100.18361643.js"><link rel="prefetch" href="/assets/js/101.8ae5d81c.js"><link rel="prefetch" href="/assets/js/102.dbf4e05d.js"><link rel="prefetch" href="/assets/js/103.f8b178c8.js"><link rel="prefetch" href="/assets/js/104.b531bbd9.js"><link rel="prefetch" href="/assets/js/105.ddfc2c30.js"><link rel="prefetch" href="/assets/js/106.20027271.js"><link rel="prefetch" href="/assets/js/107.398244c4.js"><link rel="prefetch" href="/assets/js/108.9538a18a.js"><link rel="prefetch" href="/assets/js/109.c4145b2e.js"><link rel="prefetch" href="/assets/js/11.2b5728c8.js"><link rel="prefetch" href="/assets/js/110.a3302b80.js"><link rel="prefetch" href="/assets/js/111.01140e5d.js"><link rel="prefetch" href="/assets/js/112.6cdf9642.js"><link rel="prefetch" href="/assets/js/113.ef4624f8.js"><link rel="prefetch" href="/assets/js/114.d55006b1.js"><link rel="prefetch" href="/assets/js/115.627c42a1.js"><link rel="prefetch" href="/assets/js/116.b1b47605.js"><link rel="prefetch" href="/assets/js/117.6b56e351.js"><link rel="prefetch" href="/assets/js/118.036e8d40.js"><link rel="prefetch" href="/assets/js/119.a89ecc55.js"><link rel="prefetch" href="/assets/js/12.759fbd16.js"><link rel="prefetch" href="/assets/js/120.8061eff8.js"><link rel="prefetch" href="/assets/js/121.28cc5e2a.js"><link rel="prefetch" href="/assets/js/122.91ec4913.js"><link rel="prefetch" href="/assets/js/123.499f28d5.js"><link rel="prefetch" href="/assets/js/124.0b17cc18.js"><link rel="prefetch" href="/assets/js/125.4c05e950.js"><link rel="prefetch" href="/assets/js/126.664ab882.js"><link rel="prefetch" href="/assets/js/127.1eaa74a9.js"><link rel="prefetch" href="/assets/js/128.cde2592c.js"><link rel="prefetch" href="/assets/js/129.8fcd9f1e.js"><link rel="prefetch" href="/assets/js/13.ce54800d.js"><link rel="prefetch" href="/assets/js/130.cf3320c0.js"><link rel="prefetch" href="/assets/js/131.40a74787.js"><link rel="prefetch" href="/assets/js/132.9a271ae7.js"><link rel="prefetch" href="/assets/js/133.29699e6a.js"><link rel="prefetch" href="/assets/js/134.06c30b63.js"><link rel="prefetch" href="/assets/js/135.831074fb.js"><link rel="prefetch" href="/assets/js/136.a97715ae.js"><link rel="prefetch" href="/assets/js/137.138a03e0.js"><link rel="prefetch" href="/assets/js/138.c315b3c3.js"><link rel="prefetch" href="/assets/js/139.8376b9a8.js"><link rel="prefetch" href="/assets/js/14.8e633470.js"><link rel="prefetch" href="/assets/js/140.643f7a05.js"><link rel="prefetch" href="/assets/js/15.fbb85beb.js"><link rel="prefetch" href="/assets/js/16.9a1da7a8.js"><link rel="prefetch" href="/assets/js/17.b624ec8b.js"><link rel="prefetch" href="/assets/js/18.a5146bc3.js"><link rel="prefetch" href="/assets/js/19.04cf1a70.js"><link rel="prefetch" href="/assets/js/20.44bd9178.js"><link rel="prefetch" href="/assets/js/21.b6e7096e.js"><link rel="prefetch" href="/assets/js/22.fba5fe7a.js"><link rel="prefetch" href="/assets/js/23.2006638e.js"><link rel="prefetch" href="/assets/js/24.28a822da.js"><link rel="prefetch" href="/assets/js/25.65d3faf9.js"><link rel="prefetch" href="/assets/js/26.19ac38a9.js"><link rel="prefetch" href="/assets/js/27.78a099dd.js"><link rel="prefetch" href="/assets/js/28.9b1d0f25.js"><link rel="prefetch" href="/assets/js/29.42cfe8b4.js"><link rel="prefetch" href="/assets/js/30.c0829a46.js"><link rel="prefetch" href="/assets/js/31.6ab7c59a.js"><link rel="prefetch" href="/assets/js/32.9c4c0641.js"><link rel="prefetch" href="/assets/js/33.359de626.js"><link rel="prefetch" href="/assets/js/34.ac0cfa72.js"><link rel="prefetch" href="/assets/js/35.cb44cb15.js"><link rel="prefetch" href="/assets/js/36.7e58a37f.js"><link rel="prefetch" href="/assets/js/37.8529c89b.js"><link rel="prefetch" href="/assets/js/38.12bf8e1e.js"><link rel="prefetch" href="/assets/js/39.5c75626e.js"><link rel="prefetch" href="/assets/js/40.0cbd889f.js"><link rel="prefetch" href="/assets/js/41.2f1cdfe2.js"><link rel="prefetch" href="/assets/js/42.1c848a00.js"><link rel="prefetch" href="/assets/js/43.245d204f.js"><link rel="prefetch" href="/assets/js/44.a7abe2e4.js"><link rel="prefetch" href="/assets/js/45.5c505062.js"><link rel="prefetch" href="/assets/js/46.1ffe4eda.js"><link rel="prefetch" href="/assets/js/47.fddef5c8.js"><link rel="prefetch" href="/assets/js/48.a3ed2d7c.js"><link rel="prefetch" href="/assets/js/49.32299f37.js"><link rel="prefetch" href="/assets/js/50.ef6da224.js"><link rel="prefetch" href="/assets/js/51.3e681719.js"><link rel="prefetch" href="/assets/js/52.37e09660.js"><link rel="prefetch" href="/assets/js/53.93d9d4d5.js"><link rel="prefetch" href="/assets/js/54.9c7863f4.js"><link rel="prefetch" href="/assets/js/55.58395359.js"><link rel="prefetch" href="/assets/js/56.95d7ed4f.js"><link rel="prefetch" href="/assets/js/57.2e1a1b68.js"><link rel="prefetch" href="/assets/js/58.0a5340d8.js"><link rel="prefetch" href="/assets/js/59.26f67e2a.js"><link rel="prefetch" href="/assets/js/6.e14a2eab.js"><link rel="prefetch" href="/assets/js/60.b9b0593b.js"><link rel="prefetch" href="/assets/js/61.0a5cc273.js"><link rel="prefetch" href="/assets/js/62.8a8d858f.js"><link rel="prefetch" href="/assets/js/63.77b211e2.js"><link rel="prefetch" href="/assets/js/64.83765862.js"><link rel="prefetch" href="/assets/js/65.22eaa012.js"><link rel="prefetch" href="/assets/js/66.e89ac698.js"><link rel="prefetch" href="/assets/js/67.c0eaab26.js"><link rel="prefetch" href="/assets/js/69.032da97d.js"><link rel="prefetch" href="/assets/js/7.a374f973.js"><link rel="prefetch" href="/assets/js/70.0713bc30.js"><link rel="prefetch" href="/assets/js/71.40b38861.js"><link rel="prefetch" href="/assets/js/72.0b11be53.js"><link rel="prefetch" href="/assets/js/73.541c10ae.js"><link rel="prefetch" href="/assets/js/74.2bac8bfc.js"><link rel="prefetch" href="/assets/js/75.38fc1d14.js"><link rel="prefetch" href="/assets/js/76.6d9a2496.js"><link rel="prefetch" href="/assets/js/77.d83371f9.js"><link rel="prefetch" href="/assets/js/78.dad06faa.js"><link rel="prefetch" href="/assets/js/79.37307de1.js"><link rel="prefetch" href="/assets/js/8.a38a1b58.js"><link rel="prefetch" href="/assets/js/80.baecd30e.js"><link rel="prefetch" href="/assets/js/81.e27b22bc.js"><link rel="prefetch" href="/assets/js/82.03bd699e.js"><link rel="prefetch" href="/assets/js/83.9f682cc0.js"><link rel="prefetch" href="/assets/js/84.0de94370.js"><link rel="prefetch" href="/assets/js/85.d0a99218.js"><link rel="prefetch" href="/assets/js/86.94fbab22.js"><link rel="prefetch" href="/assets/js/87.be252447.js"><link rel="prefetch" href="/assets/js/88.81b1b7c9.js"><link rel="prefetch" href="/assets/js/89.4a5818eb.js"><link rel="prefetch" href="/assets/js/90.b560197a.js"><link rel="prefetch" href="/assets/js/91.a5bfb4de.js"><link rel="prefetch" href="/assets/js/92.d36212c5.js"><link rel="prefetch" href="/assets/js/93.b57aaef8.js"><link rel="prefetch" href="/assets/js/94.ff1a46cc.js"><link rel="prefetch" href="/assets/js/95.8291149e.js"><link rel="prefetch" href="/assets/js/96.95472b69.js"><link rel="prefetch" href="/assets/js/97.bf0cd2f4.js"><link rel="prefetch" href="/assets/js/98.25e1f0f9.js"><link rel="prefetch" href="/assets/js/99.d1b80b00.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.3fe60842.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2f652080.js"><link rel="prefetch" href="/assets/js/vendors~notification.b7c38425.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.30e7c708.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">记在小本本上</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java-guide/" class="nav-link router-link-active">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/java-guide/" class="nav-link router-link-active">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>代码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/java-guide/" aria-current="page" class="sidebar-link">导语</a></li><li><a href="/java-guide/并发工具类库，线程安全就高枕无忧了吗？.html" class="sidebar-link">并发工具类库，线程安全就高枕无忧了吗？</a></li><li><a href="/java-guide/代码加锁：不要让“锁”事成为烦心事.html" class="active sidebar-link">代码加锁：不要让“锁”事成为烦心事</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java-guide/代码加锁：不要让“锁”事成为烦心事.html#代码加锁-不要让-锁-事成为烦心事" class="sidebar-link">代码加锁：不要让“锁”事成为烦心事</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java-guide/代码加锁：不要让“锁”事成为烦心事.html#加锁前要清楚锁和被保护的对象是不是一个层面的" class="sidebar-link">加锁前要清楚锁和被保护的对象是不是一个层面的</a></li><li class="sidebar-sub-header"><a href="/java-guide/代码加锁：不要让“锁”事成为烦心事.html#加锁要考虑锁的粒度和场景问题" class="sidebar-link">加锁要考虑锁的粒度和场景问题</a></li><li class="sidebar-sub-header"><a href="/java-guide/代码加锁：不要让“锁”事成为烦心事.html#多把锁要小心死锁问题" class="sidebar-link">多把锁要小心死锁问题</a></li></ul></li></ul></li><li><a href="/java-guide/线程池：业务代码最常用也最容易犯错的组件.html" class="sidebar-link">线程池：业务代码最常用也最容易犯错的组件</a></li><li><a href="/java-guide/连接池：别让连接池帮了倒忙.html" class="sidebar-link">连接池：别让连接池帮了倒忙</a></li><li><a href="/java-guide/HTTP调用：你考虑到超时、重试、并发了吗？.html" class="sidebar-link">HTTP调用：你考虑到超时、重试、并发了吗？</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>设计</span> <!----></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>安全</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="代码加锁-不要让-锁-事成为烦心事"><a href="#代码加锁-不要让-锁-事成为烦心事" class="header-anchor">#</a> 代码加锁：不要让“锁”事成为烦心事</h2> <h3 id="加锁前要清楚锁和被保护的对象是不是一个层面的"><a href="#加锁前要清楚锁和被保护的对象是不是一个层面的" class="header-anchor">#</a> 加锁前要清楚锁和被保护的对象是不是一个层面的</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>我们知道<code>静态字段属于类，类级别的锁才能保护；而非静态字段属于类实例，实例级别的锁就可以保护</code>。</p></div> <p>看看下面这段代码输出什么</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Getter</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> counter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">wrong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        counter<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-sql extra-class"><pre class="language-sql"><code><span class="token variable">@RestController</span>
+<span class="token keyword">public</span> class ControllerTest {
+
+    <span class="token variable">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/02/wrong&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> wrong<span class="token punctuation">(</span><span class="token variable">@RequestParam</span><span class="token punctuation">(</span><span class="token keyword">value</span> <span class="token operator">=</span> <span class="token string">&quot;count&quot;</span><span class="token punctuation">,</span> defaultValue <span class="token operator">=</span> <span class="token string">&quot;1000000&quot;</span><span class="token punctuation">)</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span> {
+        DataTest<span class="token punctuation">.</span>reset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//多线程循环一定次数调用Data类不同实例的wrong方法</span>
+        IntStream<span class="token punctuation">.</span>rangeClosed<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">.</span>parallel<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>forEach<span class="token punctuation">(</span>i <span class="token operator">-</span><span class="token operator">&gt;</span> new DataTest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>wrong<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> DataTest<span class="token punctuation">.</span>getCounter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    }
+}
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>结果
+<span class="token number">189236</span>
+<span class="token number">180352</span>
+<span class="token number">175156</span>
+</code></pre></div><p>因为默认运行 100 万次，所以执行后应该输出 100 万，但页面输出的是显然不符合预期，让我们来分析一下为什么</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在<code>非静态的 wrong 方法上加锁</code>，只能确保多个线程无法执行<code>同一个实例的 wrong 方法</code>，却不能保证不会执行不同实例的 wrong 方法。而<code>静态的 counter 在多个实例中共享</code>，所以必然会出现线程安全问题。</p></div> <p>理清思路后，修正方法就很清晰了：同样在类中定义一个 Object 类型的静态字段，在操作 counter 之前对这个字段加锁。</p> <p>当然你也可以把wrong方法改为静态的，这样也是类级别的锁，但是这样会改变代码结构，通常我们不这么做。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Getter</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Object</span> locker <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> counter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">wrong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>locker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counter<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="加锁要考虑锁的粒度和场景问题"><a href="#加锁要考虑锁的粒度和场景问题" class="header-anchor">#</a> 加锁要考虑锁的粒度和场景问题</h3> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>请注意，大多数情况下，数据从Controller、Service、Repository 流转到数据库，没有必要加锁保护数据</p> <p>其次滥用加锁会降低性能，使用 <code>Spring</code> 框架时，默认情况下 <code>Controller、Service、Repository</code> 是<code>单例</code>的，加上 synchronized 会<code>导致</code>整个程序几乎就<code>只能支持单线程</code>，造成极大的<code>性能问题</code>。</p> <p>即便真的需要加锁也因该考虑锁的粒度问题，尽可能<code>降低</code>锁的<code>粒度</code>，仅对<code>必要的代码块</code>甚至是需要保护的资源本身<code>加锁</code>。</p></div> <p>如果精细化考虑了锁应用范围后，性能还无法满足需求的话，我们就要考虑另一个维度的粒度问题了，</p> <p>即：区分<code>读写场景</code>以及资源的<code>访问冲突</code>，考虑使用<code>悲观方式的锁</code>还是<code>乐观方式的锁</code></p> <ul><li>对于读写比例差异明显的场景，考虑使用 <code>ReentrantReadWriteLock</code> 细化区分<code>读写锁</code>，来提高性能。</li> <li>如果你的 JDK 版本高于 1.8、共享资源的冲突概率也没那么大的话，考虑使用 <code>StampedLock</code> 的乐观读的特性，进一步提高性能。</li> <li>JDK 里 <code>ReentrantLock</code> 和 <code>ReentrantReadWriteLock</code> 都提供了公平锁的版本，在没有明确需求的情况下<code>不要轻易开启公平锁特性</code>，在任务很轻的情况下开启公平锁可能会让性能下降上百倍。</li></ul> <h3 id="多把锁要小心死锁问题"><a href="#多把锁要小心死锁问题" class="header-anchor">#</a> 多把锁要小心死锁问题</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>一个业务逻辑如果<code>涉及多把锁</code>，<code>容易</code>产生<code>死锁</code>问题</p></div> <p>下面我们来分析一个商品扣减库存的操作</p> <p>首先，定义一个商品类型，包含<code>商品名</code>、<code>库存剩余</code>和商品的<code>库存锁</code>三个属性，每一种商品默认库存 1000 个；然后，初始化 10 个这样的商品对象来模拟商品加入购物车和下单操作</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">Data</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">RequiredArgsConstructor</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">ToString</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span>extern<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span></span><span class="token class-name">Slf4j</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">GetMapping</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RestController</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ConcurrentHashMap</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ThreadLocalRandom</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">TimeUnit</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>locks<span class="token punctuation">.</span></span><span class="token class-name">ReentrantLock</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">Collectors</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @author zln
+ * @date 2021-11-30
+ */</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ControllerDemo2Test</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Data</span>
+    <span class="token annotation punctuation">@RequiredArgsConstructor</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Item</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span> <span class="token comment">//商品名</span>
+        <span class="token keyword">int</span> remaining <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">//库存剩余</span>
+        <span class="token annotation punctuation">@ToString.Exclude</span> <span class="token comment">//ToString不包含这个字段</span>
+        <span class="token class-name">ReentrantLock</span> lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">ConcurrentHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Item</span><span class="token punctuation">&gt;</span></span> items <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ConcurrentHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 初始化10个商品的商品库
+     * */</span>
+    <span class="token keyword">public</span> <span class="token class-name">ControllerDemo2Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>i <span class="token operator">-&gt;</span> items<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;item&quot;</span> <span class="token operator">+</span> i<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Item</span><span class="token punctuation">(</span><span class="token string">&quot;item&quot;</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">/**
+     * 模拟在购物车进行商品选购，每次从商品清单（items 字段）中随机选购三个商品
+     * */</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">&gt;</span></span> <span class="token function">createCart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token comment">// mapToObj返回值：该函数返回一个对象值的Stream，其中包含应用给定函数的结果。</span>
+                <span class="token punctuation">.</span><span class="token function">mapToObj</span><span class="token punctuation">(</span>i <span class="token operator">-&gt;</span> <span class="token string">&quot;item&quot;</span> <span class="token operator">+</span> <span class="token class-name">ThreadLocalRandom</span><span class="token punctuation">.</span><span class="token function">current</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span>items<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>name <span class="token operator">-&gt;</span> items<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+
+    <span class="token comment">/**
+     *
+     * 先声明一个 List 来保存所有获得的锁，然后遍历购物车中的商品依次尝试获得商品的锁，
+     * 最长等待 10 秒，获得--全部锁--之后再扣减库存；如果有无法获得锁的情况则解锁之前获得的所有锁，返回 false 下单失败。
+     *
+     * */</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">createOrder</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">&gt;</span></span> order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//存放所有获得的锁</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ReentrantLock</span><span class="token punctuation">&gt;</span></span> locks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Item</span> item <span class="token operator">:</span> order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token comment">//获得锁10秒超时</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span>SECONDS<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    locks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    locks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">ReentrantLock</span><span class="token operator">::</span><span class="token function">unlock</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//锁全部拿到之后执行扣减库存业务逻辑</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            order<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>item <span class="token operator">-&gt;</span> item<span class="token punctuation">.</span>remaining<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            locks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">ReentrantLock</span><span class="token operator">::</span><span class="token function">unlock</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/02/02/wrong&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">wrong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> begin <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//并发进行100次下单操作，统计成功次数</span>
+        <span class="token keyword">long</span> success <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">mapToObj</span><span class="token punctuation">(</span>i <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// 生成购物车</span>
+                    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">&gt;</span></span> cart <span class="token operator">=</span> <span class="token function">createCart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment">// 下单</span>
+                    <span class="token keyword">return</span> <span class="token function">createOrder</span><span class="token punctuation">(</span>cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>result <span class="token operator">-&gt;</span> result<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;success:{} totalRemaining:{} took:{}ms items:{}&quot;</span><span class="token punctuation">,</span>
+                success<span class="token punctuation">,</span>
+                items<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item <span class="token operator">-&gt;</span> item<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>remaining<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">sum</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> begin<span class="token punctuation">,</span> items<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> success<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>结果
+
+<span class="token number">2021</span>-12-06 <span class="token number">17</span>:58:04.692  INFO <span class="token number">10776</span> --- <span class="token punctuation">[</span>nio-8080-exec-1<span class="token punctuation">]</span> c.z.j.d.controller.ControllerDemo2Test   <span class="token builtin class-name">:</span> 
+success:38 totalRemaining:9886 took:60024ms 
+items:<span class="token punctuation">{</span>item0<span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item0, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">987</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item2</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item2, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">993</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item1</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item1, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">990</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item8</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item8, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">993</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item7</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item7, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">992</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item9</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item9, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">983</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item4</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item4, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">987</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item3</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item3, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">981</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item6</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item6, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">989</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item5</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item5, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">991</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</code></pre></div><p>可以看到，100 次下单操作成功了 38次，10 种商品总计 10000 件，库存总计为 9886，消耗了 114 件符合预期（38次下单成功，每次下单包含三件商品），总耗时 60秒。</p> <p>我们可以使用JDK自带的<code>jvisualvm.exe</code>(jdk的bin目录下)来监控一下程序的运行。</p> <p><img src="/java-guide/image-20211207093939907.png" alt="image-20211207093939907"></p> <p>显然出现了死锁，具体信息点击<code>线程 Dump</code>来查看，这里我们分析一下为什么出现死锁</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>原因：</p> <p>我们仔细回忆一下购物车添加商品的逻辑，随机添加了三种商品，假设一个购物车中的商品是 item1 和 item2，另一个购物车中的商品是 item2 和 item1，<code>一个线程</code>先<code>获取</code>到了 <code>item1 的锁</code>，同时另一个线程获取到了 <code>item2 的锁</code>，然后两个线程接下来要<code>分别获取 item2 和 item1 的锁</code>，这个时候锁已经被对方获取了，只能<code>相互等待</code>一直到 10 秒超时</p> <p>解决：</p> <p>其实，避免死锁的方案很简单，为购物车中的商品<code>排一下序</code>，让所有的线程一定是先获取 item1 的锁然后获取 item2 的锁，就不会有问题了,让他们同时去竞争一个锁，不存在<code>环路等待</code>的请求</p></div> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/02/02/right&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">right</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> begin <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//并发进行100次下单操作，统计成功次数</span>
+        <span class="token keyword">long</span> success <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">mapToObj</span><span class="token punctuation">(</span>i <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// 生成购物车</span>
+                    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">&gt;</span></span> cart <span class="token operator">=</span> <span class="token function">createCart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                            <span class="token comment">//排序</span>
+                            <span class="token punctuation">.</span><span class="token function">sorted</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Item</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment">// 下单</span>
+                    <span class="token keyword">return</span> <span class="token function">createOrder</span><span class="token punctuation">(</span>cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>result <span class="token operator">-&gt;</span> result<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;success:{} totalRemaining:{} took:{}ms items:{}&quot;</span><span class="token punctuation">,</span>
+                success<span class="token punctuation">,</span>
+                items<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item <span class="token operator">-&gt;</span> item<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>remaining<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">sum</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> begin<span class="token punctuation">,</span> items<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> success<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">2021</span>-12-07 09:54:22.957  INFO <span class="token number">4964</span> --- <span class="token punctuation">[</span>nio-8080-exec-2<span class="token punctuation">]</span> c.z.j.d.controller.ControllerDemo2Test   <span class="token builtin class-name">:</span> 
+success:100 totalRemaining:9700 took:6ms 
+items:<span class="token punctuation">{</span>item0<span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item0, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">984</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item2</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item2, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">971</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item1</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item1, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">970</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item8</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item8, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">979</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item7</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item7, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">968</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item9</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item9, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">960</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item4</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item4, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">967</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item3</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item3, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">964</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item6</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item6, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">966</span><span class="token punctuation">)</span>, 
+<span class="token assign-left variable">item5</span><span class="token operator">=</span>ControllerDemo2Test.Item<span class="token punctuation">(</span>name<span class="token operator">=</span>item5, <span class="token assign-left variable">remaining</span><span class="token operator">=</span><span class="token number">971</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</code></pre></div><p>可以看到，100 次下单操作成功了 100次，10 种商品总计 10000 件，库存总计为 9700，消耗了 300件符合预期（100次下单成功，每次下单包含三件商品），总耗时 6毫秒。可以看到由于避免了死锁，性能上升了1万倍，所以在日常多线程操作的时候，请务必注意使用避免死锁。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/java-guide/代码加锁：不要让“锁”事成为烦心事.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021-12-8 16:03:45</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java-guide/并发工具类库，线程安全就高枕无忧了吗？.html" class="prev">
+        并发工具类库，线程安全就高枕无忧了吗？
+      </a></span> <span class="next"><a href="/java-guide/线程池：业务代码最常用也最容易犯错的组件.html">
+        线程池：业务代码最常用也最容易犯错的组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----><!----></div></div>
+    <script src="/assets/js/app.7cdf63a1.js" defer></script><script src="/assets/js/5.4faacd21.js" defer></script><script src="/assets/js/68.6b32dbdb.js" defer></script><script src="/assets/js/9.fd263465.js" defer></script>
+  </body>
+</html>

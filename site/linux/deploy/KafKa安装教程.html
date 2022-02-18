@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>KafKa安装教程 | 记在小本本上</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script data-ad-client="ca-pub-2245427233262012" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.30e7c708.css" as="style"><link rel="preload" href="/assets/js/app.7cdf63a1.js" as="script"><link rel="preload" href="/assets/js/5.4faacd21.js" as="script"><link rel="preload" href="/assets/js/78.dad06faa.js" as="script"><link rel="preload" href="/assets/js/9.fd263465.js" as="script"><link rel="prefetch" href="/assets/js/10.e46aa002.js"><link rel="prefetch" href="/assets/js/100.18361643.js"><link rel="prefetch" href="/assets/js/101.8ae5d81c.js"><link rel="prefetch" href="/assets/js/102.dbf4e05d.js"><link rel="prefetch" href="/assets/js/103.f8b178c8.js"><link rel="prefetch" href="/assets/js/104.b531bbd9.js"><link rel="prefetch" href="/assets/js/105.ddfc2c30.js"><link rel="prefetch" href="/assets/js/106.20027271.js"><link rel="prefetch" href="/assets/js/107.398244c4.js"><link rel="prefetch" href="/assets/js/108.9538a18a.js"><link rel="prefetch" href="/assets/js/109.c4145b2e.js"><link rel="prefetch" href="/assets/js/11.2b5728c8.js"><link rel="prefetch" href="/assets/js/110.a3302b80.js"><link rel="prefetch" href="/assets/js/111.01140e5d.js"><link rel="prefetch" href="/assets/js/112.6cdf9642.js"><link rel="prefetch" href="/assets/js/113.ef4624f8.js"><link rel="prefetch" href="/assets/js/114.d55006b1.js"><link rel="prefetch" href="/assets/js/115.627c42a1.js"><link rel="prefetch" href="/assets/js/116.b1b47605.js"><link rel="prefetch" href="/assets/js/117.6b56e351.js"><link rel="prefetch" href="/assets/js/118.036e8d40.js"><link rel="prefetch" href="/assets/js/119.a89ecc55.js"><link rel="prefetch" href="/assets/js/12.759fbd16.js"><link rel="prefetch" href="/assets/js/120.8061eff8.js"><link rel="prefetch" href="/assets/js/121.28cc5e2a.js"><link rel="prefetch" href="/assets/js/122.91ec4913.js"><link rel="prefetch" href="/assets/js/123.499f28d5.js"><link rel="prefetch" href="/assets/js/124.0b17cc18.js"><link rel="prefetch" href="/assets/js/125.4c05e950.js"><link rel="prefetch" href="/assets/js/126.664ab882.js"><link rel="prefetch" href="/assets/js/127.1eaa74a9.js"><link rel="prefetch" href="/assets/js/128.cde2592c.js"><link rel="prefetch" href="/assets/js/129.8fcd9f1e.js"><link rel="prefetch" href="/assets/js/13.ce54800d.js"><link rel="prefetch" href="/assets/js/130.cf3320c0.js"><link rel="prefetch" href="/assets/js/131.40a74787.js"><link rel="prefetch" href="/assets/js/132.9a271ae7.js"><link rel="prefetch" href="/assets/js/133.29699e6a.js"><link rel="prefetch" href="/assets/js/134.06c30b63.js"><link rel="prefetch" href="/assets/js/135.831074fb.js"><link rel="prefetch" href="/assets/js/136.a97715ae.js"><link rel="prefetch" href="/assets/js/137.138a03e0.js"><link rel="prefetch" href="/assets/js/138.c315b3c3.js"><link rel="prefetch" href="/assets/js/139.8376b9a8.js"><link rel="prefetch" href="/assets/js/14.8e633470.js"><link rel="prefetch" href="/assets/js/140.643f7a05.js"><link rel="prefetch" href="/assets/js/15.fbb85beb.js"><link rel="prefetch" href="/assets/js/16.9a1da7a8.js"><link rel="prefetch" href="/assets/js/17.b624ec8b.js"><link rel="prefetch" href="/assets/js/18.a5146bc3.js"><link rel="prefetch" href="/assets/js/19.04cf1a70.js"><link rel="prefetch" href="/assets/js/20.44bd9178.js"><link rel="prefetch" href="/assets/js/21.b6e7096e.js"><link rel="prefetch" href="/assets/js/22.fba5fe7a.js"><link rel="prefetch" href="/assets/js/23.2006638e.js"><link rel="prefetch" href="/assets/js/24.28a822da.js"><link rel="prefetch" href="/assets/js/25.65d3faf9.js"><link rel="prefetch" href="/assets/js/26.19ac38a9.js"><link rel="prefetch" href="/assets/js/27.78a099dd.js"><link rel="prefetch" href="/assets/js/28.9b1d0f25.js"><link rel="prefetch" href="/assets/js/29.42cfe8b4.js"><link rel="prefetch" href="/assets/js/30.c0829a46.js"><link rel="prefetch" href="/assets/js/31.6ab7c59a.js"><link rel="prefetch" href="/assets/js/32.9c4c0641.js"><link rel="prefetch" href="/assets/js/33.359de626.js"><link rel="prefetch" href="/assets/js/34.ac0cfa72.js"><link rel="prefetch" href="/assets/js/35.cb44cb15.js"><link rel="prefetch" href="/assets/js/36.7e58a37f.js"><link rel="prefetch" href="/assets/js/37.8529c89b.js"><link rel="prefetch" href="/assets/js/38.12bf8e1e.js"><link rel="prefetch" href="/assets/js/39.5c75626e.js"><link rel="prefetch" href="/assets/js/40.0cbd889f.js"><link rel="prefetch" href="/assets/js/41.2f1cdfe2.js"><link rel="prefetch" href="/assets/js/42.1c848a00.js"><link rel="prefetch" href="/assets/js/43.245d204f.js"><link rel="prefetch" href="/assets/js/44.a7abe2e4.js"><link rel="prefetch" href="/assets/js/45.5c505062.js"><link rel="prefetch" href="/assets/js/46.1ffe4eda.js"><link rel="prefetch" href="/assets/js/47.fddef5c8.js"><link rel="prefetch" href="/assets/js/48.a3ed2d7c.js"><link rel="prefetch" href="/assets/js/49.32299f37.js"><link rel="prefetch" href="/assets/js/50.ef6da224.js"><link rel="prefetch" href="/assets/js/51.3e681719.js"><link rel="prefetch" href="/assets/js/52.37e09660.js"><link rel="prefetch" href="/assets/js/53.93d9d4d5.js"><link rel="prefetch" href="/assets/js/54.9c7863f4.js"><link rel="prefetch" href="/assets/js/55.58395359.js"><link rel="prefetch" href="/assets/js/56.95d7ed4f.js"><link rel="prefetch" href="/assets/js/57.2e1a1b68.js"><link rel="prefetch" href="/assets/js/58.0a5340d8.js"><link rel="prefetch" href="/assets/js/59.26f67e2a.js"><link rel="prefetch" href="/assets/js/6.e14a2eab.js"><link rel="prefetch" href="/assets/js/60.b9b0593b.js"><link rel="prefetch" href="/assets/js/61.0a5cc273.js"><link rel="prefetch" href="/assets/js/62.8a8d858f.js"><link rel="prefetch" href="/assets/js/63.77b211e2.js"><link rel="prefetch" href="/assets/js/64.83765862.js"><link rel="prefetch" href="/assets/js/65.22eaa012.js"><link rel="prefetch" href="/assets/js/66.e89ac698.js"><link rel="prefetch" href="/assets/js/67.c0eaab26.js"><link rel="prefetch" href="/assets/js/68.6b32dbdb.js"><link rel="prefetch" href="/assets/js/69.032da97d.js"><link rel="prefetch" href="/assets/js/7.a374f973.js"><link rel="prefetch" href="/assets/js/70.0713bc30.js"><link rel="prefetch" href="/assets/js/71.40b38861.js"><link rel="prefetch" href="/assets/js/72.0b11be53.js"><link rel="prefetch" href="/assets/js/73.541c10ae.js"><link rel="prefetch" href="/assets/js/74.2bac8bfc.js"><link rel="prefetch" href="/assets/js/75.38fc1d14.js"><link rel="prefetch" href="/assets/js/76.6d9a2496.js"><link rel="prefetch" href="/assets/js/77.d83371f9.js"><link rel="prefetch" href="/assets/js/79.37307de1.js"><link rel="prefetch" href="/assets/js/8.a38a1b58.js"><link rel="prefetch" href="/assets/js/80.baecd30e.js"><link rel="prefetch" href="/assets/js/81.e27b22bc.js"><link rel="prefetch" href="/assets/js/82.03bd699e.js"><link rel="prefetch" href="/assets/js/83.9f682cc0.js"><link rel="prefetch" href="/assets/js/84.0de94370.js"><link rel="prefetch" href="/assets/js/85.d0a99218.js"><link rel="prefetch" href="/assets/js/86.94fbab22.js"><link rel="prefetch" href="/assets/js/87.be252447.js"><link rel="prefetch" href="/assets/js/88.81b1b7c9.js"><link rel="prefetch" href="/assets/js/89.4a5818eb.js"><link rel="prefetch" href="/assets/js/90.b560197a.js"><link rel="prefetch" href="/assets/js/91.a5bfb4de.js"><link rel="prefetch" href="/assets/js/92.d36212c5.js"><link rel="prefetch" href="/assets/js/93.b57aaef8.js"><link rel="prefetch" href="/assets/js/94.ff1a46cc.js"><link rel="prefetch" href="/assets/js/95.8291149e.js"><link rel="prefetch" href="/assets/js/96.95472b69.js"><link rel="prefetch" href="/assets/js/97.bf0cd2f4.js"><link rel="prefetch" href="/assets/js/98.25e1f0f9.js"><link rel="prefetch" href="/assets/js/99.d1b80b00.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.3fe60842.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2f652080.js"><link rel="prefetch" href="/assets/js/vendors~notification.b7c38425.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.30e7c708.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">记在小本本上</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>KafKa安装教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#kafka安装教程" class="sidebar-link">KafKa安装教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#安装环境" class="sidebar-link">安装环境</a></li></ul></li><li><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#zookeeper的安装" class="sidebar-link">Zookeeper的安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#zk上传命令解压改名" class="sidebar-link">zk上传命令解压改名</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#编辑配置文件" class="sidebar-link">编辑配置文件</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#创建文件夹" class="sidebar-link">创建文件夹</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#对于集群配置文件" class="sidebar-link">对于集群配置文件</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#配置环境变量" class="sidebar-link">配置环境变量</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#启动zookeeper" class="sidebar-link">启动zookeeper</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#启动zookeeper-2" class="sidebar-link">启动zookeeper</a></li></ul></li><li><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#kafka的安装" class="sidebar-link">KafKa的安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#上传解压" class="sidebar-link">上传解压</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#配置修改" class="sidebar-link">配置修改</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#启动" class="sidebar-link">启动</a></li><li class="sidebar-sub-header"><a href="/linux/deploy/KafKa%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html#测试" class="sidebar-link">测试</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="kafka安装教程"><a href="#kafka安装教程" class="header-anchor">#</a> KafKa安装教程</h2> <h3 id="安装环境"><a href="#安装环境" class="header-anchor">#</a> 安装环境</h3> <ul><li>linux7</li> <li>jdk1.8</li> <li><img src="/upload/2020/01/image-254ce7e3cf0b4e428987344c5b03754f.png" alt="image.png"></li> <li>zookeeper 3.5.9</li> <li>kafka 2.12-1.0.0</li></ul> <h2 id="zookeeper的安装"><a href="#zookeeper的安装" class="header-anchor">#</a> Zookeeper的安装</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>大家可以使用Kafka自带的zk，也可以自己选择安装自己本地的
+这里我用我自己的zk<br>
+ZK下载地址:<a href="http://mirror.bit.edu.cn/apache/zookeeper/" target="_blank" rel="noopener noreferrer">http://mirror.bit.edu.cn/apache/zookeeper/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>提个醒 3.4以上的版本 要安装带有bin字样的安装包 例如:apache-zookeeper-3.6.1-bin.tar.gz</li> <li>个人习惯安装在/usr/local下面,自己自行选择,下载安装解压,改名</li></ul></div> <h3 id="zk上传命令解压改名"><a href="#zk上传命令解压改名" class="header-anchor">#</a> zk上传命令解压改名</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># rz   </span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># cd /usr/local</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># tar -zxvf apache-zookeeper-3.5.9-bin.tar.gz </span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mv apache-zookeeper-3.5.9-bin zookeeper</span>
+</code></pre></div><h3 id="编辑配置文件"><a href="#编辑配置文件" class="header-anchor">#</a> 编辑配置文件</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>编辑配置文件, 将zoo_sample.cfg这个文件复制为zoo.cfg (必须是这个文件名)</li></ul></div> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># cd /usr/local/zookeeper/conf</span>
+<span class="token punctuation">[</span>root@localhost conf<span class="token punctuation">]</span><span class="token comment"># cp  zoo_sample.cfg  zoo.cfg</span>
+<span class="token punctuation">[</span>root@localhost conf<span class="token punctuation">]</span><span class="token comment"># vim zoo.cfg</span>
+
+zoo.cfg文件修改 或者添加 
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+<span class="token assign-left variable">dataDir</span><span class="token operator">=</span>/usr/local/zookeeper/data
+<span class="token assign-left variable">dataLogDir</span><span class="token operator">=</span>/usr/local/zookeeper/log
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+
+
+注意：如果想配置集群的话，请在clientPort下面添加服务器的ip。如
+
+server.1<span class="token operator">=</span><span class="token number">192.168</span>.248.128:2888:3888
+server.2<span class="token operator">=</span><span class="token number">192.168</span>.248.129:2888:3888
+server.3<span class="token operator">=</span><span class="token number">192.168</span>.248.130:2888:3888
+</code></pre></div><h3 id="创建文件夹"><a href="#创建文件夹" class="header-anchor">#</a> 创建文件夹</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>创建我们刚刚指定的data和logs文件夹</li></ul></div> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost local<span class="token punctuation">]</span><span class="token comment"># cd /usr/local/zookeeper/</span>
+<span class="token punctuation">[</span>root@localhost zookeeper<span class="token punctuation">]</span><span class="token comment"># mkdir data</span>
+<span class="token punctuation">[</span>root@localhost zookeeper<span class="token punctuation">]</span><span class="token comment"># mkdir logs</span>
+</code></pre></div><h3 id="对于集群配置文件"><a href="#对于集群配置文件" class="header-anchor">#</a> 对于集群配置文件</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>如果是配置集群，还需要在前面配置过的dataDir路径下新增myid文件</li></ul> <ol><li>在data目录下创建文件，文件名为“myid”</li> <li>编辑该“myid”文件，并在对应的IP的机器上输入对应的编号</li> <li>如在192.168.248.128上，“myid”文件内容就是1。在192.168.248.129上，内容就是2。</li></ol></div> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost data<span class="token punctuation">]</span><span class="token comment"># touch myid</span>
+<span class="token punctuation">[</span>root@localhost data<span class="token punctuation">]</span><span class="token comment"># vim myid</span>
+
+<span class="token number">192.168</span>.248.128的myid内容
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+<span class="token number">1</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+<span class="token number">192.168</span>.248.129的myid内容
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+<span class="token number">2</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+<span class="token number">192.168</span>.248.130的myid内容
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+<span class="token number">3</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+</code></pre></div><h3 id="配置环境变量"><a href="#配置环境变量" class="header-anchor">#</a> 配置环境变量</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost zookeeper-3.4.13<span class="token punctuation">]</span><span class="token comment"># export ZOOKEEPER_INSTALL=/usr/local/zookeeper/</span>
+<span class="token punctuation">[</span>root@localhost zookeeper-3.4.13<span class="token punctuation">]</span><span class="token comment"># export PATH=$PATH:$ZOOKEEPER_INSTALL/bin</span>
+</code></pre></div><h3 id="启动zookeeper"><a href="#启动zookeeper" class="header-anchor">#</a> 启动zookeeper</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost zookeeper<span class="token punctuation">]</span><span class="token comment"># cd /usr/local/zookeeper/bin/</span>
+<span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment"># ./zkServer.sh start</span>
+-- 启动客户端
+<span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment"># ./zkCli.sh</span>
+
+如果是连接多个不同的主机节点，可以使用如下命令：
+./zkCli.sh -server <span class="token number">192.168</span>.248.128:2888
+</code></pre></div><h3 id="启动zookeeper-2"><a href="#启动zookeeper-2" class="header-anchor">#</a> 启动zookeeper</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment"># ./zkServer.sh status</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>至此zk安装成功。</p></div> <h2 id="kafka的安装"><a href="#kafka的安装" class="header-anchor">#</a> KafKa的安装</h2> <p>KafKa下载地址:<a href="http://kafka.apache.org/downloads.html" target="_blank" rel="noopener noreferrer">http://kafka.apache.org/downloads.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="上传解压"><a href="#上传解压" class="header-anchor">#</a> 上传解压</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>同样我们把kafka安装在/usr/local,解压改名</li></ul></div> <div class="language-bash extra-class"><pre class="language-bash"><code>--- rz 上传命令
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># rz   </span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># cd /usr/local</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># tar -zxvf kafka_2.12-1.0.0.tgz  </span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mv kafka_2.12-1.0.0 kafka</span>
+</code></pre></div><h3 id="配置修改"><a href="#配置修改" class="header-anchor">#</a> 配置修改</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>修改配置文件server.properties 使其可以被远程访问</li></ul></div> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost kafka<span class="token punctuation">]</span><span class="token comment"># cd /usr/local/kafka/config/</span>
+<span class="token punctuation">[</span>root@localhost config<span class="token punctuation">]</span><span class="token comment"># vim server.properties</span>
+
+server.properties修改部分
+<span class="token number">192.168</span>.248.128为本机的ip,可以通过ifconfig查看
+····
+host.name<span class="token operator">=</span><span class="token number">192.168</span>.248.128
+
+listeners <span class="token operator">=</span> PLAINTEXT://192.168.248.128:9092
+
+advertised.listeners<span class="token operator">=</span>PLAINTEXT://192.168.248.128:9092
+····
+</code></pre></div><h3 id="启动"><a href="#启动" class="header-anchor">#</a> 启动</h3> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <ul><li>启动之前请保证<code>9092</code>端口开放,对于安装在云服务器上面的还需要去控制平台打开安全组配置。</li></ul></div> <div class="language-bash extra-class"><pre class="language-bash"><code>-- 启动命令
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># cd /usr/local/kafka/bin</span>
+<span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment"># ./kafka-server-start.sh ../config/server.properties</span>
+
+备注:这种是控制台启动，关闭控制台服务就会关闭，后台启动命令如下
+<span class="token function">nohup</span> ./kafka-server-start.sh <span class="token punctuation">..</span>/config/server.properties <span class="token operator">&amp;</span>
+</code></pre></div><h3 id="测试"><a href="#测试" class="header-anchor">#</a> 测试</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment"># ./kafka-console-producer.sh --broker-list 192.168.248.128:9092 --topic test7</span>
+</code></pre></div><p><img src="/upload/2021/01/image-29c84e761e03470c8a1477d25d81fc39.png" alt="image.png"></p> <div class="language-bash extra-class"><pre class="language-bash"><code>---重新开一个会话
+<span class="token punctuation">[</span>root@localhost bin<span class="token punctuation">]</span><span class="token comment">#  ./kafka-console-consumer.sh --zookeeper 192.168.248.128:2181 --topic test7 --from-beginning</span>
+</code></pre></div><p><img src="/upload/2021/01/image-a5dbd11e9d844ed9b38eaa59655fcd85.png" alt="image.png"></p> <p>接收正常</p> <p>至此安装完毕</p> <p>----- 世界太大，我们太小</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/linux/deploy/KafKa安装教程.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021-11-19 13:54:01</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----><!----><!----></div></div>
+    <script src="/assets/js/app.7cdf63a1.js" defer></script><script src="/assets/js/5.4faacd21.js" defer></script><script src="/assets/js/78.dad06faa.js" defer></script><script src="/assets/js/9.fd263465.js" defer></script>
+  </body>
+</html>

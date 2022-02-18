@@ -54,6 +54,7 @@
     "vuepress-plugin-catalog-graph": "^0.2.8",
     "vuepress-plugin-disqus": "^0.2.0",
     "vuepress-plugin-flowchart": "^1.4.2",
+    "vuepress-plugin-graysite": "^0.1.0",
     "vuepress-plugin-right-anchor": "^0.5.4",
     "vuepress-plugin-social-share": "^1.1.0",
     "vuepress-plugin-table-of-contents": "^1.1.7"

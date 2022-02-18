@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>切片集群：数据增多了，是该加内存还是加实例？ | 记在小本本上</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script data-ad-client="ca-pub-2245427233262012" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.30e7c708.css" as="style"><link rel="preload" href="/assets/js/app.7cdf63a1.js" as="script"><link rel="preload" href="/assets/js/5.4faacd21.js" as="script"><link rel="preload" href="/assets/js/126.664ab882.js" as="script"><link rel="preload" href="/assets/js/9.fd263465.js" as="script"><link rel="prefetch" href="/assets/js/10.e46aa002.js"><link rel="prefetch" href="/assets/js/100.18361643.js"><link rel="prefetch" href="/assets/js/101.8ae5d81c.js"><link rel="prefetch" href="/assets/js/102.dbf4e05d.js"><link rel="prefetch" href="/assets/js/103.f8b178c8.js"><link rel="prefetch" href="/assets/js/104.b531bbd9.js"><link rel="prefetch" href="/assets/js/105.ddfc2c30.js"><link rel="prefetch" href="/assets/js/106.20027271.js"><link rel="prefetch" href="/assets/js/107.398244c4.js"><link rel="prefetch" href="/assets/js/108.9538a18a.js"><link rel="prefetch" href="/assets/js/109.c4145b2e.js"><link rel="prefetch" href="/assets/js/11.2b5728c8.js"><link rel="prefetch" href="/assets/js/110.a3302b80.js"><link rel="prefetch" href="/assets/js/111.01140e5d.js"><link rel="prefetch" href="/assets/js/112.6cdf9642.js"><link rel="prefetch" href="/assets/js/113.ef4624f8.js"><link rel="prefetch" href="/assets/js/114.d55006b1.js"><link rel="prefetch" href="/assets/js/115.627c42a1.js"><link rel="prefetch" href="/assets/js/116.b1b47605.js"><link rel="prefetch" href="/assets/js/117.6b56e351.js"><link rel="prefetch" href="/assets/js/118.036e8d40.js"><link rel="prefetch" href="/assets/js/119.a89ecc55.js"><link rel="prefetch" href="/assets/js/12.759fbd16.js"><link rel="prefetch" href="/assets/js/120.8061eff8.js"><link rel="prefetch" href="/assets/js/121.28cc5e2a.js"><link rel="prefetch" href="/assets/js/122.91ec4913.js"><link rel="prefetch" href="/assets/js/123.499f28d5.js"><link rel="prefetch" href="/assets/js/124.0b17cc18.js"><link rel="prefetch" href="/assets/js/125.4c05e950.js"><link rel="prefetch" href="/assets/js/127.1eaa74a9.js"><link rel="prefetch" href="/assets/js/128.cde2592c.js"><link rel="prefetch" href="/assets/js/129.8fcd9f1e.js"><link rel="prefetch" href="/assets/js/13.ce54800d.js"><link rel="prefetch" href="/assets/js/130.cf3320c0.js"><link rel="prefetch" href="/assets/js/131.40a74787.js"><link rel="prefetch" href="/assets/js/132.9a271ae7.js"><link rel="prefetch" href="/assets/js/133.29699e6a.js"><link rel="prefetch" href="/assets/js/134.06c30b63.js"><link rel="prefetch" href="/assets/js/135.831074fb.js"><link rel="prefetch" href="/assets/js/136.a97715ae.js"><link rel="prefetch" href="/assets/js/137.138a03e0.js"><link rel="prefetch" href="/assets/js/138.c315b3c3.js"><link rel="prefetch" href="/assets/js/139.8376b9a8.js"><link rel="prefetch" href="/assets/js/14.8e633470.js"><link rel="prefetch" href="/assets/js/140.643f7a05.js"><link rel="prefetch" href="/assets/js/15.fbb85beb.js"><link rel="prefetch" href="/assets/js/16.9a1da7a8.js"><link rel="prefetch" href="/assets/js/17.b624ec8b.js"><link rel="prefetch" href="/assets/js/18.a5146bc3.js"><link rel="prefetch" href="/assets/js/19.04cf1a70.js"><link rel="prefetch" href="/assets/js/20.44bd9178.js"><link rel="prefetch" href="/assets/js/21.b6e7096e.js"><link rel="prefetch" href="/assets/js/22.fba5fe7a.js"><link rel="prefetch" href="/assets/js/23.2006638e.js"><link rel="prefetch" href="/assets/js/24.28a822da.js"><link rel="prefetch" href="/assets/js/25.65d3faf9.js"><link rel="prefetch" href="/assets/js/26.19ac38a9.js"><link rel="prefetch" href="/assets/js/27.78a099dd.js"><link rel="prefetch" href="/assets/js/28.9b1d0f25.js"><link rel="prefetch" href="/assets/js/29.42cfe8b4.js"><link rel="prefetch" href="/assets/js/30.c0829a46.js"><link rel="prefetch" href="/assets/js/31.6ab7c59a.js"><link rel="prefetch" href="/assets/js/32.9c4c0641.js"><link rel="prefetch" href="/assets/js/33.359de626.js"><link rel="prefetch" href="/assets/js/34.ac0cfa72.js"><link rel="prefetch" href="/assets/js/35.cb44cb15.js"><link rel="prefetch" href="/assets/js/36.7e58a37f.js"><link rel="prefetch" href="/assets/js/37.8529c89b.js"><link rel="prefetch" href="/assets/js/38.12bf8e1e.js"><link rel="prefetch" href="/assets/js/39.5c75626e.js"><link rel="prefetch" href="/assets/js/40.0cbd889f.js"><link rel="prefetch" href="/assets/js/41.2f1cdfe2.js"><link rel="prefetch" href="/assets/js/42.1c848a00.js"><link rel="prefetch" href="/assets/js/43.245d204f.js"><link rel="prefetch" href="/assets/js/44.a7abe2e4.js"><link rel="prefetch" href="/assets/js/45.5c505062.js"><link rel="prefetch" href="/assets/js/46.1ffe4eda.js"><link rel="prefetch" href="/assets/js/47.fddef5c8.js"><link rel="prefetch" href="/assets/js/48.a3ed2d7c.js"><link rel="prefetch" href="/assets/js/49.32299f37.js"><link rel="prefetch" href="/assets/js/50.ef6da224.js"><link rel="prefetch" href="/assets/js/51.3e681719.js"><link rel="prefetch" href="/assets/js/52.37e09660.js"><link rel="prefetch" href="/assets/js/53.93d9d4d5.js"><link rel="prefetch" href="/assets/js/54.9c7863f4.js"><link rel="prefetch" href="/assets/js/55.58395359.js"><link rel="prefetch" href="/assets/js/56.95d7ed4f.js"><link rel="prefetch" href="/assets/js/57.2e1a1b68.js"><link rel="prefetch" href="/assets/js/58.0a5340d8.js"><link rel="prefetch" href="/assets/js/59.26f67e2a.js"><link rel="prefetch" href="/assets/js/6.e14a2eab.js"><link rel="prefetch" href="/assets/js/60.b9b0593b.js"><link rel="prefetch" href="/assets/js/61.0a5cc273.js"><link rel="prefetch" href="/assets/js/62.8a8d858f.js"><link rel="prefetch" href="/assets/js/63.77b211e2.js"><link rel="prefetch" href="/assets/js/64.83765862.js"><link rel="prefetch" href="/assets/js/65.22eaa012.js"><link rel="prefetch" href="/assets/js/66.e89ac698.js"><link rel="prefetch" href="/assets/js/67.c0eaab26.js"><link rel="prefetch" href="/assets/js/68.6b32dbdb.js"><link rel="prefetch" href="/assets/js/69.032da97d.js"><link rel="prefetch" href="/assets/js/7.a374f973.js"><link rel="prefetch" href="/assets/js/70.0713bc30.js"><link rel="prefetch" href="/assets/js/71.40b38861.js"><link rel="prefetch" href="/assets/js/72.0b11be53.js"><link rel="prefetch" href="/assets/js/73.541c10ae.js"><link rel="prefetch" href="/assets/js/74.2bac8bfc.js"><link rel="prefetch" href="/assets/js/75.38fc1d14.js"><link rel="prefetch" href="/assets/js/76.6d9a2496.js"><link rel="prefetch" href="/assets/js/77.d83371f9.js"><link rel="prefetch" href="/assets/js/78.dad06faa.js"><link rel="prefetch" href="/assets/js/79.37307de1.js"><link rel="prefetch" href="/assets/js/8.a38a1b58.js"><link rel="prefetch" href="/assets/js/80.baecd30e.js"><link rel="prefetch" href="/assets/js/81.e27b22bc.js"><link rel="prefetch" href="/assets/js/82.03bd699e.js"><link rel="prefetch" href="/assets/js/83.9f682cc0.js"><link rel="prefetch" href="/assets/js/84.0de94370.js"><link rel="prefetch" href="/assets/js/85.d0a99218.js"><link rel="prefetch" href="/assets/js/86.94fbab22.js"><link rel="prefetch" href="/assets/js/87.be252447.js"><link rel="prefetch" href="/assets/js/88.81b1b7c9.js"><link rel="prefetch" href="/assets/js/89.4a5818eb.js"><link rel="prefetch" href="/assets/js/90.b560197a.js"><link rel="prefetch" href="/assets/js/91.a5bfb4de.js"><link rel="prefetch" href="/assets/js/92.d36212c5.js"><link rel="prefetch" href="/assets/js/93.b57aaef8.js"><link rel="prefetch" href="/assets/js/94.ff1a46cc.js"><link rel="prefetch" href="/assets/js/95.8291149e.js"><link rel="prefetch" href="/assets/js/96.95472b69.js"><link rel="prefetch" href="/assets/js/97.bf0cd2f4.js"><link rel="prefetch" href="/assets/js/98.25e1f0f9.js"><link rel="prefetch" href="/assets/js/99.d1b80b00.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.3fe60842.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2f652080.js"><link rel="prefetch" href="/assets/js/vendors~notification.b7c38425.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.30e7c708.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">记在小本本上</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link router-link-active">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link router-link-active">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Redis从底层到原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/redis/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/redis/Redis的两大维度，三大主线.html" class="sidebar-link">Redis的两大维度，三大主线</a></li><li><a href="/redis/问题查找：Redis问题查找画像图.html" class="sidebar-link">问题查找：Redis问题查找画像图</a></li><li><a href="/redis/基本架构：一个K-V数据库应该包含哪些.html" class="sidebar-link">基本架构：一个K-V数据库应该包含哪些</a></li><li><a href="/redis/底层数据结构：Redis快在哪里，又有哪些慢操作？.html" class="sidebar-link">底层数据结构：Redis快在哪里，又有哪些慢操作？</a></li><li><a href="/redis/高性IO模型：为什么单线程Redis能那么快.html" class="sidebar-link">高性IO模型：为什么单线程Redis能那么快</a></li><li><a href="/redis/AOF日志：宕机了，Redis如何避免数据丢失.html" class="sidebar-link">AOF日志：宕机了，Redis如何避免数据丢失？</a></li><li><a href="/redis/RDB内存快照：宕机后，Redis如何快速恢复？.html" class="sidebar-link">RDB内存快照：宕机后，Redis如何快速恢复？</a></li><li><a href="/redis/主从机制：主从库如何实现数据一致？.html" class="sidebar-link">主从机制：主从库如何实现数据一致？</a></li><li><a href="/redis/哨兵机制：主库挂了，如何不间断服务.html" class="sidebar-link">哨兵机制：主库挂了，如何不间断服务</a></li><li><a href="/redis/哨兵集群：哨兵挂了，主从库还能切换吗？.html" class="sidebar-link">哨兵集群：哨兵挂了，主从库还能切换吗？</a></li><li><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html" class="active sidebar-link">切片集群：数据增多了，是该加内存还是加实例？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html#切片集群-数据增多了-是该加内存还是加实例" class="sidebar-link">切片集群：数据增多了，是该加内存还是加实例？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html#如何保存更多数据" class="sidebar-link">如何保存更多数据？</a></li><li class="sidebar-sub-header"><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html#数据切片和实例的对应分布关系" class="sidebar-link">数据切片和实例的对应分布关系</a></li><li class="sidebar-sub-header"><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html#客户端如何定位数据" class="sidebar-link">客户端如何定位数据？</a></li><li class="sidebar-sub-header"><a href="/redis/切片集群：数据增多了，是该加内存还是加实例？.html#redis-cluster为什么不采用把key直接映射到实例的方式-而采用哈希槽的方式" class="sidebar-link">Redis Cluster为什么不采用把key直接映射到实例的方式，而采用哈希槽的方式?</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Redis从实战到入土</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/redis/“万金油”的String，为什么不好用了？.html" class="sidebar-link">“万金油”的String，为什么不好用了？</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="切片集群-数据增多了-是该加内存还是加实例"><a href="#切片集群-数据增多了-是该加内存还是加实例" class="header-anchor">#</a> 切片集群：数据增多了，是该加内存还是加实例？</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>切片集群，也叫分片集群，就是指启动多个 Redis 实例组成一个集群，然后按照一定的规则，把收到的数据划分成多份，每一份用一个实例来保存</p></div> <p><img src="/redis/base/793251ca784yyf6ac37fe46389094b26.jpg" alt="img"></p> <h3 id="如何保存更多数据"><a href="#如何保存更多数据" class="header-anchor">#</a> 如何保存更多数据？</h3> <ul><li><code>纵向扩展</code>：<code>升级</code>单个 Redis 实例的<code>资源配置</code>，包括增加内存容量、增加磁盘容量、使用更高配置的 CPU。就像下图中，原来的实例内存是 8GB，硬盘是 50GB，纵向扩展后，内存增加到 24GB，磁盘增加到 150GB。</li> <li><code>横向扩展</code>：横向增加当前 Redis 实例的个数，就像下图中，原来使用 1 个 8GB 内存、50GB 磁盘的实例，现在使用三个相同配置的实例。</li></ul> <p><img src="/redis/base/7a512fec7eba789c6d098b834929701a.jpg" alt="img"></p> <p>在面向百万、千万级别的用户规模时，横向扩展的 Redis 切片集群会是一个非常好的选择。</p> <p><code>要想把切片集群用起来，我们就需要解决两大问题</code>：</p> <ol><li>数据切片后，在多个实例之间如何分布？</li> <li>客户端怎么确定想要访问的数据在哪个实例上？</li></ol> <h3 id="数据切片和实例的对应分布关系"><a href="#数据切片和实例的对应分布关系" class="header-anchor">#</a> 数据切片和实例的对应分布关系</h3> <h4 id="切片集群和-redis-cluster-的联系与区别"><a href="#切片集群和-redis-cluster-的联系与区别" class="header-anchor">#</a> 切片集群和 Redis Cluster 的联系与区别</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>Redis Cluster是切片集群的一种实现方案。</code></p> <p>Redis Cluster：<code>实现切片集群</code>。</p> <p>Redis Cluster方案采用<code>哈希槽（Hash Slot）</code>，处理<code>数据与实例</code>之间的<code>映射关系</code>；一个切片集群有<code>16384</code>个哈希槽，哈希槽<code>类似于数据分区</code>，每个键值对都会根据它的key被映射到一个哈希槽中。 映射步骤：根据key按照CRC16计算一个16bit值，再用16bit值对16384取模，每个模数代表一个相应编号的哈希槽</p></div> <p>有5个哈希槽的Redis Cluster示意图</p> <p><img src="/redis/base/7d070c8b19730b308bfaabbe82c2f1ab.jpg" alt="img"></p> <p>示意图中的切片集群一共有 3 个实例，同时假设有 5 个哈希槽，我们首先可以通过下面的命令手动分配哈希槽：</p> <p>实例 1 保存哈希槽 0 和 1，实例 2 保存哈希槽 2 和 3，实例 3 保存哈希槽 4。</p> <div class="language-css extra-class"><pre class="language-css"><code>redis-cli -h 172.16.19.3 –p 6379 cluster addslots 0<span class="token punctuation">,</span>1
+redis-cli -h 172.16.19.4 –p 6379 cluster addslots 2<span class="token punctuation">,</span>3
+redis-cli -h 172.16.19.5 –p 6379 cluster addslots 4
+</code></pre></div><p><code>注意：</code>在<code>手动分配哈希槽时</code>，需要把 16384 个槽都分配完，否则 Redis 集群无法正常工作。</p> <h3 id="客户端如何定位数据"><a href="#客户端如何定位数据" class="header-anchor">#</a> 客户端如何定位数据？</h3> <h4 id="哈希槽分布在哪个实例上"><a href="#哈希槽分布在哪个实例上" class="header-anchor">#</a> 哈希槽分布在哪个实例上?</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在定位键值对数据时，它所处的哈希槽是可以通过计算得到的，这个计算可以在客户端发送请求时来执行。但是，要进一步定位到实例，<code>还需要知道哈希槽分布在哪个实例上</code>。</p></div> <p>一般来说，<code>客户端和集群实例建立连接后</code>，实例就会把哈<code>希槽的分配信息发给客户端</code>。但是，在集群刚刚创建的时候，每个实例只知道自己被分配了哪些哈希槽，是不知道其他实例拥有的哈希槽信息的。</p> <p><code>那么，客户端为什么可以在访问任何一个实例时，都能获得所有的哈希槽信息呢？</code></p> <p>这是因为，Redis 实例会把自己的哈希槽信息<code>发给和它相连接的其它实例</code>，来完成哈希槽<code>分配信息的扩散</code>。当实例之间相互连接后，每个实例就有所有哈希槽的映射关系了。</p> <h4 id="实例和哈希槽的对应关系发生变化怎么办"><a href="#实例和哈希槽的对应关系发生变化怎么办" class="header-anchor">#</a> 实例和哈希槽的对应关系发生变化怎么办</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>但是，在集群中，实例和哈希槽的对应关系并不是一成不变的，最常见的变化有两个：</p> <ul><li>在集群中，实例有<code>新增</code>或<code>删除</code>，Redis 需要<code>重新分配哈希槽</code>；</li> <li>为了<code>负载均衡</code>，Redis 需要把哈希槽在所有实例上重新分布一遍。</li></ul></div> <p><code>Redis Cluster</code>方案提供了一种重定向机制,所谓的“<code>重定向</code>”，就是指，客户端给一个实例发送数据读写操作时，这个实例上并没有相应的数据，客户端要再给一个<code>新实例</code>发送操作命令。</p> <p><code>那客户端又是怎么知道重定向时的新实例的访问地址呢？</code></p> <p>当客户端把一个键值对的操作请求发给一个实例时，如果这个实例上并没有这个键值对映射的哈希槽，那么，这个实例就会给客户端返回下面的 <code>MOVED</code>命令响应结果，这个结果中就包含了新实例的访问地址。</p> <div class="language-css extra-class"><pre class="language-css"><code>GET <span class="token property">hello</span><span class="token punctuation">:</span>key
+<span class="token punctuation">(</span>error<span class="token punctuation">)</span> MOVED 13320 172.16.19.5<span class="token punctuation">:</span>6379
+</code></pre></div><p><code>解释</code>：客户端请求的键值对所在的哈希槽 13320，实际是在 172.16.19.5 这个实例上。</p> <p>通过返回的 MOVED 命令，就相当于把哈希槽所在的新实例的信息告诉给客户端了。这样一来，客户端就可以直接和 172.16.19.5 连接，并发送操作请求了。</p> <p><img src="/redis/base/350abedefcdbc39d6a8a8f1874eb0809.jpg" alt="img"></p> <p><code>注意</code>：</p> <p>客户端向实例 2 发送请求，但此时，Slot 2 中的数据只有一部分迁移到了实例 3，还有部分数据没有迁移。在这种迁移部分完成的情况下，客户端就会收到一条 ASK 报错信息</p> <div class="language-css extra-class"><pre class="language-css"><code>GET <span class="token property">hello</span><span class="token punctuation">:</span>key
+<span class="token punctuation">(</span>error<span class="token punctuation">)</span> ASK 13320 172.16.19.5<span class="token punctuation">:</span>6379
+</code></pre></div><p><code>解释</code>：客户端请求的键值对所在的哈希槽 13320，在 172.16.19.5 这个实例3上，但是这个哈希槽正在迁移。</p> <p>此时，客户端需要先给 172.16.19.5 这个实例3发送一个 <code>ASKING</code>命令。这个命令的意思是，让这个实例<code>允许执行客户端接下来发送的命令</code>。然后，客户端再向这个实例发送 GET 命令，以读取数据</p> <p>在下图中，Slot 2 正在从实例 2 往实例 3 迁移，key1 和 key2 已经迁移过去，key3 和 key4 还在实例 2。</p> <p>客户端向实例 2 请求 key2 后，就会收到实例 2 返回的 ASK 命令。ASK 命令表示两层含义：</p> <p>第一，表明 Slot 数据还在迁移中；</p> <p>第二，ASK 命令把客户端所请求数据的<code>最新实例地址</code>返回给客户端，此时，客户端需要给实例 3 发送<code>ASKING 命令，然后再发送操作命令</code>。</p> <p><img src="/redis/base/e93ae7f4edf30724d58bf68yy714eeb0.jpg" alt="img"></p> <p><code>注意</code>： 和 <code>MOVED</code> 命令不同，<code>ASK</code> 命令并<code>不会更新客户端缓存的哈希槽分配信息</code>。</p> <p>所以，在上图中，如果客户端再次<code>请求 Slot 2</code> 中的数据，它<code>还是</code>会给<code>实例 2 发送请求</code>。这也就是说，ASK 命令的作用<code>只是让客户端能给新实例发送一次请求</code>，而<code>不像 MOVED</code> 命令那样，会<code>更改本地缓存</code>，让</p> <p>后续所有命令<code>都发往新实例</code>。</p> <h3 id="redis-cluster为什么不采用把key直接映射到实例的方式-而采用哈希槽的方式"><a href="#redis-cluster为什么不采用把key直接映射到实例的方式-而采用哈希槽的方式" class="header-anchor">#</a> Redis Cluster为什么不采用把key直接映射到实例的方式，而采用哈希槽的方式?</h3> <p>1、整个集群存储<code>key的数量是无法预估</code>的，key的<code>数量非常多时，</code>直接记录每个key对应的实例映射关系，这个<code>映射表会非常庞大</code>，这个映射表无论是存储在服务端还是客户端都<code>占用了非常大的内存空间</code>。</p> <p>2、Redis Cluster采用无中心化的模式（无proxy，客户端与服务端直连），客户端在某个节点访问一个key，如果这个key不在这个节点上，这个节点需要有纠正客户端路由到正确节点的能力（MOVED响应），这就</p> <p>需要节点之间互相交换路由表，每个节点拥有整个集群完整的路由关系。<code>如果存储的都是key与实例的对应关系</code>，节点之间<code>交换信息也会变得非常庞大</code>，消耗过多的网络资源，而且就算交换完成，相当于每个节点都</p> <p>需要额外存储其他节点的路由表，内存占用过大造成资源浪费。</p> <p>3、当集群在扩容、缩容、数据均衡时，节点之间会发生<code>数据迁移</code>，迁移时需要<code>修改每个key的映射关系，维护成本高</code>。</p> <p>4、而在中间增加一层哈希槽，可以把<code>数据和节点解耦</code>，<code>key通过Hash计算，只需要关心映射到了哪个哈希槽</code>，然后再通过<code>哈希槽和节点的映射表找到节点</code>，相当于消耗了很少的CPU资源，不但让数据分布更均匀，</p> <p>还可以让这个映射表变得很小，利于客户端和服务端保存，节点之间交换信息时也变得轻量。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/redis/切片集群：数据增多了，是该加内存还是加实例？.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021-11-19 13:54:01</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/redis/哨兵集群：哨兵挂了，主从库还能切换吗？.html" class="prev">
+        哨兵集群：哨兵挂了，主从库还能切换吗？
+      </a></span> <span class="next"><a href="/redis/“万金油”的String，为什么不好用了？.html">
+        “万金油”的String，为什么不好用了？
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----><!----></div></div>
+    <script src="/assets/js/app.7cdf63a1.js" defer></script><script src="/assets/js/5.4faacd21.js" defer></script><script src="/assets/js/126.664ab882.js" defer></script><script src="/assets/js/9.fd263465.js" defer></script>
+  </body>
+</html>

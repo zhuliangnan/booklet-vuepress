@@ -74,12 +74,17 @@ module.exports = ctx => ({
                     '/docker/': getDockerSidebar('Docker操作手册', '介绍'),
                     '/mysql/': getMysqlSidebar('Mysql基础必知', '目录', 'Mysql实战必会'),
                     '/java-guide/': getJavaGuideSidebar('代码', '设计', '安全'),
+                    '/camera/': getCameraSidebar('摄影'),
                 }
             }
         }
     },
     plugins: [
         ['vuepress-plugin-table-of-contents',true],
+        ['graysite',{
+            startDate: '2021-12-13 00:00:00',
+            endDate: '2021-12-13 23:59:59'
+        }],
         ['vuepress-plugin-baidu-autopush'],
         [
             'social-share',
@@ -190,6 +195,21 @@ function getApiSidebar() {
     ]
 }
 
+
+function getCameraSidebar(groupA) {
+    return [
+        {
+            title: groupA,
+            sidebarDepth: 2,
+            collapsable: false,
+            children: [
+                '',
+                '22-2-15 南京元宵灯会：夫子庙，老门东'
+            ]
+        }
+    ]
+}
+
 function getJavaGuideSidebar(groupA, groupB ,groupC) {
     return [
         {
@@ -200,7 +220,9 @@ function getJavaGuideSidebar(groupA, groupB ,groupC) {
                 '',
                 '并发工具类库，线程安全就高枕无忧了吗？',
                 '代码加锁：不要让“锁”事成为烦心事',
-                '线程池：业务代码最常用也最容易犯错的组件'
+                '线程池：业务代码最常用也最容易犯错的组件',
+                '连接池：别让连接池帮了倒忙',
+                'HTTP调用：你考虑到超时、重试、并发了吗？'
             ]
         },
         {

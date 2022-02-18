@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>深入浅出索引一 | 记在小本本上</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script data-ad-client="ca-pub-2245427233262012" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.30e7c708.css" as="style"><link rel="preload" href="/assets/js/app.7cdf63a1.js" as="script"><link rel="preload" href="/assets/js/5.4faacd21.js" as="script"><link rel="preload" href="/assets/js/94.ff1a46cc.js" as="script"><link rel="preload" href="/assets/js/9.fd263465.js" as="script"><link rel="prefetch" href="/assets/js/10.e46aa002.js"><link rel="prefetch" href="/assets/js/100.18361643.js"><link rel="prefetch" href="/assets/js/101.8ae5d81c.js"><link rel="prefetch" href="/assets/js/102.dbf4e05d.js"><link rel="prefetch" href="/assets/js/103.f8b178c8.js"><link rel="prefetch" href="/assets/js/104.b531bbd9.js"><link rel="prefetch" href="/assets/js/105.ddfc2c30.js"><link rel="prefetch" href="/assets/js/106.20027271.js"><link rel="prefetch" href="/assets/js/107.398244c4.js"><link rel="prefetch" href="/assets/js/108.9538a18a.js"><link rel="prefetch" href="/assets/js/109.c4145b2e.js"><link rel="prefetch" href="/assets/js/11.2b5728c8.js"><link rel="prefetch" href="/assets/js/110.a3302b80.js"><link rel="prefetch" href="/assets/js/111.01140e5d.js"><link rel="prefetch" href="/assets/js/112.6cdf9642.js"><link rel="prefetch" href="/assets/js/113.ef4624f8.js"><link rel="prefetch" href="/assets/js/114.d55006b1.js"><link rel="prefetch" href="/assets/js/115.627c42a1.js"><link rel="prefetch" href="/assets/js/116.b1b47605.js"><link rel="prefetch" href="/assets/js/117.6b56e351.js"><link rel="prefetch" href="/assets/js/118.036e8d40.js"><link rel="prefetch" href="/assets/js/119.a89ecc55.js"><link rel="prefetch" href="/assets/js/12.759fbd16.js"><link rel="prefetch" href="/assets/js/120.8061eff8.js"><link rel="prefetch" href="/assets/js/121.28cc5e2a.js"><link rel="prefetch" href="/assets/js/122.91ec4913.js"><link rel="prefetch" href="/assets/js/123.499f28d5.js"><link rel="prefetch" href="/assets/js/124.0b17cc18.js"><link rel="prefetch" href="/assets/js/125.4c05e950.js"><link rel="prefetch" href="/assets/js/126.664ab882.js"><link rel="prefetch" href="/assets/js/127.1eaa74a9.js"><link rel="prefetch" href="/assets/js/128.cde2592c.js"><link rel="prefetch" href="/assets/js/129.8fcd9f1e.js"><link rel="prefetch" href="/assets/js/13.ce54800d.js"><link rel="prefetch" href="/assets/js/130.cf3320c0.js"><link rel="prefetch" href="/assets/js/131.40a74787.js"><link rel="prefetch" href="/assets/js/132.9a271ae7.js"><link rel="prefetch" href="/assets/js/133.29699e6a.js"><link rel="prefetch" href="/assets/js/134.06c30b63.js"><link rel="prefetch" href="/assets/js/135.831074fb.js"><link rel="prefetch" href="/assets/js/136.a97715ae.js"><link rel="prefetch" href="/assets/js/137.138a03e0.js"><link rel="prefetch" href="/assets/js/138.c315b3c3.js"><link rel="prefetch" href="/assets/js/139.8376b9a8.js"><link rel="prefetch" href="/assets/js/14.8e633470.js"><link rel="prefetch" href="/assets/js/140.643f7a05.js"><link rel="prefetch" href="/assets/js/15.fbb85beb.js"><link rel="prefetch" href="/assets/js/16.9a1da7a8.js"><link rel="prefetch" href="/assets/js/17.b624ec8b.js"><link rel="prefetch" href="/assets/js/18.a5146bc3.js"><link rel="prefetch" href="/assets/js/19.04cf1a70.js"><link rel="prefetch" href="/assets/js/20.44bd9178.js"><link rel="prefetch" href="/assets/js/21.b6e7096e.js"><link rel="prefetch" href="/assets/js/22.fba5fe7a.js"><link rel="prefetch" href="/assets/js/23.2006638e.js"><link rel="prefetch" href="/assets/js/24.28a822da.js"><link rel="prefetch" href="/assets/js/25.65d3faf9.js"><link rel="prefetch" href="/assets/js/26.19ac38a9.js"><link rel="prefetch" href="/assets/js/27.78a099dd.js"><link rel="prefetch" href="/assets/js/28.9b1d0f25.js"><link rel="prefetch" href="/assets/js/29.42cfe8b4.js"><link rel="prefetch" href="/assets/js/30.c0829a46.js"><link rel="prefetch" href="/assets/js/31.6ab7c59a.js"><link rel="prefetch" href="/assets/js/32.9c4c0641.js"><link rel="prefetch" href="/assets/js/33.359de626.js"><link rel="prefetch" href="/assets/js/34.ac0cfa72.js"><link rel="prefetch" href="/assets/js/35.cb44cb15.js"><link rel="prefetch" href="/assets/js/36.7e58a37f.js"><link rel="prefetch" href="/assets/js/37.8529c89b.js"><link rel="prefetch" href="/assets/js/38.12bf8e1e.js"><link rel="prefetch" href="/assets/js/39.5c75626e.js"><link rel="prefetch" href="/assets/js/40.0cbd889f.js"><link rel="prefetch" href="/assets/js/41.2f1cdfe2.js"><link rel="prefetch" href="/assets/js/42.1c848a00.js"><link rel="prefetch" href="/assets/js/43.245d204f.js"><link rel="prefetch" href="/assets/js/44.a7abe2e4.js"><link rel="prefetch" href="/assets/js/45.5c505062.js"><link rel="prefetch" href="/assets/js/46.1ffe4eda.js"><link rel="prefetch" href="/assets/js/47.fddef5c8.js"><link rel="prefetch" href="/assets/js/48.a3ed2d7c.js"><link rel="prefetch" href="/assets/js/49.32299f37.js"><link rel="prefetch" href="/assets/js/50.ef6da224.js"><link rel="prefetch" href="/assets/js/51.3e681719.js"><link rel="prefetch" href="/assets/js/52.37e09660.js"><link rel="prefetch" href="/assets/js/53.93d9d4d5.js"><link rel="prefetch" href="/assets/js/54.9c7863f4.js"><link rel="prefetch" href="/assets/js/55.58395359.js"><link rel="prefetch" href="/assets/js/56.95d7ed4f.js"><link rel="prefetch" href="/assets/js/57.2e1a1b68.js"><link rel="prefetch" href="/assets/js/58.0a5340d8.js"><link rel="prefetch" href="/assets/js/59.26f67e2a.js"><link rel="prefetch" href="/assets/js/6.e14a2eab.js"><link rel="prefetch" href="/assets/js/60.b9b0593b.js"><link rel="prefetch" href="/assets/js/61.0a5cc273.js"><link rel="prefetch" href="/assets/js/62.8a8d858f.js"><link rel="prefetch" href="/assets/js/63.77b211e2.js"><link rel="prefetch" href="/assets/js/64.83765862.js"><link rel="prefetch" href="/assets/js/65.22eaa012.js"><link rel="prefetch" href="/assets/js/66.e89ac698.js"><link rel="prefetch" href="/assets/js/67.c0eaab26.js"><link rel="prefetch" href="/assets/js/68.6b32dbdb.js"><link rel="prefetch" href="/assets/js/69.032da97d.js"><link rel="prefetch" href="/assets/js/7.a374f973.js"><link rel="prefetch" href="/assets/js/70.0713bc30.js"><link rel="prefetch" href="/assets/js/71.40b38861.js"><link rel="prefetch" href="/assets/js/72.0b11be53.js"><link rel="prefetch" href="/assets/js/73.541c10ae.js"><link rel="prefetch" href="/assets/js/74.2bac8bfc.js"><link rel="prefetch" href="/assets/js/75.38fc1d14.js"><link rel="prefetch" href="/assets/js/76.6d9a2496.js"><link rel="prefetch" href="/assets/js/77.d83371f9.js"><link rel="prefetch" href="/assets/js/78.dad06faa.js"><link rel="prefetch" href="/assets/js/79.37307de1.js"><link rel="prefetch" href="/assets/js/8.a38a1b58.js"><link rel="prefetch" href="/assets/js/80.baecd30e.js"><link rel="prefetch" href="/assets/js/81.e27b22bc.js"><link rel="prefetch" href="/assets/js/82.03bd699e.js"><link rel="prefetch" href="/assets/js/83.9f682cc0.js"><link rel="prefetch" href="/assets/js/84.0de94370.js"><link rel="prefetch" href="/assets/js/85.d0a99218.js"><link rel="prefetch" href="/assets/js/86.94fbab22.js"><link rel="prefetch" href="/assets/js/87.be252447.js"><link rel="prefetch" href="/assets/js/88.81b1b7c9.js"><link rel="prefetch" href="/assets/js/89.4a5818eb.js"><link rel="prefetch" href="/assets/js/90.b560197a.js"><link rel="prefetch" href="/assets/js/91.a5bfb4de.js"><link rel="prefetch" href="/assets/js/92.d36212c5.js"><link rel="prefetch" href="/assets/js/93.b57aaef8.js"><link rel="prefetch" href="/assets/js/95.8291149e.js"><link rel="prefetch" href="/assets/js/96.95472b69.js"><link rel="prefetch" href="/assets/js/97.bf0cd2f4.js"><link rel="prefetch" href="/assets/js/98.25e1f0f9.js"><link rel="prefetch" href="/assets/js/99.d1b80b00.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.3fe60842.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2f652080.js"><link rel="prefetch" href="/assets/js/vendors~notification.b7c38425.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.30e7c708.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">记在小本本上</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link router-link-active">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link router-link-active">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Mysql基础必知</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mysql/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/mysql/基础架构：一条SQL查询语句是如何执行的？.html" class="sidebar-link">基础架构：一条SQL查询语句是如何执行的？</a></li><li><a href="/mysql/日志系统：一条SQL更新语句是如何执行的？.html" class="sidebar-link">日志系统：一条SQL更新语句是如何执行的？</a></li><li><a href="/mysql/事务隔离：为什么你改了我还看不见？.html" class="sidebar-link">事务隔离：为什么你改了我还看不见？</a></li><li><a href="/mysql/深入浅出索引一.html" class="active sidebar-link">深入浅出索引一</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mysql/深入浅出索引一.html#深入浅出索引一" class="sidebar-link">深入浅出索引一</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mysql/深入浅出索引一.html#索引的常见模型" class="sidebar-link">索引的常见模型</a></li><li class="sidebar-sub-header"><a href="/mysql/深入浅出索引一.html#数据库索引的原理-为什么要用-b-树-为什么不用二叉树" class="sidebar-link">数据库索引的原理，为什么要用 B+树，为什么不用二叉树？</a></li><li class="sidebar-sub-header"><a href="/mysql/深入浅出索引一.html#innodb-的索引模型" class="sidebar-link">InnoDB 的索引模型</a></li><li class="sidebar-sub-header"><a href="/mysql/深入浅出索引一.html#索引维护" class="sidebar-link">索引维护</a></li></ul></li></ul></li><li><a href="/mysql/深入浅出索引二.html" class="sidebar-link">深入浅出索引二</a></li><li><a href="/mysql/全局锁和表锁 ：给表加个字段怎么有这么多阻碍？.html" class="sidebar-link">全局锁和表锁 ：给表加个字段怎么有这么多阻碍？</a></li><li><a href="/mysql/行锁功过：怎么减少行锁对性能的影响？.html" class="sidebar-link">行锁功过：怎么减少行锁对性能的影响？</a></li><li><a href="/mysql/事务到底是隔离的还是不隔离的？.html" class="sidebar-link">事务到底是隔离的还是不隔离的？</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Mysql实战必会</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="深入浅出索引一"><a href="#深入浅出索引一" class="header-anchor">#</a> 深入浅出索引一</h2> <h3 id="索引的常见模型"><a href="#索引的常见模型" class="header-anchor">#</a> 索引的常见模型</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>三种常见、也比较简单的数据结构，它们分别是哈希表、有序数组和搜索树。</p> <p>对于哈希表来说：</p> <p>查找速度还可以，对于冲突我们还可以使用拉链法解决，但是涉及区间查找就真的gg了</p> <p>所以哈希表这种结构适用于只有等值查询的场景</p> <p>对于数组来说：</p> <p>查找和区间查找是可以用二分法O(log(N))，仅仅看查询是最快的了</p> <p>但是插入数据就gg了，需要移动了元素太多，内存消耗太大</p></div> <h3 id="数据库索引的原理-为什么要用-b-树-为什么不用二叉树"><a href="#数据库索引的原理-为什么要用-b-树-为什么不用二叉树" class="header-anchor">#</a> 数据库索引的原理，为什么要用 B+树，为什么不用二叉树？</h3> <p>可以从几个维度去看这个问题，<strong>查询是否够快</strong>，<strong>效率是否稳定</strong>，<strong>存储数据多少</strong>，**以及查找磁盘次数，**为什么不是二叉树，为什么不是平衡二叉树，为什么不是B树，而偏偏是B+树呢？</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><strong>为什么不是一般二叉树？</strong></p></div> <p>如果二叉树特殊化为一个<code>链表</code>，相当于<code>全表扫描</code></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><strong>为什么不是平衡二叉树呢？</strong></p></div> <p>在内存比在磁盘的数据，查询效率快得多。如果树这种数据结构作为索引，那我们每查找一次数据就需要从磁盘中<strong>读取一个节点，也就是我们说的一个磁盘块</strong>，但是平衡二叉树可是<strong>每个节点只存储一个键值和数据的</strong></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>**那为什么不是B树而是B+树呢？**每一个索引在 InnoDB 里面对应一棵 B+ 树。</p></div> <p><strong>B+树非叶子节点上是不存储数据的，仅存储键值</strong>，<strong>而B树节点中不仅存储键值，也会存储数据，会读取很多不必要的数据</strong>。<strong>innodb中页的默认大小是16KB，如果不存储数据，那么就会存储更多的键值</strong>，相应的<strong>树的阶数（节点的子节点树）就会更大，树就会更矮更胖</strong>，如此一来我们查找数据进<strong>行磁盘的IO次数有会再次减少</strong>，数据查询的效率也会更快。</p> <p>B+树的叶子节点有一条链相连，而B+树的叶子节点各自独立</p> <p>B+树的叶节点由一条链相连</p> <p><strong>由于B+树的内部节点只存放键，不存放值，因此，一次读取，可以在内存页中获取更多的键</strong></p> <p><strong>B+树的叶节点由一条链相连</strong></p> <h3 id="innodb-的索引模型"><a href="#innodb-的索引模型" class="header-anchor">#</a> InnoDB 的索引模型</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>1.在 InnoDB 中，每一张表其实就是多个 B+ 树，即<code>一个主键索引树</code>和<code>多个非主键索引树</code>。</p> <p>2.执行查询的效率，一般来说使用<code>主键索引 &gt; 使用非主键索引</code> &gt; 不使用索引，具体需要结合场景。</p> <p>3.<code>如果不使用索引进行查询，则从主索引 B+ 树的叶子节点进行遍历</code>。</p></div> <p>下面来看一个案例帮助我们理解主键索引和非主键索引</p> <div class="language-sql extra-class"><pre class="language-sql"><code>mysql<span class="token operator">&gt;</span> <span class="token keyword">create</span> <span class="token keyword">table</span> T<span class="token punctuation">(</span>
+  id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span> 
+  k <span class="token keyword">int</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span> 
+  name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token keyword">index</span> <span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword">engine</span><span class="token operator">=</span><span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+</code></pre></div><p><img src="/mysql/base/dcda101051f28502bd5c4402b292e38d.png" alt="img"></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>主键索引的叶子存该行的数据，二级索引(非主键索引)的叶子节点存的就是<code>主键的值</code>,不是索引</p> <p>因为要根据这个值进行回表，再在主键索引里面<code>直接从叶子节点里面拿到值</code>，不需要进行一次IO去磁盘找。</p> <p>为啥存值不存引用（数据在磁盘的地址指针）？因为一旦发生<code>页分裂</code>或者<code>页合并</code>，就得去<code>维护</code>这个地址<code>指针</code>，更麻烦。</p></div> <p><em>再举个栗子</em></p> <ul><li>如果语句是 <code>select * from T where ID=500</code>，即主键查询方式，则只需要搜索 ID 这棵 B+ 树；</li> <li>如果语句是 <code>select * from T where k=5</code>，即普通索引查询方式，则需要先搜索 k 索引树，得到 ID 的值为 500，<code>再到 ID 索引树搜索一次</code>。这个过程称为<code>回表</code>。</li> <li>也就是说，基于非主键索引的查询需要<code>多扫描一棵索引树</code>。因此，我们在应用中应该<code>尽量使用主键查询</code>。</li></ul> <h3 id="索引维护"><a href="#索引维护" class="header-anchor">#</a> 索引维护</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>以上面这个图为栗子，如果我们插入值为700的R6很简单插入到R5后面，如果新插入的 ID 值为 400，就相对麻烦了，需要逻辑上挪动后面的数据，空出位置。</p></div> <h4 id="页分裂"><a href="#页分裂" class="header-anchor">#</a> 页分裂</h4> <p><em>值得我们注意的是</em></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>而更糟的情况是，如果 <code>R5 所在的数据页已经满了</code>，根据 B+ 树的算法，这时候需要申请一个新的数据页，然后挪动部分数据过去。这个过程称为<code>页分裂</code>。在这种情况下，性能自然会受影响。</p></div> <p>所以一般我们使用<code>主键自增</code>这种方法就可以<code>防止页分裂</code>.</p> <p>在建表语句中一般是这么定义的： <code>NOT NULL PRIMARY KEY AUTO_INCREMENT</code>。</p> <h4 id="页合并"><a href="#页合并" class="header-anchor">#</a> 页合并</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>当然有分裂就有合并。当<code>相邻</code>两个页由于删除了数据，<code>利用率很低之后，会将数据页做合并</code>。合并的过程，可以认为是分裂过程的逆过程。</p></div> <p>我们可以使用<code>逻辑删除(状态位)</code>来<code>防止页合并</code>的产生.</p> <h4 id="不用业务字段做主键"><a href="#不用业务字段做主键" class="header-anchor">#</a> 不用业务字段做主键</h4> <ol><li>业务字段不一定是递增的，有<code>可能</code>会造成主键索引的<code>页分裂</code>，导致性能不稳定。</li> <li>二级索引存储的值是主键，如果使用业务字段占用<code>大小不好控制</code>，如果<code>业务字段过长可能会导致二级索引占用空间过大</code>，利用率不高。</li></ol> <h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>显然，主键长度越小，普通索引的叶子节点就越小，普通索引占用的空间也就越小。</p> <p>所以，从性能和存储空间方面考量，自增主键往往是更合理的选择。</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>提问：如果我们要重建索引，以下做法可取吗</p></div> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">##对于普通索引</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> T <span class="token keyword">drop</span> <span class="token keyword">index</span> k<span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> T <span class="token keyword">add</span> <span class="token keyword">index</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">##对于主键索引</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> T <span class="token keyword">drop</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> T <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>答：</p> <p>重建索引 k 的做法是合理的，可以达到省空间的目的。但是，重建主键的过程不合理。</p> <p>不论是删除主键还是创建主键，都会将整个表重建。所以连着执行这两个语句的话，第一个语句就白做了。这两个语句，你可以用这个语句代替</p> <div class="language-sql extra-class"><pre class="language-sql"><code> <span class="token keyword">alter</span> <span class="token keyword">table</span> T <span class="token keyword">engine</span><span class="token operator">=</span><span class="token keyword">InnoDB</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/mysql/深入浅出索引一.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021-11-24 17:14:28</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mysql/事务隔离：为什么你改了我还看不见？.html" class="prev">
+        事务隔离：为什么你改了我还看不见？
+      </a></span> <span class="next"><a href="/mysql/深入浅出索引二.html">
+        深入浅出索引二
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----><!----></div></div>
+    <script src="/assets/js/app.7cdf63a1.js" defer></script><script src="/assets/js/5.4faacd21.js" defer></script><script src="/assets/js/94.ff1a46cc.js" defer></script><script src="/assets/js/9.fd263465.js" defer></script>
+  </body>
+</html>

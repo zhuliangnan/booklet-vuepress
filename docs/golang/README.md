@@ -1,5 +1,12 @@
 ## Golang的介绍
+  
+  
 ::: tip
-  前言：本篇为学习笔记--极客时间-Redis核心技术与实战  作者--蒋德钧
-  感兴趣的小伙伴可以去订阅他的课程
+  前言：作为一名Java开发人员，不应局限于Java一门语言，Golang的协程思想及高并发量的特性很值得我们去好好探索。
+  所有代码在都已经上传GitHub-master分支 [GitHub](https://github.com/zhuliangnan/Golang)
 ::: 
+![image-golang.jpg](/golang.jpg)
+
+
+# 目录
+<GlobalTableOfContents />

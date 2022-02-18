@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Option API | Plugin</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script data-ad-client="ca-pub-2245427233262012" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Java 基础，面经手册，Go语言教程，MySql从入门到实战，Redis从入门到入土，设计模式，杂文，摄影...">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.30e7c708.css" as="style"><link rel="preload" href="/assets/js/app.7cdf63a1.js" as="script"><link rel="preload" href="/assets/js/5.4faacd21.js" as="script"><link rel="preload" href="/assets/js/115.627c42a1.js" as="script"><link rel="preload" href="/assets/js/9.fd263465.js" as="script"><link rel="prefetch" href="/assets/js/10.e46aa002.js"><link rel="prefetch" href="/assets/js/100.18361643.js"><link rel="prefetch" href="/assets/js/101.8ae5d81c.js"><link rel="prefetch" href="/assets/js/102.dbf4e05d.js"><link rel="prefetch" href="/assets/js/103.f8b178c8.js"><link rel="prefetch" href="/assets/js/104.b531bbd9.js"><link rel="prefetch" href="/assets/js/105.ddfc2c30.js"><link rel="prefetch" href="/assets/js/106.20027271.js"><link rel="prefetch" href="/assets/js/107.398244c4.js"><link rel="prefetch" href="/assets/js/108.9538a18a.js"><link rel="prefetch" href="/assets/js/109.c4145b2e.js"><link rel="prefetch" href="/assets/js/11.2b5728c8.js"><link rel="prefetch" href="/assets/js/110.a3302b80.js"><link rel="prefetch" href="/assets/js/111.01140e5d.js"><link rel="prefetch" href="/assets/js/112.6cdf9642.js"><link rel="prefetch" href="/assets/js/113.ef4624f8.js"><link rel="prefetch" href="/assets/js/114.d55006b1.js"><link rel="prefetch" href="/assets/js/116.b1b47605.js"><link rel="prefetch" href="/assets/js/117.6b56e351.js"><link rel="prefetch" href="/assets/js/118.036e8d40.js"><link rel="prefetch" href="/assets/js/119.a89ecc55.js"><link rel="prefetch" href="/assets/js/12.759fbd16.js"><link rel="prefetch" href="/assets/js/120.8061eff8.js"><link rel="prefetch" href="/assets/js/121.28cc5e2a.js"><link rel="prefetch" href="/assets/js/122.91ec4913.js"><link rel="prefetch" href="/assets/js/123.499f28d5.js"><link rel="prefetch" href="/assets/js/124.0b17cc18.js"><link rel="prefetch" href="/assets/js/125.4c05e950.js"><link rel="prefetch" href="/assets/js/126.664ab882.js"><link rel="prefetch" href="/assets/js/127.1eaa74a9.js"><link rel="prefetch" href="/assets/js/128.cde2592c.js"><link rel="prefetch" href="/assets/js/129.8fcd9f1e.js"><link rel="prefetch" href="/assets/js/13.ce54800d.js"><link rel="prefetch" href="/assets/js/130.cf3320c0.js"><link rel="prefetch" href="/assets/js/131.40a74787.js"><link rel="prefetch" href="/assets/js/132.9a271ae7.js"><link rel="prefetch" href="/assets/js/133.29699e6a.js"><link rel="prefetch" href="/assets/js/134.06c30b63.js"><link rel="prefetch" href="/assets/js/135.831074fb.js"><link rel="prefetch" href="/assets/js/136.a97715ae.js"><link rel="prefetch" href="/assets/js/137.138a03e0.js"><link rel="prefetch" href="/assets/js/138.c315b3c3.js"><link rel="prefetch" href="/assets/js/139.8376b9a8.js"><link rel="prefetch" href="/assets/js/14.8e633470.js"><link rel="prefetch" href="/assets/js/140.643f7a05.js"><link rel="prefetch" href="/assets/js/15.fbb85beb.js"><link rel="prefetch" href="/assets/js/16.9a1da7a8.js"><link rel="prefetch" href="/assets/js/17.b624ec8b.js"><link rel="prefetch" href="/assets/js/18.a5146bc3.js"><link rel="prefetch" href="/assets/js/19.04cf1a70.js"><link rel="prefetch" href="/assets/js/20.44bd9178.js"><link rel="prefetch" href="/assets/js/21.b6e7096e.js"><link rel="prefetch" href="/assets/js/22.fba5fe7a.js"><link rel="prefetch" href="/assets/js/23.2006638e.js"><link rel="prefetch" href="/assets/js/24.28a822da.js"><link rel="prefetch" href="/assets/js/25.65d3faf9.js"><link rel="prefetch" href="/assets/js/26.19ac38a9.js"><link rel="prefetch" href="/assets/js/27.78a099dd.js"><link rel="prefetch" href="/assets/js/28.9b1d0f25.js"><link rel="prefetch" href="/assets/js/29.42cfe8b4.js"><link rel="prefetch" href="/assets/js/30.c0829a46.js"><link rel="prefetch" href="/assets/js/31.6ab7c59a.js"><link rel="prefetch" href="/assets/js/32.9c4c0641.js"><link rel="prefetch" href="/assets/js/33.359de626.js"><link rel="prefetch" href="/assets/js/34.ac0cfa72.js"><link rel="prefetch" href="/assets/js/35.cb44cb15.js"><link rel="prefetch" href="/assets/js/36.7e58a37f.js"><link rel="prefetch" href="/assets/js/37.8529c89b.js"><link rel="prefetch" href="/assets/js/38.12bf8e1e.js"><link rel="prefetch" href="/assets/js/39.5c75626e.js"><link rel="prefetch" href="/assets/js/40.0cbd889f.js"><link rel="prefetch" href="/assets/js/41.2f1cdfe2.js"><link rel="prefetch" href="/assets/js/42.1c848a00.js"><link rel="prefetch" href="/assets/js/43.245d204f.js"><link rel="prefetch" href="/assets/js/44.a7abe2e4.js"><link rel="prefetch" href="/assets/js/45.5c505062.js"><link rel="prefetch" href="/assets/js/46.1ffe4eda.js"><link rel="prefetch" href="/assets/js/47.fddef5c8.js"><link rel="prefetch" href="/assets/js/48.a3ed2d7c.js"><link rel="prefetch" href="/assets/js/49.32299f37.js"><link rel="prefetch" href="/assets/js/50.ef6da224.js"><link rel="prefetch" href="/assets/js/51.3e681719.js"><link rel="prefetch" href="/assets/js/52.37e09660.js"><link rel="prefetch" href="/assets/js/53.93d9d4d5.js"><link rel="prefetch" href="/assets/js/54.9c7863f4.js"><link rel="prefetch" href="/assets/js/55.58395359.js"><link rel="prefetch" href="/assets/js/56.95d7ed4f.js"><link rel="prefetch" href="/assets/js/57.2e1a1b68.js"><link rel="prefetch" href="/assets/js/58.0a5340d8.js"><link rel="prefetch" href="/assets/js/59.26f67e2a.js"><link rel="prefetch" href="/assets/js/6.e14a2eab.js"><link rel="prefetch" href="/assets/js/60.b9b0593b.js"><link rel="prefetch" href="/assets/js/61.0a5cc273.js"><link rel="prefetch" href="/assets/js/62.8a8d858f.js"><link rel="prefetch" href="/assets/js/63.77b211e2.js"><link rel="prefetch" href="/assets/js/64.83765862.js"><link rel="prefetch" href="/assets/js/65.22eaa012.js"><link rel="prefetch" href="/assets/js/66.e89ac698.js"><link rel="prefetch" href="/assets/js/67.c0eaab26.js"><link rel="prefetch" href="/assets/js/68.6b32dbdb.js"><link rel="prefetch" href="/assets/js/69.032da97d.js"><link rel="prefetch" href="/assets/js/7.a374f973.js"><link rel="prefetch" href="/assets/js/70.0713bc30.js"><link rel="prefetch" href="/assets/js/71.40b38861.js"><link rel="prefetch" href="/assets/js/72.0b11be53.js"><link rel="prefetch" href="/assets/js/73.541c10ae.js"><link rel="prefetch" href="/assets/js/74.2bac8bfc.js"><link rel="prefetch" href="/assets/js/75.38fc1d14.js"><link rel="prefetch" href="/assets/js/76.6d9a2496.js"><link rel="prefetch" href="/assets/js/77.d83371f9.js"><link rel="prefetch" href="/assets/js/78.dad06faa.js"><link rel="prefetch" href="/assets/js/79.37307de1.js"><link rel="prefetch" href="/assets/js/8.a38a1b58.js"><link rel="prefetch" href="/assets/js/80.baecd30e.js"><link rel="prefetch" href="/assets/js/81.e27b22bc.js"><link rel="prefetch" href="/assets/js/82.03bd699e.js"><link rel="prefetch" href="/assets/js/83.9f682cc0.js"><link rel="prefetch" href="/assets/js/84.0de94370.js"><link rel="prefetch" href="/assets/js/85.d0a99218.js"><link rel="prefetch" href="/assets/js/86.94fbab22.js"><link rel="prefetch" href="/assets/js/87.be252447.js"><link rel="prefetch" href="/assets/js/88.81b1b7c9.js"><link rel="prefetch" href="/assets/js/89.4a5818eb.js"><link rel="prefetch" href="/assets/js/90.b560197a.js"><link rel="prefetch" href="/assets/js/91.a5bfb4de.js"><link rel="prefetch" href="/assets/js/92.d36212c5.js"><link rel="prefetch" href="/assets/js/93.b57aaef8.js"><link rel="prefetch" href="/assets/js/94.ff1a46cc.js"><link rel="prefetch" href="/assets/js/95.8291149e.js"><link rel="prefetch" href="/assets/js/96.95472b69.js"><link rel="prefetch" href="/assets/js/97.bf0cd2f4.js"><link rel="prefetch" href="/assets/js/98.25e1f0f9.js"><link rel="prefetch" href="/assets/js/99.d1b80b00.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.3fe60842.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2f652080.js"><link rel="prefetch" href="/assets/js/vendors~notification.b7c38425.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.30e7c708.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">记在小本本上</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/java-guide/" class="nav-link">
+  Java开发避坑指南📝
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言☕" class="dropdown-title"><span class="title">编程语言☕</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言☕" class="mobile-dropdown-title"><span class="title">编程语言☕</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Golang
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang/" class="nav-link">
+  Golang入门基础教程🧑‍🚀
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Golang(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/golang-note/GoLand 控制台输出中文乱码的解决方案.html" class="nav-link">
+  GoLand 控制台输出中文乱码的解决方案👿
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Go语言生成二维码.html" class="nav-link">
+  Go语言生成二维码🤖
+</a></li><li class="dropdown-subitem"><a href="/golang-note/Golang 新手可能会踩的 50+ 个坑.html" class="nav-link">
+  Golang 新手可能会踩的 50+ 个坑👽
+</a></li><li class="dropdown-subitem"><a href="/golang-note/GoLand 解决无法导入自定义包的问题.html" class="nav-link">
+  GoLand 解决无法导入自定义包的问题🤬
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Java(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/java-note/Springboot引用外部jar包并打包成jar程序运行.html" class="nav-link">
+  Springboot引用外部jar包并打包成jar程序运行😺
+</a></li><li class="dropdown-subitem"><a href="/java-note/Error-java无效的源发行版11错误.html" class="nav-link">
+  Error:java: 无效的源发行版: 11错误🙀
+</a></li><li class="dropdown-subitem"><a href="/java-note/基于Spring Aop实现用户操作日志监控.html" class="nav-link">
+  基于Spring Aop实现用户操作日志监控🙉
+</a></li><li class="dropdown-subitem"><a href="/java-note/fastjson基本使用.html" class="nav-link">
+  fastjson基本使用🤠
+</a></li><li class="dropdown-subitem"><a href="/java-note/spring项目中手动获取bean.html" class="nav-link">
+  spring项目中手动获取bean🤠
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Gradle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/gradle-note/Idea实现gradle打jar包.html" class="nav-link">
+  Idea实现gradle打jar包😺
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件🀄" class="dropdown-title"><span class="title">中间件🀄</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件🀄" class="mobile-dropdown-title"><span class="title">中间件🀄</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Redis
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/redis/" class="nav-link">
+  Redis基础到实战(详细)🎮
+</a></li><li class="dropdown-subitem"><a href="/redis/other/Redis操作速查手册.html" class="nav-link">
+  Redis操作速查手册🍒
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库💊" class="dropdown-title"><span class="title">数据库💊</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库💊" class="mobile-dropdown-title"><span class="title">数据库💊</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Mysql
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/" class="nav-link">
+  Mysql基础到实战(详细)🕹️
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Mysql(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql-note/MySQL索引及实际应用.html" class="nav-link">
+  MySQL索引及实际应用🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Oracle(杂谈)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/oracle-note/ORA-01756报错的解决方案中文编码错误.html" class="nav-link">
+  ORA-01756报错的解决方案中文编码错误🥝
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器🐳" class="dropdown-title"><span class="title">容器🐳</span> <span class="arrow down"></span></button> <button type="button" aria-label="容器🐳" class="mobile-dropdown-title"><span class="title">容器🐳</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          docker🐳
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  docker操作手册🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          docker(杂谈)🐬
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docker-note/Docker时间与linux不一致.html" class="nav-link">
+  Docker时间与linux不一致🐠
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="小册|部署|PDF📜" class="dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow down"></span></button> <button type="button" aria-label="小册|部署|PDF📜" class="mobile-dropdown-title"><span class="title">小册|部署|PDF📜</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Linux
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/Linux常用操作速查.html" class="nav-link">
+  Linux常用操作速查❤🐦
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Linux小册(环境安装)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/deploy/java环境安装.html" class="nav-link">
+  java环境安装🌱
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/redis环境安装.html" class="nav-link">
+  redis环境安装(docker)🐳
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/zookeeper环境安装.html" class="nav-link">
+  zookeeper环境安装(linux)🦕
+</a></li><li class="dropdown-subitem"><a href="/linux/deploy/KafKa安装教程.html" class="nav-link">
+  KafKa安装教程(Linux)🍉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          PDF
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mianshi/" class="nav-link">
+  面试知识点💤💭
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他💬" class="dropdown-title"><span class="title">其他💬</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他💬" class="mobile-dropdown-title"><span class="title">其他💬</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/git-clone-10054或者443问题.html" class="nav-link">
+  git-clone-10054或者443问题🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工作流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/flowable/Flowable工作流快速入门.html" class="nav-link">
+  Flowable工作流快速入门🎉
+</a></li></ul></li><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/webpack-dev-server不是内部或外部命令，也不是可运行的程序.html" class="nav-link">
+  webpack-dev-server不是内部或外部命令，也不是可运行的程序🥥
+</a></li></ul></li><li class="dropdown-item"><h4>
+          ES
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/elasticsearch空index搜索排序报错问题Nomapping found for occurTime in order to sort on.html" class="nav-link">
+  elasticsearch空index搜索排序报错问题:No mapping found for occurTime in order to sort on🥥
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="摄影📷🎥" class="dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow down"></span></button> <button type="button" aria-label="摄影📷🎥" class="mobile-dropdown-title"><span class="title">摄影📷🎥</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          照片
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera/" class="nav-link">
+  近期拍摄的相片(后期)🏳️‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          摄影
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/movie_camera/" class="nav-link">
+  近期拍摄的视频🏴‍
+</a></li></ul></li><li class="dropdown-item"><h4>
+          杂谈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/camera_color/后期调色.html" class="nav-link">
+  后期调色🐳‍
+</a></li></ul></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>插件music.163.co</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/plugin/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/plugin/using-a-plugin.html" class="sidebar-link">使用插件</a></li><li><a href="/plugin/writing-a-plugin.html" class="sidebar-link">开发插件</a></li><li><a href="/plugin/life-cycle.html" class="sidebar-link">生命周期</a></li><li><a href="/plugin/option-api.html" aria-current="page" class="active sidebar-link">Option API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/plugin/option-api.html#name" class="sidebar-link">name</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#plugins" class="sidebar-link">plugins</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#chainwebpack" class="sidebar-link">chainWebpack</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#define" class="sidebar-link">define</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#alias" class="sidebar-link">alias</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#beforedevserver" class="sidebar-link">beforeDevServer</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#afterdevserver" class="sidebar-link">afterDevServer</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#extendmarkdown" class="sidebar-link">extendMarkdown</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#chainmarkdown" class="sidebar-link">chainMarkdown</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#enhanceappfiles" class="sidebar-link">enhanceAppFiles</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#clientdynamicmodules" class="sidebar-link">clientDynamicModules</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#extendpagedata" class="sidebar-link">extendPageData</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#clientrootmixin" class="sidebar-link">clientRootMixin</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#additionalpages" class="sidebar-link">additionalPages</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#globaluicomponents" class="sidebar-link">globalUIComponents</a></li><li class="sidebar-sub-header"><a href="/plugin/option-api.html#extendcli" class="sidebar-link">extendCli</a></li></ul></li><li><a href="/plugin/context-api.html" class="sidebar-link">Context API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>官方插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/plugin/official/plugin-active-header-links.html" class="sidebar-link">active-header-links</a></li><li><a href="/plugin/official/plugin-back-to-top.html" class="sidebar-link">back-to-top</a></li><li><a href="/plugin/official/plugin-blog.html" class="sidebar-link">blog</a></li><li><a href="/plugin/official/plugin-google-analytics.html" class="sidebar-link">google-analytics</a></li><li><a href="/plugin/official/plugin-last-updated.html" class="sidebar-link">last-updated</a></li><li><a href="/plugin/official/plugin-medium-zoom.html" class="sidebar-link">medium-zoom</a></li><li><a href="/plugin/official/plugin-nprogress.html" class="sidebar-link">nprogress</a></li><li><a href="/plugin/official/plugin-pwa.html" class="sidebar-link">pwa</a></li><li><a href="/plugin/official/plugin-register-components.html" class="sidebar-link">register-components</a></li><li><a href="/plugin/official/plugin-search.html" class="sidebar-link">search</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="option-api"><a href="#option-api" class="header-anchor">#</a> Option API</h1> <h2 id="name"><a href="#name" class="header-anchor">#</a> name</h2> <ul><li>类型: <code>string</code></li> <li>默认值: undefined</li></ul> <p>插件的名字。</p> <p>在内部，VuePress 将会使用插件的包名作为插件的名称。当你的插件是一个本地插件（即直接使用了一个纯函数）时，请确保设定了该选项，这对调试更有利。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .vuepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token punctuation">(</span><span class="token parameter">pluginOptions<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        name<span class="token operator">:</span> <span class="token string">'my-xxx-plugin'</span>
+        <span class="token comment">// ... the rest of options</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="plugins"><a href="#plugins" class="header-anchor">#</a> plugins</h2> <ul><li>类型: <code>array</code></li> <li>默认值: undefined</li></ul> <p>一个插件可以像 preset 一样包含多个插件。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 一个插件</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'tag'</span><span class="token punctuation">,</span>
+    <span class="token string">'category'</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="chainwebpack"><a href="#chainwebpack" class="header-anchor">#</a> chainWebpack</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: undefined</li></ul> <p>使用 <a href="https://github.com/mozilla-neutrino/webpack-chain" target="_blank" rel="noopener noreferrer">webpack-chain<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 来修改内部的 webpack 配置：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">chainWebpack</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token punctuation">,</span> isServer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// config 是一个 ChainableConfig 的实例</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">提示</p> <p>由于 VuePress 是一个基于 Vue-SSR 的应用，这里会有两个 webpack 配置，<code>isServer</code> 用于决定当前的 webpack 配置是应用到 server 还是 client。</p> <p><strong>参考:</strong></p> <ul><li><a href="https://ssr.vuejs.org/zh/guide/build-config.html" target="_blank" rel="noopener noreferrer">Vue SSR &gt; 构建配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <h2 id="define"><a href="#define" class="header-anchor">#</a> define</h2> <ul><li>类型: <code>Object|Function</code></li> <li>默认值: undefined</li></ul> <p>由于通过 <a href="#chainwebpack">chainWebpack</a> 使用 <a href="https://webpack.js.org/plugins/define-plugin/" target="_blank" rel="noopener noreferrer">DefinePlugin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 会有点麻烦：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">chainWebpack</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span><span class="token string">'injections'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>options<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+      Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token constant">SW_BASE_URL</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>VuePress 特别开辟了一个更简洁的 <code>define</code> 选项。值得注意的是这些值已自动地被 <code>JSON.stringify</code> 处理。</p> <ul><li>对象式:</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  define<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token constant">SW_BASE_URL</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>函数式:</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">define</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token constant">SW_BASE_URL</span><span class="token operator">:</span> context<span class="token punctuation">.</span>base <span class="token operator">||</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      <span class="token constant">SW_ENABLED</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token operator">!</span>options<span class="token punctuation">.</span>enabled<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="alias"><a href="#alias" class="header-anchor">#</a> alias</h2> <ul><li>类型: <code>Object|Function</code></li> <li>默认值: undefined</li></ul> <p>我们可以通过 <a href="#chainwebpack">chainWebpack</a> 来配置别名：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">chainWebpack</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>resolve<span class="token punctuation">.</span>alias<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@pwd'</span><span class="token punctuation">,</span> process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>alias</code> 可以使这个流程更像配置：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'@theme'</span><span class="token operator">:</span> context<span class="token punctuation">.</span>themeAPI<span class="token punctuation">.</span>themePath
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="beforedevserver"><a href="#beforedevserver" class="header-anchor">#</a> beforeDevServer</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: undefined</li></ul> <p>等同于 <a href="https://github.com/webpack/webpack-dev-server" target="_blank" rel="noopener noreferrer">webpack-dev-server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中的 <a href="https://webpack.js.org/configuration/dev-server/#devserver-before" target="_blank" rel="noopener noreferrer">before<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 选项，你可以使用它来自定义你的 devServer，如：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token function">beforeDevServer</span><span class="token punctuation">(</span><span class="token parameter">app<span class="token punctuation">,</span> server</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/path/to/your/custom'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> custom<span class="token operator">:</span> <span class="token string">'response'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="afterdevserver"><a href="#afterdevserver" class="header-anchor">#</a> afterDevServer</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: undefined</li></ul> <p>等同于 <a href="https://github.com/webpack/webpack-dev-server" target="_blank" rel="noopener noreferrer">webpack-dev-server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中的 <a href="https://webpack.js.org/configuration/dev-server/#devserver-after" target="_blank" rel="noopener noreferrer">after<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，你可以用其在所有中间件的最后去执行一些自定义的中间件：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token function">afterDevServer</span><span class="token punctuation">(</span><span class="token parameter">app<span class="token punctuation">,</span> server</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// hacking now ...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="extendmarkdown"><a href="#extendmarkdown" class="header-anchor">#</a> extendMarkdown</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: <code>undefined</code></li></ul> <p>一个函数，修改内部用于渲染 markdown 文件的 <a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener noreferrer">markdown-it<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 实例的配置、或者应用一些额外的插件：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">extendMarkdown</span><span class="token operator">:</span> <span class="token parameter">md</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    md<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">{</span> breaks<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    md<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'markdown-it-xxx'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="chainmarkdown"><a href="#chainmarkdown" class="header-anchor">#</a> chainMarkdown</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: <code>undefined</code></li></ul> <p>使用 <a href="https://github.com/ulivz/markdown-it-chain" target="_blank" rel="noopener noreferrer">markdown-it-chain<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 来修改内部的 markdown 配置。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">chainMarkdown</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 与 new MarkdownIt 的 'options' 互动</span>
+    <span class="token comment">// 参考: https://markdown-it.github.io/markdown-it/#MarkdownIt.new</span>
+    config
+      <span class="token punctuation">.</span>options
+        <span class="token punctuation">.</span><span class="token function">link</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">breaks</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 修改内置插件的参数</span>
+    config
+      <span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span><span class="token string">'anchor'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>options<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+          Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token punctuation">{</span> permalinkSymbol<span class="token operator">:</span> <span class="token string">'#'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 增加额外的插件</span>
+    config
+      <span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span><span class="token string">'sup'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'markdown-it-sup'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// Remove internal plugin</span>
+    config<span class="token punctuation">.</span>plugins<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'snippet'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>参考:</strong></p> <ul><li><a href="https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/markdown/index.js" target="_blank" rel="noopener noreferrer">VuePress 的内置 markdown-it 插件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/neutrinojs/webpack-chain#config-plugins" target="_blank" rel="noopener noreferrer">配置插件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h2 id="enhanceappfiles"><a href="#enhanceappfiles" class="header-anchor">#</a> enhanceAppFiles</h2> <ul><li>类型: <code>String | Array | AsyncFunction</code></li> <li>默认值: <code>undefined</code></li></ul> <p>此选项接受指向增强文件的绝对文件路径或返回该路径的函数，你可以通过此选项做一些<a href="/guide/basic-config.html#应用级别的配置">应用级别的配置</a>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> resolve <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'path'</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  enhanceAppFiles<span class="token operator">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'client.js'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>此选项还支持动态代码，允许你使用贴近编译上下文的能力来做更多的事：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">option<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function">enhanceAppFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+         name<span class="token operator">:</span> <span class="token string">'dynamic-code'</span><span class="token punctuation">,</span>
+         content<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">export default ({ Vue }) =&gt; { Vue.mixin('$source', '</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+           context<span class="token punctuation">.</span>sourceDir
+         <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">') }</span><span class="token template-punctuation string">`</span></span>
+       <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="clientdynamicmodules"><a href="#clientdynamicmodules" class="header-anchor">#</a> clientDynamicModules</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: <code>undefined</code></li></ul> <p>有时，你可能想要在编译期间生成一些在客户端使用的模块：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">clientDynamicModules</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">'constants.js'</span><span class="token punctuation">,</span>
+      content<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">export const SOURCE_DIR = '</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>context<span class="token punctuation">.</span>sourceDir<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">'</span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>然后你可以在客户端这样使用你的模块：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">SOURCE_DIR</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dynamic/constants'</span>
+</code></pre></div><h2 id="extendpagedata"><a href="#extendpagedata" class="header-anchor">#</a> extendPageData</h2> <ul><li>类型: <code>Function</code></li> <li>默认值: <code>undefined</code></li></ul> <p>一个函数，用于拓展或者修改 <a href="/guide/global-computed.html#page">$page</a> 对象。这个函数将会在编译期为每个页面执行一次。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">extendPageData</span> <span class="token punctuation">(</span><span class="token parameter">$page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      _filePath<span class="token punctuation">,</span>           <span class="token comment">// 源文件的绝对路径</span>
+      _computed<span class="token punctuation">,</span>           <span class="token comment">// 在构建期访问全局的计算属性，如：_computed.$localePath.</span>
+      _content<span class="token punctuation">,</span>            <span class="token comment">// 源文件的原始内容字符串</span>
+      _strippedContent<span class="token punctuation">,</span>    <span class="token comment">// 源文件剔除掉 frontmatter 的内容字符串</span>
+      key<span class="token punctuation">,</span>                 <span class="token comment">// 页面唯一的 hash key</span>
+      frontmatter<span class="token punctuation">,</span>         <span class="token comment">// 页面的 frontmatter 对象</span>
+      regularPath<span class="token punctuation">,</span>         <span class="token comment">// 当前页面遵循文件层次结构的默认链接</span>
+      path<span class="token punctuation">,</span>                <span class="token comment">// 当前页面的实际链接（在 permalink 不存在时，使用 regularPath ）</span>
+    <span class="token punctuation">}</span> <span class="token operator">=</span> $page
+
+    <span class="token comment">// 1. Add extra fields.</span>
+    $page<span class="token punctuation">.</span>xxx <span class="token operator">=</span> <span class="token string">'xxx'</span>
+
+    <span class="token comment">// 2. Change frontmatter.</span>
+    frontmatter<span class="token punctuation">.</span>sidebar <span class="token operator">=</span> <span class="token string">'auto'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意</p> <p>那些以 <code>_</code> 开头的字段意味着你只能在编译期访问。</p></div> <p>例子：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">extendPageData</span> <span class="token punctuation">(</span><span class="token parameter">$page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    $page<span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token punctuation">(</span>$page<span class="token punctuation">.</span>_content<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'kb'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后你可以在任意的 Vue 中通过 <code>this.$page.size</code> 来访问这个变量。</p> <h2 id="clientrootmixin"><a href="#clientrootmixin" class="header-anchor">#</a> clientRootMixin</h2> <ul><li>类型: <code>String</code></li> <li>默认值: <code>undefined</code></li></ul> <p>指向 <code>mixin</code> 文件的路径，它让你可以控制根组件的生命周期：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 插件的入口</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  clientRootMixin<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'mixin.js'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// mixin.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="additionalpages"><a href="#additionalpages" class="header-anchor">#</a> additionalPages</h2> <ul><li>类型: <code>Array|AsyncFunction</code></li> <li>默认值: <code>undefined</code></li></ul> <p>增加一个指向某个 markdown 文件的页面：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  additionalPages<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+     path<span class="token operator">:</span> <span class="token string">'/readme/'</span><span class="token punctuation">,</span>
+     filePath<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../README.md'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>或增加一个具有明确内容的页面：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">additionalPages</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 注意 VuePress 没有任何内置的请求库，</span>
+    <span class="token comment">// 你需要自己安装它。</span>
+    <span class="token keyword">const</span> rp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'request-promise'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">rp</span><span class="token punctuation">(</span><span class="token string">'https://raw.githubusercontent.com/vuejs/vuepress/master/CHANGELOG.md'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/changelog/'</span><span class="token punctuation">,</span>
+        content
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>或增加一个纯粹的路由：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  additionalPages<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+       path<span class="token operator">:</span> <span class="token string">'/alpha/'</span><span class="token punctuation">,</span>
+       frontmatter<span class="token operator">:</span> <span class="token punctuation">{</span>
+          layout<span class="token operator">:</span> <span class="token string">'MyLayout'</span>
+       <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="globaluicomponents"><a href="#globaluicomponents" class="header-anchor">#</a> globalUIComponents</h2> <ul><li>类型: <code>Array|String</code></li> <li>默认值: <code>undefined</code></li></ul> <p>你可能想注入某些全局的 UI，并固定在页面中的某处，如  <code>back-to-top</code>, <code>popup</code>。在 VuePress 中，<strong>一个全局 UI 就是一个 Vue 组件</strong>。你可以直接配置该全局组件的名称，如：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  globalUIComponents<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'Component-1'</span><span class="token punctuation">,</span>
+    <span class="token string">'Component-2'</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>VuePress 将会自动将这些组件注入到布局组件的隔壁：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>theme-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- Layout Component --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>global-ui<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component-1</span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component-2</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="extendcli"><a href="#extendcli" class="header-anchor">#</a> extendCli</h2> <ul><li>类型: <code>function</code></li> <li>默认值: <code>undefined</code></li></ul> <p>注册一个额外的 command 来增强 VuePress 的 CLI。这个函数将会以一个 <a href="https://github.com/cacjs/cac" target="_blank" rel="noopener noreferrer">CAC<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的实例作为第一个参数被调用。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">extendCli</span> <span class="token punctuation">(</span><span class="token parameter">cli</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cli
+      <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'info [targetDir]'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">'--debug'</span><span class="token punctuation">,</span> <span class="token string">'display info in debug mode'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span>dir <span class="token operator">=</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Display info of your website'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>现在你可以在你项目中使用 <code>vuepress info [targetDir]</code> 了！</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>值得注意的是，一个自定义的 command 需要 VuePress 像 <code>vuepress dev</code> 或 <code>vuepress build</code> 去定位到你的站点配置，所以在开发一个 command 时，请确保引导用户去传入 <code>targetDir</code> 作为 CLI 参数的一部分。</p></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/plugin/option-api.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021-11-8 17:45:42</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/plugin/life-cycle.html" class="prev">
+        生命周期
+      </a></span> <span class="next"><a href="/plugin/context-api.html">
+        Context API
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----><!----></div></div>
+    <script src="/assets/js/app.7cdf63a1.js" defer></script><script src="/assets/js/5.4faacd21.js" defer></script><script src="/assets/js/115.627c42a1.js" defer></script><script src="/assets/js/9.fd263465.js" defer></script>
+  </body>
+</html>

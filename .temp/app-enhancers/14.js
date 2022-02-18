@@ -1,0 +1,1 @@
+export { default } from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-global-toc\\enhanceAppFile.js"

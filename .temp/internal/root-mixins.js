@@ -5,9 +5,10 @@ import m0 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuep
 import m1 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\plugin-active-header-links\\clientRootMixin.js"
 import m2 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\plugin-nprogress\\clientRootMixin.js"
 import m3 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-smooth-scroll\\lib\\clientRootMixin.js"
-import m4 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\plugin-medium-zoom\\clientRootMixin.js"
-import m5 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-tags\\clientRootMixin.js"
-import m6 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@xiaopanda\\vuepress-plugin-code-copy\\clientRootMixin.js"
+import m4 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-graysite\\clientRootMixin.js"
+import m5 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@vuepress\\plugin-medium-zoom\\clientRootMixin.js"
+import m6 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\vuepress-plugin-tags\\clientRootMixin.js"
+import m7 from "D:\\IdeaProjects\\codesuger-booklet-vuepress\\node_modules\\@xiaopanda\\vuepress-plugin-code-copy\\clientRootMixin.js"
 
 export default [
   m0,
@@ -16,5 +17,6 @@ export default [
   m3,
   m4,
   m5,
-  m6
+  m6,
+  m7
 ]

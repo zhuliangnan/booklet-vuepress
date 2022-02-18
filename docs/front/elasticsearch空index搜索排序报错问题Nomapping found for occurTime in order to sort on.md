@@ -30,8 +30,9 @@ sidebar: auto
 ````
 
 - 代码解决
->> 在排序代码中加上 unmappedType("date")  date为类型  用于设置默认的类型 
-
+::: tip
+ 在排序代码中加上 unmappedType("date")  date为类型  用于设置默认的类型 
+::: 
 ````java
 SortBuilders.fieldSort("occurTime").order(SortOrder.ASC).unmappedType("date")
 ````
