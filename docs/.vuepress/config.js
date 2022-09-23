@@ -69,6 +69,7 @@ module.exports = ctx => ({
                     '/plugin/': getPluginSidebar('插件music.163.co', '介绍', '官方插件'),
                     '/theme/': getThemeSidebar('主题', '介绍'),
                     '/redis/': getRedisSidebar('Redis从底层到原理', '目录', 'Redis从实战到入土'),
+                    '/leetcode/': getLeetCodeSidebar('链表、栈、队列', '目录', '数组'),
                     '/golang/': getGolangSidebar('Golang入门教程', '介绍'),
                     '/mianshi/': getMianShiSidebar('面试知识点总结'),
                     '/docker/': getDockerSidebar('Docker操作手册', '介绍'),
@@ -375,6 +376,27 @@ function getRedisSidebar(groupA, introductionA, groupB) {
         }
     ]
 }
+
+function getLeetCodeSidebar(groupA, introductionA, groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ['', introductionA],
+                'Leetcode[206]-反转链表'
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+            ]
+        }
+    ]
+}
+
 
 
 function getGolangSidebar(groupA, introductionA) {

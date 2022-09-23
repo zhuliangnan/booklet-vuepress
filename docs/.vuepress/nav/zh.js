@@ -110,6 +110,25 @@ module.exports = [
         ]
     },
     {
+        text: '算法⏳',
+        ariaLabel: '算法⏳',
+        items: [
+            {
+                text: '算法',
+                items: [
+                    {
+                        text: 'LeetCode',
+                        link: '/leetcode/'
+                    },
+                    {
+                        text: '剑指offer',
+                        link: '/tooffer/'
+                    }
+                ]
+            }
+        ]
+    },
+    {
         text: '数据库💊',
         ariaLabel: '数据库💊',
         items: [
